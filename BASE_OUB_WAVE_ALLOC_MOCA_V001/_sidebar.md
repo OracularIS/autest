@@ -1,0 +1,8 @@
+- [**BASE_OUB_WAVE_ALLOC_MOCA_V001**](Read_me.md)
+    - [Test Category](#Test-Category)
+    - [Overview](#overview)
+    - [Applicable versions](#applicable-versions)
+    - [Test Arguments](#test-arguments)
+    - [Equivalent Usecase](#equivalent-usecase)
+    - [Applicable MOCA commands](#applicable-moca-commands)
+    - [Affected DB Tables](#affected-db-tables)
