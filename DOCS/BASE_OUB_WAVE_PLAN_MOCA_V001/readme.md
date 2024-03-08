@@ -111,3 +111,8 @@ affected:
 This table contains information about the planning waves for efficient
 picking and processing in a warehouse environment.
 
+[SMART-IS](https://www.smart-is.pk) 
+
+[Next-Test](/DOCS/BASE_OUB_WAVE_WAIT_REL_MOCA_V001/readme.md)
+
+
