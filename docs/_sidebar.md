@@ -1,5 +1,5 @@
 <!-- docs/_sidebar.md -->
 
 - [Home](/readme.md)
-- [Tests with Equivalent Usecases](/Tests with Equivalent Usecases)
+- [Tests_with_Equivalent_Usecase](/Tests with Equivalent Usecases)
 
