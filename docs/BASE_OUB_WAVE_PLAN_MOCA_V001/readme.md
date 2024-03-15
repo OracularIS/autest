@@ -113,6 +113,6 @@ picking and processing in a warehouse environment.
 
 [SMART-IS](https://www.smart-is.pk) 
 
-[Previous-Test](/DOCS/BASE_OUB_WAVE_ALLOC_MOCA_V001/readme.md) - [Next-Test](/DOCS/BASE_OUB_WAVE_WAIT_REL_MOCA_V001/readme.md)
+[Previous-Test](/docs/BASE_OUB_WAVE_ALLOC_MOCA_V001/readme.md) - [Next-Test](/docs/BASE_OUB_WAVE_WAIT_REL_MOCA_V001/readme.md)
 
 
