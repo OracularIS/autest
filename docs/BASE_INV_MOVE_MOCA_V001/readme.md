@@ -125,6 +125,6 @@ command.
 
 [SMART-IS](https://www.smart-is.pk) 
 
-[Previous-Test](/docs/BASE_INV_CREATE_MOCA_V001/readme.md) - [Next-Test](/DOCS/BASE_OUB_LIST_PICK_MOCA_V001/readme.md)
+[Previous-Test](/docs/BASE_INV_CREATE_MOCA_V001/readme.md) - [Next-Test](/docs/BASE_OUB_LIST_PICK_MOCA_V001/readme.md)
 
 
