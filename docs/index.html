@@ -16,45 +16,23 @@
       repo: 'OracularIS/autest',
       homepage: 'readme.md',
       coverpage: true,
-      search: 'auto',
+      search: 'auto', // default,
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
-      autoHeader: true,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
+       // complete configuration parameters
       search: {
-        maxAge: 86400000,
-        paths: 'auto',
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto', // or 'auto'
         placeholder: 'Type to search',
+              // Headline depth, 1 - 6
         depth: 6,
-        hideOtherSidebarContent: false,
+
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
+        // To avoid search index collision
+        // between multiple websites under the same domain
         namespace: 'smart-automated-test',
-      },
-      // Add custom script to prevent sidebar from collapsing after clicking a link
-      executeScript: true,
-      beforeMounted: function () {
-        const sidebar = document.querySelector('.sidebar');
-        sidebar.addEventListener('click', function (event) {
-          if (event.target.tagName === 'A' && event.target.closest('.sidebar-nav')) {
-            event.preventDefault();
-            window.location.hash = event.target.hash;
-          }
-        });
-      },
-      afterEach: function (content) {
-        const sidebarItems = document.querySelectorAll('.sidebar-nav li');
-        const currentHash = window.location.hash.substring(2);
-        sidebarItems.forEach(item => {
-          const itemHash = item.firstChild.getAttribute('href').substring(2);
-          if (itemHash === currentHash) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-        return content;
       },
     }
   </script>
