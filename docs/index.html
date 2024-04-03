@@ -20,23 +20,9 @@
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
-      // Add a custom script to update the sidebar based on the currently selected test
-      executeScript: true,
-      // Add a custom script to update the sidebar based on the currently selected test
-      beforeEach: function (content) {
-        const selectedTestId = content.replace('.md', ''); // Assuming the file name is the test ID
-        const sidebar = document.querySelector('.sidebar-nav');
-        if (sidebar) {
-          const sidebarItems = sidebar.querySelectorAll('li');
-          sidebarItems.forEach(item => {
-            if (item.textContent.trim() === selectedTestId) {
-              item.classList.add('active');
-            } else {
-              item.classList.remove('active');
-            }
-          });
-        }
-        return content;
+      autoHeader: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
       },
       search: {
         maxAge: 86400000,
@@ -45,6 +31,30 @@
         depth: 6,
         hideOtherSidebarContent: false,
         namespace: 'smart-automated-test',
+      },
+      // Add custom script to prevent sidebar from collapsing after clicking a link
+      executeScript: true,
+      beforeMounted: function () {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.addEventListener('click', function (event) {
+          if (event.target.tagName === 'A' && event.target.closest('.sidebar-nav')) {
+            event.preventDefault();
+            window.location.hash = event.target.hash;
+          }
+        });
+      },
+      afterEach: function (content) {
+        const sidebarItems = document.querySelectorAll('.sidebar-nav li');
+        const currentHash = window.location.hash.substring(2);
+        sidebarItems.forEach(item => {
+          const itemHash = item.firstChild.getAttribute('href').substring(2);
+          if (itemHash === currentHash) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+        return content;
       },
     }
   </script>
