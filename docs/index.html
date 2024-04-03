@@ -16,22 +16,34 @@
       repo: 'OracularIS/autest',
       homepage: 'readme.md',
       coverpage: true,
-      search: 'auto', // default,
+      search: 'auto',
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
-       // complete configuration parameters
+      // Add a custom script to update the sidebar based on the currently selected test
+      executeScript: true,
+      // Add a custom script to update the sidebar based on the currently selected test
+      beforeEach: function (content) {
+        const selectedTestId = content.replace('.md', ''); // Assuming the file name is the test ID
+        const sidebar = document.querySelector('.sidebar-nav');
+        if (sidebar) {
+          const sidebarItems = sidebar.querySelectorAll('li');
+          sidebarItems.forEach(item => {
+            if (item.textContent.trim() === selectedTestId) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          });
+        }
+        return content;
+      },
       search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto', // or 'auto'
+        maxAge: 86400000,
+        paths: 'auto',
         placeholder: 'Type to search',
-              // Headline depth, 1 - 6
         depth: 6,
-
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-
-        // To avoid search index collision
-        // between multiple websites under the same domain
+        hideOtherSidebarContent: false,
         namespace: 'smart-automated-test',
       },
     }
