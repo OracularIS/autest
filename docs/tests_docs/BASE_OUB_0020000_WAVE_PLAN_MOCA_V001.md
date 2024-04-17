@@ -124,7 +124,7 @@ the rule that defines the parameters by which to search for orders or
 shipments. Click **Search**. The orders or shipments that meet the
 search criteria are displayed.
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image4.png)}
+![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image4.png)
 
 **Step:5**
 
