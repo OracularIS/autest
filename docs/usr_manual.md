@@ -112,6 +112,14 @@ Inventory move is a fundamental operation where inventory is transferred from on
 
  **Overview:** 
 
+Moving a load from one location to another within a warehouse is a critical task in logistics management. This operation involves safely transporting the load while ensuring minimal disruption to warehouse operations.  
+#### View-test
+[BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md)
+
+---
+
+ **Overview:** 
+
 Copying an existing inbound order within a system involves duplicating an established order's details to streamline the process of creating a similar transaction. This functionality is beneficial when dealing with recurrent or similar orders, saving time, and ensuring consistency.
 #### View-test
  [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
