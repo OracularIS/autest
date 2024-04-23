@@ -20,6 +20,8 @@ Unlock the efficiency of your warehouse with Blue Yonder's Wave Release feature.
 #### View-test
 [BASE_OUB_0040000_WAIT_REL_MOCA_V001](./tests_docs/BASE_OUB_0040000_WAIT_REL_MOCA_V001.md)
 
+---
+
 **Overview:** 
 
 List picking involves the process of fulfilling customer orders by selecting and collecting items from the warehouse based on a generated picking list. This list is dynamically created, considering factors such as inventory levels, order priorities, and optimal picking routes. The software aims to optimize the efficiency of the picking process by organizing items in a logical sequence, reducing travel time for warehouse personnel.
