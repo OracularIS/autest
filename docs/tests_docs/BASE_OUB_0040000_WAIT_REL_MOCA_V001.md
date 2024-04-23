@@ -1,11 +1,13 @@
-# **BASE_OUB_0020000_WAVE_PLAN_MOCA_V001**
+# **BASE_OUB_0040000_WAIT_REL_MOCA_V001**
 
 
 <!-- SMART_DOC_GEN_TEST_DESCR - Start -->
-The BASE tests that create orders, set ord.wave_set column.  This test builds upon that and plans a wave for the wave set.  So this allows for a mechanism to combine multiple orders into a single wave.
+This test builds upon the concepts of other BASE outbound tests.  It will wait for the allocated wave to become completely released - so the core idea is that it is waiting for the pick release manager to do its job.
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
+
 ## **Test Category**
+
 
 **☐** Custom
 
@@ -14,20 +16,11 @@ The BASE tests that create orders, set ord.wave_set column.  This test builds up
 **🗹** Standard
 
 ## **Overview**
-The initial stage in inventory allocation for outbound orders or
-shipments involves meticulously planning them into a wave. Prior to
-allocation, all orders must be seamlessly integrated into a wave
-structure. Facilitating this process is the Outbound Planner module,
-designed to streamline warehouse operations comprehensively.
+Wave release is a crucial step in the warehouse management process, where batches of orders are released for processing. This release typically follows the wave planning stage and involves assigning orders to specific picking areas or zones within the warehouse. 
 
-This module enables users to effectively adjust inventory, process
-orders, manage shipments, and perform various other essential functions.
-It serves as a pivotal tool in enhancing warehouse efficiency, ensuring
-smooth operations, and ultimately boosting productivity.
+During wave release, the system generates pick tasks based on the assigned zones, ensuring that orders are efficiently picked, packed, and shipped. This process helps to optimize warehouse operations by maximizing picking efficiency and minimizing travel time within the warehouse.
 
-The test scenario outlined is focused on planning multiple orders that
-are part of a wave set, consolidating them into a singular wave for
-efficient management.
+By releasing waves of orders in a controlled and systematic manner, businesses can ensure that orders are processed in a timely fashion, leading to improved order fulfillment rates and customer satisfaction.
 
 ## **Applicable versions**
 
@@ -48,14 +41,13 @@ sets of data or configurations. The input is as follows:
 <!-- SMART_DOC_GEN_TEST_ARG - Start -->
 <table>
 <tr><th>Arguments</th><th>Argument Description</th></tr>
-<tr><td>client_id</td><td>If not specified, we use the client_id from the first order in the wave set.</td></tr>
-<tr><td>schbat</td><td>What scheduling batch should we create? If not specified, we use uc_schbat_expr to determine it.</td></tr>
-<tr><td>uc_schbat_expr</td><td>If a specific scheduling batch is not given, we default it to ‘ADATAW-‘ || @uc_test_exec_seqnum</td></tr>
+<tr><td>schbat</td><td>What is the schbat we should create. If not passed in we use the uc_schbat_expr to come up with it</td></tr>
+<tr><td>uc_max_iter</td><td>To avoid infinite loop, we cap the # iterations. Default is 1000</td></tr>
+<tr><td>uc_schbat_expr</td><td>If explicit schbat is not passed. We will default it using "ADATAW" || @uc_test_exec_seqnum</td></tr>
+<tr><td>uc_sleep_ms_after_r_before_list_check</td><td>When we are doing list, pckwrk goes to R temporarily and then to L – so to avoid getting wrong R, once it detects all pckwrk in R – wait for this many milli-seconds before looking for lists. Default is 10000</td></tr>
+<tr><td>uc_sleep_ms_each_iter</td><td>It provides a pattern for load numbers to move.</td></tr>
 <tr><td>uc_test_exec_seqnum</td><td>During each run, it generates unique base-36 value.</td></tr>
-<tr><td>uc_wave_rule_nam</td><td>What wave rule are we going to use? For Alcon default is PUWH1 – but our test itself cannot have a default</td></tr>
-<tr><td>uc_wave_set_expr</td><td>If no wave set is provided, we default to creating one with the expression ‘AW’ || @uc_test_exec_seqnum</td></tr>
-<tr><td>wave_set</td><td>If not provided, we use our default value.</td></tr>
-<tr><td>wh_id</td><td>If not specified, we use the first order from the wave set.</td></tr>
+<tr><td>Wh_id</td><td>If not passed in, we see first shipment line in the wave and select the wh_id from there.</td></tr>
 </table>
 <!-- SMART_DOC_GEN_TEST_ARG - End -->
 
@@ -67,7 +59,6 @@ This section provides a comprehensive list of test cases that are associated wit
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - Start -->
 | Test Case ID | Test Case Description |
 | ------------ | --------------------- |
-| BASE_ALL_GEN | null |
 
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - End -->
 
@@ -80,11 +71,12 @@ This section details the various RunSets that utilize this test as part of their
 | Run Set ID | Run Set Description |
 | ---------- | ------------------- |
 | BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
+| BASE_OUB_000100_CREATE_TO_DISPATCH_USING_FRONT_END | create order, plan, allocate (web), release, pick, dispatch |
 | BASE_OUB_001000_TRAFFIC_PLAN_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
-## **Equivalent Usecase**
+**Equivalent Usecase**
 
 The following steps represent a general procedure for planned wave
 through GUI.
@@ -93,19 +85,19 @@ through GUI.
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image1.png)
+![](BASE_OUB_0040000_WAIT_REL_MOCA_V001/image1.png)
 
 **Step:2**
 
-Click on the **\'Wave and Pick\'** screen.
+Click on the **'Wave and Pick'** screen.
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image2.png)
+![](BASE_OUB_0040000_WAIT_REL_MOCA_V001/image2.png)
 
 **Step:3**
 
 From the **Actions **drop-down list, select **Plan Wave.**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image3.png)
+![](BASE_OUB_0040000_WAIT_REL_MOCA_V001/image3.png)
 
 **Step:4**
 
@@ -114,13 +106,13 @@ the rule that defines the parameters by which to search for orders or
 shipments. Click **Search**. The orders or shipments that meet the
 search criteria are displayed.
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image4.png)}
+![](BASE_OUB_0040000_WAIT_REL_MOCA_V001/image4.png)
 
 **Step:5**
 
 Click **Plan Wave.**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image5.png)
+![](BASE_OUB_0040000_WAIT_REL_MOCA_V001/image5.png)
 
 ## **Applicable MOCA commands**
 

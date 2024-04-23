@@ -1,8 +1,8 @@
-# **BASE_OUB_0020000_WAVE_PLAN_MOCA_V001**
+# **BASE_OUB_0020100_WAVE_PLAN_WEB_V001**
 
 
 <!-- SMART_DOC_GEN_TEST_DESCR - Start -->
-The BASE tests that create orders, set ord.wave_set column.  This test builds upon that and plans a wave for the wave set.  So this allows for a mechanism to combine multiple orders into a single wave.
+Plan a wave using web screen
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
 ## **Test Category**
@@ -50,10 +50,10 @@ sets of data or configurations. The input is as follows:
 <tr><th>Arguments</th><th>Argument Description</th></tr>
 <tr><td>client_id</td><td>If not specified, we use the client_id from the first order in the wave set.</td></tr>
 <tr><td>schbat</td><td>What scheduling batch should we create? If not specified, we use uc_schbat_expr to determine it.</td></tr>
-<tr><td>uc_schbat_expr</td><td>If a specific scheduling batch is not given, we default it to ‘ADATAW-‘ || @uc_test_exec_seqnum</td></tr>
-<tr><td>uc_test_exec_seqnum</td><td>During each run, it generates unique base-36 value.</td></tr>
-<tr><td>uc_wave_rule_nam</td><td>What wave rule are we going to use? For Alcon default is PUWH1 – but our test itself cannot have a default</td></tr>
-<tr><td>uc_wave_set_expr</td><td>If no wave set is provided, we default to creating one with the expression ‘AW’ || @uc_test_exec_seqnum</td></tr>
+<tr><td>uc_schbat_expr</td><td>If a specific scheduling batch is not given, we default it to 'ADATAW-' || @uc_test_exec_seqnum.</td></tr>
+<tr><td>uc_test_exec_seqnum</td><td>During each run, it generates a unique base-36 value.</td></tr>
+<tr><td>uc_wave_rule_nam</td><td>What wave rule are we going to use? For Alcon, the default is PUWH1 – but our test itself cannot have a default.</td></tr>
+<tr><td>uc_wave_set_expr</td><td>If no wave set is provided, we default to creating one with the expression 'AW' || @uc_test_exec_seqnum.</td></tr>
 <tr><td>wave_set</td><td>If not provided, we use our default value.</td></tr>
 <tr><td>wh_id</td><td>If not specified, we use the first order from the wave set.</td></tr>
 </table>
@@ -79,8 +79,7 @@ This section details the various RunSets that utilize this test as part of their
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - Start -->
 | Run Set ID | Run Set Description |
 | ---------- | ------------------- |
-| BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
-| BASE_OUB_001000_TRAFFIC_PLAN_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
+| BASE_OUB_000100_CREATE_TO_DISPATCH_USING_FRONT_END | create order, plan, allocate (web), release, pick, dispatch |
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
@@ -93,19 +92,19 @@ through GUI.
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image1.png)
+![](BASE_OUB_0020100_WAVE_PLAN_WEB_V001/image1.png)
 
 **Step:2**
 
 Click on the **\'Wave and Pick\'** screen.
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image2.png)
+![](BASE_OUB_0020100_WAVE_PLAN_WEB_V001/image2.png)
 
 **Step:3**
 
 From the **Actions **drop-down list, select **Plan Wave.**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image3.png)
+![](BASE_OUB_0020100_WAVE_PLAN_WEB_V001/image3.png)
 
 **Step:4**
 
@@ -114,13 +113,13 @@ the rule that defines the parameters by which to search for orders or
 shipments. Click **Search**. The orders or shipments that meet the
 search criteria are displayed.
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image4.png)}
+![](BASE_OUB_0020100_WAVE_PLAN_WEB_V001/image4.png)}
 
 **Step:5**
 
 Click **Plan Wave.**
 
-![](BASE_OUB_0020000_WAVE_PLAN_MOCA_V001/image5.png)
+![](BASE_OUB_0020100_WAVE_PLAN_WEB_V001/image5.png)
 
 ## **Applicable MOCA commands**
 
@@ -143,6 +142,3 @@ picking and processing in a warehouse environment.
 
 
 [SMART-IS](https://www.smart-is.pk) 
-
-
-
