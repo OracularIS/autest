@@ -26,11 +26,15 @@ List picking involves the process of fulfilling customer orders by selecting and
 #### View-test
  [BASE_OUB_0050000_LIST_PICK_MOCA_V001](./tests_docs/BASE_OUB_0050000_LIST_PICK_MOCA_V001.md)
 
+---
+
 **Overview:** 
 
 In this concept, picked inventory will be transported through a series of hops, representing different stages or locations in the warehouse or distribution center. Each hop signifies a step in the process where the inventory moves closer to its destination, such as from picking to packing or from one area of the warehouse to another. This approach streamlines the movement of inventory by breaking down the process into smaller, manageable steps, ensuring that inventory is efficiently transferred and processed at each hop.
 #### View-test
  [BASE_OUB_0060000_PICK_HOP_MOCA_V001](./tests_docs/BASE_OUB_0060000_PICK_HOP_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -38,11 +42,15 @@ To implement this use case effectively, the system needs to have a robust mechan
 #### View-test
  [BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 In this innovative approach, Material Handling Equipment (MHE) is employed to efficiently execute order picking tasks within a specified wave, following the established standards of Smart IS implementations. By leveraging MHE capabilities, this method enhances order picking processes, ensuring accuracy and efficiency in warehouse operations. This approach integrates seamlessly with Smart IS systems, providing a reliable and standardized solution for order fulfillment within warehouse environments.
 #### View-test
  [BASE_OUB_0050A00_MHE_SMART_PICK_MOCA_V001](./tests_docs/BASE_OUB_0050A00_MHE_SMART_PICK_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -50,11 +58,15 @@ This implementation builds on the foundation of Smart IS principles, ensuring th
 #### View-test
  [BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001](./tests_docs/BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 In this innovative approach, the selection of inventory for shipment precedes the determination of whether pallet building is suitable for packing. This method involves first selecting items from the available inventory and subsequently assessing their compatibility for pallet packing. By prioritizing inventory selection over the determination of the packing method, this process optimizes the efficiency of the packing process.
 #### View-test
  [BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001](./tests_docs/BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -62,11 +74,15 @@ In the described use case, the system is designed to wait for an order to be dis
 #### View-test
  [BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 Copying an existing order within a system involves duplicating an established order's details to streamline the process of creating a similar transaction. This functionality is beneficial when dealing with recurrent or similar orders, saving time, and ensuring consistency. To initiate this action, the user typically needs to identify the existing order they want to replicate.
 #### View-test
  [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -74,11 +90,15 @@ This represents subcontracting process in a system like SAP. It takes an order w
 #### View-test
  [BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001](./tests_docs/BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 Create multiple pallets in a location. The destination location is created by copying a template location - this provides a way to seggregate inventory for each test run. The inventory characteristics and pallet count are passed in.
 #### View-test
  [BASE_INV_CREATE_MOCA_V001](./tests_docs/BASE_INV_CREATE_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -86,11 +106,15 @@ Inventory move is a fundamental operation where inventory is transferred from on
 #### View-test
  [BASE_INV_MOVE_MOCA_V001](./tests_docs/BASE_INV_MOVE_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 Copying an existing inbound order within a system involves duplicating an established order's details to streamline the process of creating a similar transaction. This functionality is beneficial when dealing with recurrent or similar orders, saving time, and ensuring consistency.
 #### View-test
  [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -98,11 +122,15 @@ In the described use case, the system is designed to manage the process of check
 #### View-test
  [BASE_INB_0002100_TRLR_CKIN_MOCA_V001](./tests_docs/BASE_INB_0002100_TRLR_CKIN_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 This test represents a typical Smart IS extension for representing MHE systems. It takes the inventory that was created earlier by the BASE_INV_CREATE_MOCA test (in a generated location). It then calls a command to emulate the movement into the MHE system for the loads in that location.
 #### View-test
  [BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001](./tests_docs/BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001.md)
+
+---
 
  **Overview:** 
 
@@ -110,11 +138,15 @@ In the described use case, the system is designed to manage the process of closi
 #### View-test
  [BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001.md)
 
+---
+
  **Overview:** 
 
 The initial stage in inventory allocation for outbound orders or shipments involves meticulously planning them into a wave. Prior to allocation, all orders must be seamlessly integrated into a wave structure. Facilitating this process is the Outbound Planner module, designed to streamline warehouse operations comprehensively.
 #### View-test
  [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md)
+
+---
 
  **Overview:** 
 
@@ -122,8 +154,12 @@ Wave allocation is a strategic process that involves grouping orders together to
 #### View-test
  [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md)
 
+---
+
  **Overview:** 
 
 The initial stage in inventory allocation for outbound orders or shipments involves meticulously planning them into a wave. Prior to allocation, all orders must be seamlessly integrated into a wave structure. Facilitating this process is the Outbound Planner module, designed to streamline warehouse operations comprehensively.
 #### View-test
  [BASE_OUB_0035100_WAVE_REL_WEB_V001](./tests_docs/BASE_OUB_0035100_WAVE_REL_WEB_V001.md)
+
+---
