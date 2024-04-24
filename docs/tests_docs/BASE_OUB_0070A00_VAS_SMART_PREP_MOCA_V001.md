@@ -111,5 +111,12 @@ When Smart VAS Pack Prep are created, the following database table is typically 
 
 These updates ensure that the system maintains accurate records of inventory and locations affected by the Smart VAS Pack Prep creation process, enabling efficient tracking and management of inventory levels and locations.
 
+---
+
+**Previous-Test**
+ [BASE_OUB_0050A00_MHE_SMART_PICK_MOCA_V001](./tests_docs/BASE_OUB_0050A00_MHE_SMART_PICK_MOCA_V001.md)
+ 
+**Next-Test**
+  [BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001](./tests_docs/BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001.md)
 
 [SMART-IS](https://www.smart-is.pk) 

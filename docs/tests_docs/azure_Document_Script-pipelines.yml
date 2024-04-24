@@ -7,29 +7,30 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '14.x'  # Updated Node.js version to 14.x
+    versionSpec: '18.x'  # Updated Node.js version to 18.x to meet the requirements of all dependencies
   displayName: 'Install Node.js'
 
+- script: node --version  # Print Node.js version
+  displayName: 'Print Node.js version'
+
+# Add a step to clone the Azure DevOps repository
+- checkout: self
+
 - script: |
-    cd .Script_DevOps_Dynamic_Document  # Navigate to the script directory
-    npm install  # Install project dependencies using npm
-    # Assuming test.js is your entry script file, replace it with your actual script filename
+    cd .Script_DevOps_Dynamic_Document
+    npm install
     node test.js  
   displayName: 'Run Node.js script'
 
 - script: |
+    cd .Script_DevOps_Dynamic_Document  # Change directory to .Script_DevOps_Dynamic_Document
     npm install  # Install project dependencies
   displayName: 'Install Dependencies'
 
 - script: |
-    cd .Script_DevOps_Dynamic_Document  # Navigate to the script directory
-    npm install  # Install project dependencies
-  displayName: 'Install Dependencies and Fix Missing Modules'
-
-- script: |
-    npm install  # Install project dependencies
-    npm audit  # Run npm audit to review any compatibility warnings or errors
-  displayName: 'Install Dependencies and Review Compatibility Warnings'
+    cd .Script_DevOps_Dynamic_Document  # Change directory to .Script_DevOps_Dynamic_Document
+    npm audit  # Review compatibility warnings or errors
+  displayName: 'Review Compatibility Warnings'
 
 - script: |
     # Your additional testing steps here

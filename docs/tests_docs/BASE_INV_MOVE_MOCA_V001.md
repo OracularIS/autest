@@ -139,7 +139,14 @@ command.
  These tables are crucial for tracking inventory movement and within
  the warehouse management system.
 
+---
 
+ **Previous-Test**
+ [BASE_INV_CREATE_MOCA_V001](./tests_docs/BASE_INV_CREATE_MOCA_V001.md)
+ 
+**Next-Test**
+  [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md)
+  
 
 [SMART-IS](https://www.smart-is.pk) 
 

@@ -148,5 +148,12 @@ typically affected:
 These tables are integral components of the inventory management system
 and are essential for tracking and summarizing inventory data.
 
+---
+
+ **Previous-Test**
+ [BASE_INB_0002100_TRLR_CKIN_MOCA_V001](./tests_docs/BASE_INB_0002100_TRLR_CKIN_MOCA_V001.md)
+ 
+ **Next-Test**
+  [BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001.md)
 
 [SMART-IS](https://www.smart-is.pk) 

@@ -119,4 +119,11 @@ The following database table is typically affected while check IN:
 
 These tables are likely to be affected to ensure proper tracking and management of the check in trailors.
 
+---
+ **Previous-Test**
+ [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
+ 
+ **Next-Test**
+  [BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001](./tests_docs/BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001.md)
+  
 [SMART-IS](https://www.smart-is.pk) 

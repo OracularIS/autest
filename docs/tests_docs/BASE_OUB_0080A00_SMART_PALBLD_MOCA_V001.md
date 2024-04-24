@@ -121,5 +121,11 @@ When Smart pallet build is created, the following database table is typically af
 
 This table likely contains information related to the work or tasks associated with building the pallets, such as the items to be included, quantities, locations, and other relevant details.
 
-
+---
+**Previous-Test**
+ [BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001](./tests_docs/BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001.md)
+ 
+**Next-Test**
+  [BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.md)
+  
 [SMART-IS](https://www.smart-is.pk) 

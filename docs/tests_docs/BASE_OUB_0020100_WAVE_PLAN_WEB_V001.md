@@ -140,5 +140,12 @@ affected:
 This table contains information about the planning waves for efficient
 picking and processing in a warehouse environment.
 
+---
 
+ **Previous-Test**
+ [BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001.md)
+ 
+**Next-Test**
+  [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md)
+  
 [SMART-IS](https://www.smart-is.pk) 

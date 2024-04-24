@@ -110,4 +110,12 @@ The following database table is typically affected while dispatching the order:
 
 These tables are likely to be affected to ensure proper tracking and management of the dispatch process and associated trucks.
 
+---
+
+**Previous-Test**
+ [BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001](./tests_docs/BASE_INB_0004A00_MHE_SMART_PUT_MOCA_V001.md)
+ 
+**Next-Test**
+  [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md)
+  
 [SMART-IS](https://www.smart-is.pk) 
