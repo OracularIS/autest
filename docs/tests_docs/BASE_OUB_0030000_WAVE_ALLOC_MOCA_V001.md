@@ -166,12 +166,12 @@ affected:
 These tables are crucial for tracking inventory movement and allocation
 within the warehouse management system.
 
+---
 
-
--   **Previous-Test**
+**Previous-Test**
 [BASE_OUB_0020000_WAVE_PLAN_MOCA_V001](./tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md)
 
--   **Next-Test**
+**Next-Test**
 [BASE_OUB_0040000_WAIT_REL_MOCA_V001](./tests_docs/BASE_OUB_0040000_WAIT_REL_MOCA_V001.md)
 
 [SMART-IS](https://www.smart-is.pk) 
