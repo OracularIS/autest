@@ -168,12 +168,10 @@ within the warehouse management system.
 
 
 
-[SMART-IS](https://www.smart-is.pk) 
-
 -   **Previous-Test**
 [BASE_OUB_0020000_WAVE_PLAN_MOCA_V001](./tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md)
 
--   **Previous-Test**
+-   **Next-Test**
 [BASE_OUB_0040000_WAIT_REL_MOCA_V001](./tests_docs/BASE_OUB_0040000_WAIT_REL_MOCA_V001.md)
 
-
+[SMART-IS](https://www.smart-is.pk) 
