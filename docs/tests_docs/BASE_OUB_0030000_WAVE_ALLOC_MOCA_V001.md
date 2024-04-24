@@ -170,6 +170,8 @@ within the warehouse management system.
 
 [SMART-IS](https://www.smart-is.pk) 
 
+[Previous-Test](/tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md) 
+[Next-Test](/tests_docs/BASE_OUB_0040000_WAIT_REL_MOCA_V001.md)
 
 
 
