@@ -2,6 +2,7 @@
 
 
 <!-- SMART_DOC_GEN_TEST_DESCR - Start -->
+This test builds on other BASE outbound tests.  The test will wait for the outbound order to be completely dispatched.
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
 ## **Test Category**
@@ -32,6 +33,18 @@ sets of data or configurations. The input is as follows:
 
 
 <!-- SMART_DOC_GEN_TEST_ARG - Start -->
+<table>
+<tr><th>Arguments</th><th>Argument Description</th></tr>
+<tr><td>ordnum</td><td>Order number.</td></tr>
+<tr><td>schbat</td><td>This parameter specifies the schbat to create. If it is not passed, the uc_schbat_expr expression is used to determine its value.</td></tr>
+<tr><td>ship_id</td><td>Can pass in an explicit ship_id if needed.</td></tr>
+<tr><td>uc_max_iter</td><td>To avoid an infinite loop, we cap the number of iterations. The default is 1000.</td></tr>
+<tr><td>uc_sleep_ms_each_iter</td><td>It provides a pattern for load numbers to move.</td></tr>
+<tr><td>uc_test_exec_seqnum</td><td>During each run, it generates a unique base-36 value.</td></tr>
+<tr><td>uc_wave_set_expr</td><td>To locate data for the test run, set a default wave set. Default is as we used during order creation, i.e., "AW" || @uc_test_exec_seqnum.</td></tr>
+<tr><td>wave_set</td><td>You can explicitly pass in a wave set for specific cases.</td></tr>
+<tr><td>wh_id</td><td>This refers to the warehouse ID.</td></tr>
+</table>
 <!-- SMART_DOC_GEN_TEST_ARG - End -->
 
 ## **TestCases using this test**
@@ -40,6 +53,10 @@ This section provides a comprehensive list of test cases that are associated wit
 
 
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - Start -->
+| Test Case ID | Test Case Description |
+| ------------ | --------------------- |
+| BASE_ALL_GEN | null |
+
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - End -->
 
 ## **RunSets using this test**
@@ -48,6 +65,12 @@ This section details the various RunSets that utilize this test as part of their
 
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - Start -->
+| Run Set ID | Run Set Description |
+| ---------- | ------------------- |
+| BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
+| BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
+| BASE_OUB_000100_CREATE_TO_DISPATCH_USING_FRONT_END | create order, plan, allocate (web), release, pick, dispatch |
+
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
 ## **Equivalent Usecase**
