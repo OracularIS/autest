@@ -1,34 +1,4 @@
-# **BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001**
 
-
-<!-- SMART_DOC_GEN_TEST_DESCR - Start -->
-Close and dispatch a shipping trailer
-<!-- SMART_DOC_GEN_TEST_DESCR - End -->
-
-## **Test Category**
- the test
-
-
-## **TestCases using this test**
-
-This section provides a comprehensive list of test cases that are associated with this particular test. It provides a quick reference for understanding the specific tests covered. By reviewing these test cases, users can gain a deeper understanding of how this test is used in different scenarios and ensure comprehensive test coverage.
-
-
-<!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - Start -->
-| Test Case ID | Test Case Description |
-| ------------ | --------------------- |
-| BASE_ALL_GEN | null |
-
-<!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - End -->
-
-## **RunSets using this test**
-
-This section details the various RunSets that utilize this test as part of their execution. Each RunSet represents a collection of tests and configurations that are executed together to achieve specific testing goals. By examining the RunSets that include this test, users can understand how it fits into larger testing scenarios and how it contributes to overall test coverage and automation.
-
-
-<!-- SMART_DOC_GEN_RUN_SET_USING_THIS - Start -->
-| Run Set ID | Run Set Description |
-| ---------- | ------------------- |
 | BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
 | BASE_OUB_001000_TRAFFIC_PLAN_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
 
