@@ -1,28 +1,6 @@
 
 | BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
-| BASE_OUB_001000_TRAFFIC_PLAN_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
-
-<!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
-
-## **Equivalent Usecase**
-
-The following steps represent a general procedure for dispatched order through GUI.
-
-**Step:1**
-
-Select **Configuration** > **Outbound Planner**
-
-![](BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001.png)
-
-**Step:2**
-
-Click on the **'Wave and Pick'** screen.
-
-![](BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001/image2.png)
-
-**Step:3**
-
-From the **Actions** drop-down list, select **Plan Wave.**
+| BA
 
 ![](BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001/image3.png)
 
