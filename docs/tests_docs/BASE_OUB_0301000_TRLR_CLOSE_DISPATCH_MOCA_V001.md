@@ -6,41 +6,8 @@ Close and dispatch a shipping trailer
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
 ## **Test Category**
+ the test
 
-**☐** Custom  
-**☐** Smart IS  
-hello
-**🗹** Standard  
-
-## **Overview**
-
-In the described use case, the system is designed for a trailer to be closed for dispatch, indicating a process that involves monitoring the status of a trailer until it reaches the "closed" state. This process likely involves a system that tracks trailers and their statuses, possibly interfacing with other systems or components that handle the actual closing and dispatching process. The waiting mechanism may involve periodic checks of the trailer status or subscribing to notifications or events that indicate when a trailer has been closed for dispatch. This functionality is crucial for ensuring that downstream processes or actions dependent on the trailer being closed for dispatch are triggered at the right time.
-
-To implement this use case effectively, the system needs to have a robust mechanism for tracking and managing trailer statuses. It should be able to handle various scenarios, such as delays or errors in the closing and dispatch process, and provide visibility into the status of each trailer.
-## **Applicable versions**
-
-This test is designed to support versions greater than **2008.x.x**,
-ensuring compatibility and smooth operation with the latest software
-releases. Users can confidently utilize this test, as it is optimized
-for newer versions while retaining a user-friendly testing process.
-
-## **Test Arguments**
-
-Test arguments are parameters or inputs that are passed to the test
-cases to customize the test execution. These arguments provide
-flexibility and allow for the reuse of the same test case with different
-sets of data or configurations. The input is as follows:
-
-
-<!-- SMART_DOC_GEN_TEST_ARG - Start -->
-<table>
-<tr><th>Arguments</th><th>Argument Description</th></tr>
-<tr><td>schbat</td><td>This parameter specifies the schbat to create. If it is not passed, the uc_schbat_expr expression is used to determine its value.</td></tr>
-<tr><td>uc_schbat_expr</td><td>If an explicit schbat is not passed, this expression is used to default it. The expression seems to concatenate the string 'ADATAW-' with the value of uc_test_exec_seqnum.</td></tr>
-<tr><td>uc_test_exec_seqnum</td><td>During each run, it generates a unique base-36 value.</td></tr>
-<tr><td>wh_id</td><td>If this parameter is not passed, the system should use the first shipment line in the wave to determine its value.</td></tr>
-</table>
-<!-- SMART_DOC_GEN_TEST_ARG - End -->
 
 ## **TestCases using this test**
 
