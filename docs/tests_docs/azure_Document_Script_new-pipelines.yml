@@ -1,0 +1,37 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'  # Updated Node.js version to 18.x to meet the requirements of all dependencies
+  displayName: 'Install Node.js'
+
+- script: node --version  # Print Node.js version
+  displayName: 'Print Node.js version'
+
+# Add a step to clone the Azure DevOps repository
+- checkout: self
+
+- script: |
+    cd .Script_DevOps_Dynamic_Document
+    npm install
+    node test.js  
+  displayName: 'Run Node.js script'
+
+- script: |
+    cd .Script_DevOps_Dynamic_Document  # Change directory to .Script_DevOps_Dynamic_Document
+    npm install  # Install project dependencies
+  displayName: 'Install Dependencies'
+
+- script: |
+    cd .Script_DevOps_Dynamic_Document  # Change directory to .Script_DevOps_Dynamic_Document
+    npm audit  # Review compatibility warnings or errors
+  displayName: 'Review Compatibility Warnings'
+
+- script: |
+    # Your additional testing steps here
+  displayName: 'Test and Iterate'
