@@ -7,11 +7,12 @@
 
 ## **Test Category**
 
-**☐** Custom
+<input type="checkbox"> Standard
+<br>
+<input type="checkbox"> Custom
+<br>
+<input type="checkbox" checked> Smart IS
 
-**🗹** Smart IS
-
-**☐** Standard
 
 ## **Overview**
 
