@@ -2,7 +2,7 @@
   <h2>Overview</h2>
 <p style="font-size: large; text-align: left;">Boost your business with Smart testing. Streamline operations, improve decisions, and drive growth. Enhance integration, optimize performance, and ensure security. See the Smart difference. Stay ahead of the competition with our Smart testing suite. Ensure your systems provide a seamless experience for customers. From UI testing to data security, our suite has you covered. Build trust and loyalty among your customer base. Maximize efficiency with Smart testing. Minimize errors, boost productivity, and stay competitive. Manage inventory, orders, and shipments effortlessly. Simplify complex processes with our Smart testing suite. Enhance collaboration, implement tests effectively, and scale to meet your needs. Empower your team and revolutionize your testing approach with Smart suite.</p>
 
-| Test | Overview |
+| Tests | Descriptions |
 |-----------|----------|
 | [BASE_OUB_0020000_WAVE_PLAN_MOCA_V001](./tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md) | Planning multiple orders into a wave for efficient management. |
 | [BASE_OUB_0030000_WAVE_ALLOC_MOCA_V001](./tests_docs/BASE_OUB_0030000_WAVE_ALLOC_MOCA_V001.md) | Optimizing order processing, reducing costs, and enhancing customer satisfaction through wave allocation. |
@@ -27,3 +27,6 @@
 | [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md) | Planning orders into a wave for efficient management. |
 | [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md) | Grouping orders together to streamline handling and improve operational efficiency. |
 | [BASE_OUB_0035100_WAVE_REL_WEB_V001](./tests_docs/BASE_OUB_0035100_WAVE_REL_WEB_V001.md) | Integrating orders into a wave structure to streamline warehouse operations. |
+| [BASE_OUB_0200000_TRLR_CKIN_MOCA_V001](./tests_docs/BASE_OUB_0200000_TRLR_CKIN_MOCA_V001.md) | Managing the process of checking in transport equipment. |
+| [BASE_OUB_0090000_STAGE_MOCA_V001](./tests_docs/BASE_OUB_0090000_STAGE_MOCA_V001.md) | Ensuring shipments are fully picked and in a staging lane before staging. |
+| [BASE_OUB_0250000_TRLR_LOAD_MOCA_V001](./tests_docs/BASE_OUB_0250000_TRLR_LOAD_MOCA_V001.md) | Assigning staged shipments to stops in an outbound load for loading. |
