@@ -10,4 +10,4 @@
 - **Flexibility and Efficiency:** Whether it's a single test or a group of tests, AuTest offers unlimited possibilities for flexible testing. With support for GUI and RF tests, you can focus on testing, not data recreation.
 
 [AuTest Demo](https://www.smart-is.com/what-we-do/smart-product/autest/)
-[User Guide](./usr_manual.md)
+[User Guide](./_sidebar.md)
