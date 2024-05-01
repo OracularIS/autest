@@ -1,6 +1,6 @@
 <div>
   <h2>Overview</h2>
-  <p style="font-size: large; text-align: left;">Boost your business with Smart testing. Streamline operations, improve decisions, and drive growth. Enhance integration, optimize performance, and ensure security. See the Smart difference. Stay ahead of the competition with our Smart testing suite. Ensure your systems provide a seamless experience for customers. From UI testing to data security, our suite has you covered. Build trust and loyalty among your customer base. Maximize efficiency with Smart testing. Minimize errors, boost productivity, and stay competitive. Manage inventory, orders, and shipments effortlessly. Simplify complex processes with our Smart testing suite. Enhance collaboration, implement tests effectively, and scale to meet your needs. Empower your team and revolutionize your testing approach with Smart suite.</p>
+  <p style="font-size: large; text-align: left;">Smart Automated test is a cutting-edge automated testing tool that brings traditional testing up to speed. It handles important tasks like organizing data, checking screens, and creating tests, making testing smoother and faster. With its integration with Blue Yonder (BY)/JDA components, AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
 </div>
 
 | Tests | Descriptions |
