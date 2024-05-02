@@ -68,7 +68,7 @@ The following steps represent a general procedure for trailor load through GUI.
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0250000_TRLR_LOAD_MOCA_V001.png)
+![](BASE_OUB_0250000_TRLR_LOAD_MOCA_V001/image1.png)
 
 **Step:2**
 
