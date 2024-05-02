@@ -20,9 +20,10 @@ process could involve moving goods between different warehouses,
 distribution centers, or even within the same facility to optimize
 storage and accessibility. Blue Yonder provides tools and features to
 facilitate this movement seamlessly, allowing users to initiate and
-track the transfer of inventory with precision. By specifying the source
-and destination locations, users can manage the logistics of the move
-efficiently. The platform\'s real-time visibility and data analytics
+track the transfer of inventory with precision. 
+
+By specifying the source and destination locations, users can manage the logistics of the move
+efficiently. The platform's real-time visibility and data analytics
 ensure that businesses can make informed decisions during the inventory
 move process, contributing to better overall supply chain management and
 operational efficiency.
