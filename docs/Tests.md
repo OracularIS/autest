@@ -1,6 +1,14 @@
 <div>
   <h2>Overview</h2>
-  <p style="font-size: large; text-align: left;">Smart Automated test is a cutting-edge automated testing tool that brings traditional testing up to speed. It handles important tasks like organizing data, checking screens, and creating tests, making testing smoother and faster. With its integration with Blue Yonder (BY)/JDA components, AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
+  <p style="font-size: large; text-align: left;">Smart Automated test is a cutting-edge automated testing tool that brings traditional testing up to speed. It handles important tasks like organizing data, checking screens, and creating tests, making testing smoother and faster. With its integration with Blue Yonder (BY)/JDA components, AuTest is flexible and scalable, fitting perfectly into projects of any size.
+    
+ **Naming convention:** 
+ 
+  - BASE_INB focus on inbound processes
+  - BASE_INV focus on inventory processes
+  - BASE_OUB focus on outbound processes
+  
+  </p>
 </div>
 
 | Tests | Descriptions |
