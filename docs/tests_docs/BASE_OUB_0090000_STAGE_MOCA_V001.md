@@ -71,7 +71,7 @@ The following steps represent a general procedure for stage shipment through GUI
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0090000_STAGE_MOCA_V001.png)
+![](BASE_OUB_0090000_STAGE_MOCA_V001/image1.png)
 
 **Step:2**
 
