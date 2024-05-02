@@ -72,34 +72,34 @@ through GUI.
 
  Select **Configuration**  **Inventory**
 
-![](BASE_INV_MOV_MOCA_V001/image1.png)
+![](BASE_INV_MOVE_MOCA_V001/image1.png)
 
 **Step:2**
 Click on the **Inventory** screen.
 
-![](BASE_INV_MOV_MOCA_V001/image2.png)
+![](BASE_INV_MOVE_MOCA_V001/image2.png)
 
 **Step:3**
 Click on **LPN** tab.
 
-![](BASE_INV_MOV_MOCA_V001/image3.png)
+![](BASE_INV_MOVE_MOCA_V001/image3.png)
 
 **Step:4**
 
 Select the **specific LPN** you want to move. LPN will be shown in the
 column.
 
-![](BASE_INV_MOV_MOCA_V001/image4.png)
+![](BASE_INV_MOVE_MOCA_V001/image4.png)
 
 **Step:5**
 
 Go to the **Actions** tab and click on **Move Inventory**
 
-![](BASE_INV_MOV_MOCA_V001/image5.png)
+![](BASE_INV_MOVE_MOCA_V001/image5.png)
 **Note**: from the onsite tab, you can also select locations, and
 click on a location and select LPN to view the LPN in the location.
 
-![](BASE_INV_MOV_MOCA_V001/image6.png)
+![](BASE_INV_MOVE_MOCA_V001/image6.png)
 
 **Step:6**
 
