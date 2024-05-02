@@ -5,6 +5,7 @@
 Copy a template receive truck to a new one
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
+Sherazi ILU
 
 ## **Test Category**
 
