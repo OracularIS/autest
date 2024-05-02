@@ -72,7 +72,7 @@ The following steps represent a general procedure for check In trailor through G
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0200000_TRLR_CKIN_MOCA_V001.png)
+![](BASE_OUB_0200000_TRLR_CKIN_MOCA_V001/image1.png)
 
 **Step:2**
 
