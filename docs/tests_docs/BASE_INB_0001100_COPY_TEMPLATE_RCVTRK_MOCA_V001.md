@@ -84,7 +84,7 @@ Select **Configuration** > **recieving**
 
 **Step:2**
 
-n the grid, click the inbound shipment to which you want to add an order. The inbound shipment details are displayed.
+In the grid, click the inbound shipment to which you want to add an order. The inbound shipment details are displayed.
 
 ![](BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001/image2.png)
 
@@ -110,7 +110,6 @@ Click Add to Shipment. A planned inbound order is added to the shipment and assi
 To copy a order the following MOCA command you can use.
 
 -   **create_receive_invoice**
--   **uc_create_receive_invoice_line_ctxt_cmd**
 -   **uc_create_rcvlin_cmd**
 -   **create_asn_invsub**
 
