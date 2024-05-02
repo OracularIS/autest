@@ -130,7 +130,7 @@ following command.
 This command will trigger the move inventory to MHE location based on
 the predefined parameters and rules within the MOCA system.
 
-## **Affected DB tables
+## **Affected DB tables**
 
 When move inventory to MHE location, the following database tables are
 typically affected:
