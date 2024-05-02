@@ -73,7 +73,7 @@ The following steps represent a general procedure for dispatched order through G
 
 Select **Configuration** > **Outbound Planner**
 
-![](BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.png)
+![](BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001/image1.png)
 
 **Step:2**
 
