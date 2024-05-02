@@ -1,4 +1,4 @@
-# **BASE_INV_MOV_MOCA_V001**
+# **BASE_INV_MOVE_MOCA_V001**
 
 
 <!-- SMART_DOC_GEN_TEST_DESCR - Start -->
@@ -44,6 +44,14 @@ different sets of data or configurations. The input is as follows:
 <!-- SMART_DOC_GEN_TEST_ARG - Start -->
 <table>
 <tr><th>Arguments</th><th>Argument Description</th></tr>
+<tr><td>uc_dstloc</td><td>Specify where you want to move inventory from the source location.</td></tr>
+<tr><td>uc_dstloc_expr</td><td>If the destination location is not provided, this expression helps determine it. By default, it is 'AMOVLOC-' || @uc_test_exec_seqnum</td></tr>
+<tr><td>uc_max_load_cnt</td><td>Specify the maximum number of loads to move based on the source location and load number expression conditions. If not provided, all loads meeting the condition will be moved.</td></tr>
+<tr><td>uc_mov_lodnum_expr</td><td>It provides a pattern for load numbers to move.</td></tr>
+<tr><td>uc_srcloc</td><td>Optionally, indicate where you are taking inventory from.</td></tr>
+<tr><td>uc_srcloc_expr</td><td>If the source location is not provided, this expression helps determine it. By default, it is 'ADSTLOC-' || @uc_test_exec_seqnum</td></tr>
+<tr><td>uc_test_exec_seqnum</td><td>During each run, it generates a unique base-36 value.</td></tr>
+<tr><td>wh_id</td><td>Choose the warehouse where you want to perform actions.</td></tr>
 </table>
 <!-- SMART_DOC_GEN_TEST_ARG - End -->
 
