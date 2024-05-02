@@ -16,9 +16,10 @@ Move a load
 
 ## **Overview**
 
-**Overview:**
 
-Moving a load from one location to another within a warehouse is a critical task in logistics management. This operation involves safely transporting the load while ensuring minimal disruption to warehouse operations. The process includes planning the movement, coordinating with warehouse personnel, and updating the inventory system. It's essential to use the appropriate equipment and follow safety protocols to prevent damage to the load and ensure the safety of personnel. Efficiently executing load movements helps maintain warehouse efficiency and timely order fulfillment.
+Moving a load from one location to another within a warehouse is a critical task in logistics management. This operation involves safely transporting the load while ensuring minimal disruption to warehouse operations. The process includes planning the movement, coordinating with warehouse personnel, and updating the inventory system. 
+
+It's essential to use the appropriate equipment and follow safety protocols to prevent damage to the load and ensure the safety of personnel. Efficiently executing load movements helps maintain warehouse efficiency and timely order fulfillment.
 
 **Applicable versions**
 
