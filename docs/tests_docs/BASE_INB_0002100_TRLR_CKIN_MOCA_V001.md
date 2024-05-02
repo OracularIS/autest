@@ -79,7 +79,7 @@ The following steps represent a general procedure for check IN through GUI.
 
 Select **Configuration** > **Receiving**
 
-![](/docs/tests_docs/BASE_INB_0002100_TRLR_CKIN_MOCA_V001/image1.png)
+![](BASE_INB_0002100_TRLR_CKIN_MOCA_V001/image1.png)
 
 **Step:2**
 
