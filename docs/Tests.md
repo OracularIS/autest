@@ -3,11 +3,16 @@
   <p style="font-size: large; text-align: left;">Smart Automated test is a cutting-edge automated testing tool that brings traditional testing up to speed. It handles important tasks like organizing data, checking screens, and creating tests, making testing smoother and faster. With its integration with Blue Yonder (BY)/JDA components, AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
   <p><strong>Naming convention:</strong></p>
   <ul>
-    <li>BASE_INB focus on inbound processes.</li>
-    <li>BASE_INV focus on inventory processes.</li>
-    <li>BASE_OUB focus on outbound processes.</li>
+    <li>"BASE" indicates standard processes of Blue Yonder.</li>
+    <li>"SMART" indicates that implementation is per typical Smart IS implementations.</li>
+    <li>"INB", "INV" and "OUB" indicate the tests is related to inbound processes, inventory processes and outbound processes.</li>
+    <li>"0001100","0002100" represent a numeric process sequences identifier.</li>
+    <li>"COPY_TEMPLATE_RCVTRK","WAVE_PLAN" likely describe the specific functionality.</li>
+    <li>"MOCA", "WEB" and "RF" indicates that this is a MOCA-based test, WEB-based test and RF-based test</li>
+    <li>"V001" signifies the version of the test.</li>
   </ul>
 </div>
+
 
 
 | Tests | Descriptions |
