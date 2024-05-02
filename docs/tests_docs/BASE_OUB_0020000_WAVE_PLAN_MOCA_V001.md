@@ -2,16 +2,16 @@
 
 
 <!-- SMART_DOC_GEN_TEST_DESCR - Start -->
-The BASE tests that create orders, set ord.wave_set column.  This test builds upon that and plans a wave for the wave set.  So this allows for a mechanism to combine multiple orders into a single wave.
 <!-- SMART_DOC_GEN_TEST_DESCR - End -->
 
 ## **Test Category**
 
-**☐** Custom
+<input type="checkbox" checked disabled> Standard
+<br>
+<input type="checkbox" disabled> Custom
+<br>
+<input type="checkbox" disabled> Smart IS
 
-**☐** Smart IS
-
-**🗹** Standard
 
 ## **Overview**
 The initial stage in inventory allocation for outbound orders or
@@ -65,10 +65,6 @@ This section provides a comprehensive list of test cases that are associated wit
 
 
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - Start -->
-| Test Case ID | Test Case Description |
-| ------------ | --------------------- |
-| BASE_ALL_GEN | null |
-
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - End -->
 
 ## **RunSets using this test**
@@ -77,11 +73,6 @@ This section details the various RunSets that utilize this test as part of their
 
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - Start -->
-| Run Set ID | Run Set Description |
-| ---------- | ------------------- |
-| BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
-| BASE_OUB_001000_TRAFFIC_PLAN_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
-
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
 ## **Equivalent Usecase**
