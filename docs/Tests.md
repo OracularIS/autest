@@ -6,8 +6,8 @@
     <li>"BASE" indicates standard processes of Blue Yonder.</li>
     <li>"SMART" indicates that implementation is per typical Smart IS implementations.</li>
     <li>"INB", "INV" and "OUB" indicate the tests is related to inbound processes, inventory processes and outbound processes.</li>
-    <li>"0001100","0002100" represent a numeric process sequences identifier.</li>
-    <li>"COPY_TEMPLATE_RCVTRK","WAVE_PLAN" likely describe the specific functionality.</li>
+    <li>"0001100" and "0002100" represent a numeric process sequences identifier.</li>
+    <li>"COPY_TEMPLATE_RCVTRK"and "WAVE_PLAN" describe the specific functionality.</li>
     <li>"MOCA", "WEB" and "RF" indicates that this is a MOCA-based test, WEB-based test and RF-based test</li>
     <li>"V001" signifies the version of the test.</li>
   </ul>
