@@ -1,14 +1,13 @@
 <div>
   <h2>Overview</h2>
-  <p style="font-size: large; text-align: left;">Smart Automated test is a cutting-edge automated testing tool that brings traditional testing up to speed. It handles important tasks like organizing data, checking screens, and creating tests, making testing smoother and faster. With its integration with Blue Yonder (BY)/JDA components, AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
+  <p style="font-size: large; text-align: left;">AuTest is an innovative automated testing solution that modernizes traditional testing methods. It handles important tasks like managing tests, executing tests, and creating tests, making testing smoother and faster. AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
   <p><strong>Naming convention:</strong></p>
   <ul>
-    <li>"BASE" indicates standard processes of Blue Yonder.</li>
-    <li>"SMART" indicates that implementation is per typical Smart IS implementations.</li>
-    <li>"INB", "INV" and "OUB" indicate the tests is related to inbound processes, inventory processes and outbound processes.</li>
-    <li>"0001100" and "0002100" represent a numeric process sequences identifier.</li>
-    <li>"COPY_TEMPLATE_RCVTRK"and "WAVE_PLAN" describe the specific functionality.</li>
-    <li>"MOCA", "WEB" and "RF" indicates that this is a MOCA-based test, WEB-based test and RF-based test</li>
+    <li>"INB", "INV" and "OUB" indicate the tests is related to inbound processes, inventory processes and outbound processes respectively.</li>
+    <li>"0001100" and "0002100" represent a numeric process sequences identifier respectively.</li>
+    <li>"COPY_TEMPLATE_RCVTRK"and "WAVE_PLAN" describe the specific functionality respectively.</li>
+	<li>"SMART" indicates that it is per typical Smart IS implementations.</li>
+    <li>"MOCA", "WEB" and "RF" indicates that this is a MOCA-based test, WEB-based test and RF-based testrespectively</li>
     <li>"V001" signifies the version of the test.</li>
   </ul>
 </div>
