@@ -1,6 +1,6 @@
 <div>
   <h2>Overview</h2>
-  <p style="font-size: large; text-align: left;">AuTest is an innovative automated testing solution that modernizes traditional testing methods. It handles important tasks like managing tests, executing tests, and creating tests, making testing smoother and faster. AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
+  <p style="font-size: large; text-align: left;">AuTest is an innovative automated testing solution that modernizes testing methods. It handles important tasks like managing tests, executing tests, and creating tests, making testing smoother and faster. AuTest is flexible and scalable, fitting perfectly into projects of any size.</p>
   <p><strong>Naming convention:</strong></p>
   <ul>
     <li>"INB", "INV" and "OUB" indicate the tests is related to inbound processes, inventory processes and outbound processes respectively.</li>
