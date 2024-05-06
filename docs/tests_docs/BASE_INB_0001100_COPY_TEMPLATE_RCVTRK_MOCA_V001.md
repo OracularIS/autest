@@ -13,7 +13,7 @@ Copy a template receive truck to a new one
 <br>
 <input type="checkbox" disabled> Smart IS
 
-
+Hello
 
 ## **Overview**
 
