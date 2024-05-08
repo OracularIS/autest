@@ -15,8 +15,6 @@ Check in receive truck to an empty door
 
 ## **Overview**
 
-heloo
-
 In the described use case, the system is designed to manage the process of checking in transport equipment, indicating a procedure that involves registering the arrival of transport vehicles or equipment at a designated location, such as a warehouse or distribution center. This process likely includes verifying the identity of the transport equipment, inspecting it for any damage or defects, and recording its arrival for further processing.
 
 Implementing this use case effectively requires a robust system for managing transport equipment check-ins. It should be able to handle various scenarios, such as different types of transport equipment, varying check-in procedures, and integration with other systems or components involved in the logistics process.
