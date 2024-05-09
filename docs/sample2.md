@@ -1,9 +1,3 @@
-<!-- docs/_sidebar.md -->
-- [Home](./readme.md)
-- [Architecture Overview](./arch_overview.md)
-- [Why Use AuTest?](./Why_AuTest.md)
-- [Tests](./Tests.md)
-
 **MOCA**
 | Tests | Descriptions |
 |-----------|----------|
@@ -16,7 +10,7 @@
 | [BASE_INV_CREATE_MOCA_V001](./tests_docs/BASE_INV_CREATE_MOCA_V001.md) | helo |
 | [BASE_INV_MOVE_MOCA_V001](./tests_docs/BASE_INV_MOVE_MOCA_V001.md) | helo |
 | [BASE_MOCA_V001](./tests_docs/BASE_MOCA_V001.md) | helo |
-| [BASE_MOCA_V002 ](./tests_docs/BASE_MOCA_V002 .md) | helo |
+| [BASE_MOCA_V002](./tests_docs/BASE_MOCA_V002.md) | helo |
 | [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md) | helo |
 | [BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001](./tests_docs/BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001.md) | helo |
 | [BASE_OUB_0020000_WAVE_PLAN_MOCA_V001](./tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md) | helo |
@@ -33,6 +27,7 @@
 | [BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.md) | helo |
 | [BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001.md) | helo |
 
+
 **WEB**
 | Tests | Descriptions |
 |-----------|----------|
@@ -42,6 +37,7 @@
 | [BASE_WEB_V001](./tests_docs/BASE_WEB_V001.md) | helo |
 | [BASE_WEB_V002](./tests_docs/BASE_WEB_V002.md) | helo |
 
+
 **RF**
 | Tests | Descriptions |
 |-----------|----------|
@@ -49,3 +45,4 @@
 | [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md) | helo |
 | [BASE_RF_V001](./tests_docs/BASE_RF_V001.md) | helo |
 | [BASE_RF_V002](./tests_docs/BASE_RF_V002.md) | helo |
+
