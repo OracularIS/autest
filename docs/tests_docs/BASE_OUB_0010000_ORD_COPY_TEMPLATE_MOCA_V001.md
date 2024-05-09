@@ -68,6 +68,7 @@ This section details the various RunSets that utilize this test as part of their
 | ---------- | ------------------- |
 | BASE_OUB_000000_CREATE_TO_DISPATCH | create order, plan, allocate, release, pick, dispatch |
 | BASE_OUB_000100_CREATE_TO_DISPATCH_USING_FRONT_END | create order, plan, allocate (web), release, pick, dispatch |
+| NEW RUN SET | new runset |
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
