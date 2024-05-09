@@ -105,9 +105,7 @@ To change the appointment time:
 
 To dispatch order using the MOCA command, you can use the following command.
 
--  create trailer
--  change receive truck
--  process trailer dispatch
+-  check in trailer
 
 
 This command will trigger the check in based on the predefined parameters and rules within the MOCA system.
