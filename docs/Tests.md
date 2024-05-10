@@ -44,7 +44,6 @@
 | [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md) | Planning orders into a wave for efficient management. |
 | [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md) | Grouping orders together to streamline handling and improve operational efficiency. |
 | [BASE_OUB_0035100_WAVE_REL_WEB_V001](./tests_docs/BASE_OUB_0035100_WAVE_REL_WEB_V001.md) | Integrating orders into a wave structure to streamline warehouse operations. |
-
 |**RF**|
 | [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md) | Safely transporting loads within a warehouse to minimize disruption. |
 | [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md) | Fulfilling customer orders based on a generated picking list. |
