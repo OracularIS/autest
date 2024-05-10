@@ -39,12 +39,8 @@
 | [BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001](./tests_docs/BASE_OUB_0070A00_VAS_SMART_PREP_MOCA_V001.md) | Implementing MHE-based order selection process within warehouse management systems. |
 | [BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001](./tests_docs/BASE_OUB_0080A00_SMART_PALBLD_MOCA_V001.md) | Optimizing the efficiency of the packing process by selecting inventory before determining pallet building. |
 | [BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.md) | Managing the process of waiting for an order to be dispatched. |
-
-
 |**WEB**|
 | [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md) | Planning orders into a wave for efficient management. |
 | [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md) | Grouping orders together to streamline handling and improve operational efficiency. |
-
-
 |**RF**|
 | [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md) | Safely transporting loads within a warehouse to minimize disruption. |
