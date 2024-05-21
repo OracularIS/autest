@@ -6,6 +6,6 @@
   <details>
   <summary><strong>MOCA</strong></summary>
   <ul>
-    <li>- [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)</li> 
+    <li> [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)</li> 
   </ul>
   </details>
