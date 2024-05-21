@@ -5,8 +5,8 @@
 - [Tests](./sample2.md)
   <details>
     <summary><strong>MOCA</strong></summary>
-  
-          - [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
+    
+  - [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
   
   </details>
   <details>
