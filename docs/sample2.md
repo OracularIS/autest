@@ -11,8 +11,6 @@ AuTest is an innovative automated testing solution that modernizes testing metho
 - "MOCA", "WEB", and "RF" indicate that this is a MOCA-based test, WEB-based test, and RF-based test respectively.
 - "V001" signifies the version of the test.
 
-[Tests](./_sidebar.md)
-
 
 **MOCA**
 
