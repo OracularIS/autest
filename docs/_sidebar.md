@@ -2,26 +2,7 @@
 - [Home](./readme.md)
 - [Architecture Overview](./arch_overview.md)
 - [Why Use AuTest?](./Why_AuTest.md)
-- [Tests](./sample2.md)
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expandable Sidebar</title>
-  <style>
-    .hidden {
-      display: none;
-    }
-    .visible {
-      display: block;
-    }
-    summary {
-      cursor: pointer;
-    }
-  </style>
-</head>
+- </head>
 <body>
   <ul>
     <li><a href="./sample2.md">Tests</a>
