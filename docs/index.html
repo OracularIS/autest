@@ -7,6 +7,23 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Include the custom CSS styles -->
+  <style>
+    /* Hide arrows for details/summary */
+    details > summary {
+        list-style-type: none;
+    }
+
+    /* Hide the default marker (arrow) */
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Hide bullet points for unordered list items */
+    ul {
+        list-style-type: none;
+    }
+  </style>
 </head>
 <body>
   <div id="app"></div>
