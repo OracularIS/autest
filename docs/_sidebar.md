@@ -4,7 +4,7 @@
 - [Why Use AuTest?](./Why_AuTest.md)
 <details>
     <summary>Tests</summary>
-	  [Go to Tests](./sample2)
+    [Go to Tests](./sample2.md)
 
   <details>
     <summary>MOCA</summary>
