@@ -3,7 +3,7 @@
 - [Architecture Overview](./arch_overview.md)
 - [Why Use AuTest?](./Why_AuTest.md)
 <details>
-  <summary><a href="#/sample2.md">Tests</a></summary>
+  <summary><a href="./sample2.md">Tests</a></summary>
 
   <details>
     <summary>MOCA</summary>
