@@ -4,7 +4,7 @@
 - [Why Use AuTest?](./Why_AuTest.md)
 <details>
     <summary>Tests</summary>
-    [Go to Tests](#/sample2.md)
+  <summary><a href="#/sample2.md">Tests</a></summary>
 
   <details>
     <summary>MOCA</summary>
