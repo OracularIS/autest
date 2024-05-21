@@ -29,21 +29,4 @@
   - [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md)
 </details>
 
-<script>
-  // Toggle visibility of nested lists when the summary is clicked
-  document.addEventListener('DOMContentLoaded', function() {
-    const details = document.querySelectorAll('details');
-    details.forEach(detail => {
-      detail.addEventListener('toggle', function() {
-        if (detail.open) {
-          // Close other open details elements
-          details.forEach(otherDetail => {
-            if (otherDetail !== detail && otherDetail.open) {
-              otherDetail.open = false;
-            }
-          });
-        }
-      });
-    });
-  });
-</script>
+
