@@ -2,7 +2,7 @@
 - [Home](./readme.md)
 - [Architecture Overview](./arch_overview.md)
 - [Why Use AuTest?](./Why_AuTest.md)
-- [Tests](./sample2.md)
+- [AB_Tests](./sample2.md)
   <details>
     <summary><strong>MOCA</strong></summary>
     
