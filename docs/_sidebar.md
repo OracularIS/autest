@@ -5,9 +5,9 @@
 - [Tests](./sample2.md)
   <details>
     <summary><strong>MOCA</strong></summary>
-    <ul>
+  
           - [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
-    </ul>
+  
   </details>
   <details>
     <summary><strong>WEB</strong></summary>
