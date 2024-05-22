@@ -7,7 +7,6 @@
 <details>
   <summary>Tests1</summary>
       
-  - [Tests1](./sample2.md)
   <details>
     <summary>MOCA</summary>
 
