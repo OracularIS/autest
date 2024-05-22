@@ -55,6 +55,7 @@
           return response.text();
         })
         .then(text => {
+          console.log('Fetched sidebar content:', text); // Log fetched content to console
           document.getElementById('sidebar-content').innerHTML = text;
         })
         .catch(error => {
