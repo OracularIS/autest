@@ -7,33 +7,6 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- Include the custom CSS styles -->
-  <style>
-    /* Hide arrows for details/summary */
-    details > summary {
-        list-style-type: none;
-    }
-
-    /* Hide the default marker (arrow) */
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
-
-    /* Hide bullet points for unordered list items */
-    ul {
-        list-style-type: none;
-        padding-left: 0; /* Remove left padding */
-    }
-
-    /* Additional styling to ensure consistency */
-    details > summary {
-        cursor: pointer; /* Change cursor to pointer for better UX */
-    }
-
-    details[open] > summary {
-        font-weight: bold; /* Bold the summary text when open */
-    }
-  </style>
 </head>
 <body>
   <div id="app"></div>
@@ -43,17 +16,23 @@
       repo: 'OracularIS/autest',
       homepage: 'readme.md',
       coverpage: true,
-      search: 'auto',
+      search: 'auto', // default,
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
+       // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto', // or 'auto'
         placeholder: 'Type to search',
-        depth: 6, // Headline depth, 1 - 6
+              // Headline depth, 1 - 6
+        depth: 6,
+
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-        namespace: 'smart-automated-test', // To avoid search index collision
+
+        // To avoid search index collision
+        // between multiple websites under the same domain
+        namespace: 'smart-automated-test',
       },
     }
   </script>
