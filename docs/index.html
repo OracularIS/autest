@@ -42,6 +42,9 @@
 </head>
 <body>
   <div id="app"></div>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script>
     window.$docsify = {
       name: 'Smart Automated Test',
@@ -52,54 +55,31 @@
       loadSidebar: true,
       subMaxLevel: 6,
       auto2top: true,
-       // complete configuration parameters
-      search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto', // or 'auto'
-        placeholder: 'Type to search',
-        // Headline depth, 1 - 6
-        depth: 6,
+      executeScript: true, // Enable executing scripts in Markdown files
+      // Add a callback after the content is rendered
+      callback: function (content) {
+        // Get all test item links
+        const testLinks = document.querySelectorAll('.is-submenu a');
 
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+        // Add click event listener to each test item link
+        testLinks.forEach(link => {
+          link.addEventListener('click', function () {
+            // Get the parent details element
+            const parentDetails = link.closest('details');
 
-        // To avoid search index collision
-        // between multiple websites under the same domain
-        namespace: 'smart-automated-test',
-      },
-    }
-  </script>
-<script>
-  // Wrap the JavaScript code inside a function
-  function addOpenAttributeToParentSummary() {
-    // Select all li elements with class "active"
-    const activeItems = document.querySelectorAll('.is-submenu li.active');
-        console.log("called");
-    // Loop through each active li element
-    activeItems.forEach(item => {
-      // Get the parent <details> element
-      const parentDetails = item.closest('.is-submenu');
-
-      // Check if parentDetails exists and has class "is-submenu"
-      if (parentDetails && parentDetails.classList.contains('is-submenu')) {
-        // Get the summary element inside parentDetails
-        const summaryElement = parentDetails.querySelector('summary');
-
-        // If summary element exists, add the "open" attribute
-        if (summaryElement) {
-          summaryElement.setAttribute('open', '');
-        }
+            // If parent details element exists, close other details elements
+            if (parentDetails) {
+              const allDetails = document.querySelectorAll('details.is-submenu');
+              allDetails.forEach(details => {
+                if (details !== parentDetails) {
+                  details.removeAttribute('open');
+                }
+              });
+            }
+          });
+        });
       }
-    });
-  }
-
-  // Attach the function to the DOMContentLoaded event
-  document.addEventListener('DOMContentLoaded', addOpenAttributeToParentSummary);
-</script>
-
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    };
+  </script>
 </body>
 </html>
-
-
