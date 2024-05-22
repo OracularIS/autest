@@ -2,7 +2,7 @@
 - [Home](./readme.md)
 - [Architecture Overview](./arch_overview.md)
 - [Why Use AuTest?](./Why_AuTest.md)
-- [Tests](./sample2.md)
+- [Tests1](./sample2.md)
    
 
   <details>
