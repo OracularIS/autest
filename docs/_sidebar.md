@@ -4,7 +4,7 @@
 
 [Why Use AuTest?](./Why_AuTest.md)
 
-[Tests1](./sample2.md)
+[Tests12](./sample2.md)
    
 
 <details>
@@ -38,8 +38,8 @@
 <details>
   <summary>RF</summary>
  
-- [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md)
-- [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md)
+  - [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md)
+  - [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md)
   </details>
 
 <details>
