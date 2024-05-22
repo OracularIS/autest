@@ -1,9 +1,10 @@
-/* Hide arrows for details/summary */
-details > summary {
-    list-style-type: none;
+/* Hide bullets */
+details ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Hide bullet points for unordered list items */
-ul {
-    list-style-type: none;
+/* Hide arrows */
+details summary::-webkit-details-marker {
+  display: none;
 }
