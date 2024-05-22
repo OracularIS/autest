@@ -48,38 +48,43 @@
       repo: 'OracularIS/autest',
       homepage: 'readme.md',
       coverpage: true,
-      search: 'auto', // default,
+      search: 'auto',
       loadSidebar: true,
       subMaxLevel: 6,
       auto2top: true,
       executeScript: true, // Enable executing scripts in Markdown files
-      // Add a callback after the content is rendered
-      callback: function (content) {
+      doneEach: function () {
+        // Get the current page URL
+        const currentPage = window.location.hash.split('?')[0];
+        
         // Get all test item links
         const testLinks = document.querySelectorAll('.is-submenu a');
 
         // Add click event listener to each test item link
         testLinks.forEach(link => {
           link.addEventListener('click', function () {
-            console.log("clicked");
-            // Get the parent details element
+            // Store the parent details element's ID in localStorage
             const parentDetails = link.closest('details');
-
-            // If parent details element exists, close other details elements
             if (parentDetails) {
-              const allDetails = document.querySelectorAll('details.is-submenu');
-              allDetails.forEach(details => {
-                if (details !== parentDetails) {
-                  details.removeAttribute('open');
-                }
-              });
+              localStorage.setItem('openDetails', parentDetails.querySelector('summary').textContent);
             }
           });
         });
+
+        // Open the correct details element based on localStorage
+        const openDetailsText = localStorage.getItem('openDetails');
+        if (openDetailsText) {
+          const allDetails = document.querySelectorAll('details.is-submenu');
+          allDetails.forEach(details => {
+            if (details.querySelector('summary').textContent === openDetailsText) {
+              details.setAttribute('open', 'open');
+            }
+          });
+        }
       }
     };
   </script>
-    <!-- Docsify v4 -->
+  <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
