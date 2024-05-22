@@ -68,28 +68,34 @@
       },
     }
   </script>
-  <script>
+<script>
+  // Wrap the JavaScript code inside a function
+  function addOpenAttributeToParentSummary() {
     // Select all li elements with class "active"
-const activeItems = document.querySelectorAll('.is-submenu li.active');
-console.log("called");
-// Loop through each active li element
-activeItems.forEach(item => {
-  // Get the parent <details> element
-  const parentDetails = item.closest('.is-submenu');
-  
-  // Check if parentDetails exists and has class "is-submenu"
-  if (parentDetails && parentDetails.classList.contains('is-submenu')) {
-    // Get the summary element inside parentDetails
-    const summaryElement = parentDetails.querySelector('summary');
-    
-    // If summary element exists, add the "open" attribute
-    if (summaryElement) {
-      summaryElement.setAttribute('open', '');
-    }
-  }
-});
+    const activeItems = document.querySelectorAll('.is-submenu li.active');
 
-  </script>
+    // Loop through each active li element
+    activeItems.forEach(item => {
+      // Get the parent <details> element
+      const parentDetails = item.closest('.is-submenu');
+
+      // Check if parentDetails exists and has class "is-submenu"
+      if (parentDetails && parentDetails.classList.contains('is-submenu')) {
+        // Get the summary element inside parentDetails
+        const summaryElement = parentDetails.querySelector('summary');
+
+        // If summary element exists, add the "open" attribute
+        if (summaryElement) {
+          summaryElement.setAttribute('open', '');
+        }
+      }
+    });
+  }
+
+  // Attach the function to the DOMContentLoaded event
+  document.addEventListener('DOMContentLoaded', addOpenAttributeToParentSummary);
+</script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
