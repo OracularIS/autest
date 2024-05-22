@@ -58,4 +58,3 @@
 |-------|--------------|
 | [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md) |Move a load  |
 | [BASE_OUB_0050100_LIST_PICK_RF_V001](./tests_docs/BASE_OUB_0050100_LIST_PICK_RF_V001.md) |This test will perform the differnt types of picks on RF  |
-
