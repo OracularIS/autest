@@ -22,6 +22,16 @@
     /* Hide bullet points for unordered list items */
     ul {
         list-style-type: none;
+        padding-left: 0; /* Remove left padding */
+    }
+
+    /* Additional styling to ensure consistency */
+    details > summary {
+        cursor: pointer; /* Change cursor to pointer for better UX */
+    }
+
+    details[open] > summary {
+        font-weight: bold; /* Bold the summary text when open */
     }
   </style>
 </head>
@@ -33,23 +43,17 @@
       repo: 'OracularIS/autest',
       homepage: 'readme.md',
       coverpage: true,
-      search: 'auto', // default,
+      search: 'auto',
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
-       // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto', // or 'auto'
         placeholder: 'Type to search',
-              // Headline depth, 1 - 6
-        depth: 6,
-
+        depth: 6, // Headline depth, 1 - 6
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-
-        // To avoid search index collision
-        // between multiple websites under the same domain
-        namespace: 'smart-automated-test',
+        namespace: 'smart-automated-test', // To avoid search index collision
       },
     }
   </script>
