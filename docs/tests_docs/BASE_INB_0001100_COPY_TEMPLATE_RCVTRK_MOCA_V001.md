@@ -7,12 +7,9 @@ Copy a template receive truck to a new one
 
 ## **Test Category**
 
-<input type="checkbox" checked disabled> Standard
-<br>
-<input type="checkbox" disabled> Custom
-<br>
-<input type="checkbox" disabled> Smart IS
-
+- [x] Standard
+- [ ] Custom
+- [ ] Smart IS
 
 ## **Overview**
 
