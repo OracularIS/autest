@@ -61,6 +61,7 @@
         // Add click event listener to each test item link
         testLinks.forEach(link => {
           link.addEventListener('click', function () {
+            console.log("clicked");
             // Get the parent details element
             const parentDetails = link.closest('details');
 
