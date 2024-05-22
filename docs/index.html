@@ -1,3 +1,6 @@
+modified html
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +14,17 @@
   <style>
     /* Hide arrows for details/summary */
     details > summary {
-      list-style-type: none;
+        list-style-type: none;
     }
 
     /* Hide the default marker (arrow) */
     details > summary::-webkit-details-marker {
-      display: none;
+        display: none;
     }
 
     /* Hide bullet points for unordered list items */
     ul {
-      list-style-type: none;
+        list-style-type: none;
     }
   </style>
 </head>
@@ -37,37 +40,21 @@
       loadSidebar: true,
       subMaxLevel: 4,
       auto2top: true,
-      // complete configuration parameters
+       // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
         paths: 'auto', // or 'auto'
         placeholder: 'Type to search',
-        // Headline depth, 1 - 6
+              // Headline depth, 1 - 6
         depth: 6,
+
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+
         // To avoid search index collision
         // between multiple websites under the same domain
         namespace: 'smart-automated-test',
       },
     }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const testsLink = document.getElementById('tests-link');
-      
-      if (testsLink) {
-        testsLink.addEventListener('click', function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-
-          // Open all related details sections
-          document.getElementById('moca-section').setAttribute('open', true);
-          document.getElementById('rf-section').setAttribute('open', true);
-          document.getElementById('web-section').setAttribute('open', true);
-
-          // Navigate to the target link
-          window.location.href = this.href;
-        });
-      }
-    });
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
