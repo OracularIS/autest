@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Smart Automated Test</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -11,32 +11,34 @@
   <style>
     /* Hide arrows for details/summary */
     details > summary {
-        list-style-type: none;
-        display: inline-block;
-        margin-right: 10px; /* Adjust margin as needed */
-        cursor: pointer;
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 10px; /* Adjust margin as needed */
+      cursor: pointer;
     }
 
     /* Hide the default marker (arrow) */
     details > summary::-webkit-details-marker {
-        display: none;
+      display: none;
     }
 
     /* Hide bullet points for unordered list items */
     ul {
-        list-style-type: none;
-        padding-left: 0; /* Remove the left padding */
+      list-style-type: none;
+      padding-left: 0; /* Remove the left padding */
     }
 
     /* Optional: Remove margin for list items to ensure consistency */
     ul > li {
-        margin-left: 0;
+      margin-left: 0;
     }
-    .ml-10{
-      margin-left:10px;
+
+    .ml-10 {
+      margin-left: 10px;
     }
-    .ml-25{
-      margin-left:25px;
+
+    .ml-25 {
+      margin-left: 25px;
     }
   </style>
 </head>
@@ -54,9 +56,19 @@
       auto2top: true,
       executeScript: true, // Enable executing scripts in Markdown files
       doneEach: function () {
-        // Get the current page URL
-        const currentPage = window.location.hash.split('?')[0];
-        
+        // Function to handle opening details based on localStorage
+        function openDetailsFromStorage() {
+          const openDetailsText = localStorage.getItem('openDetails');
+          if (openDetailsText) {
+            const allDetails = document.querySelectorAll('details.is-submenu');
+            allDetails.forEach(details => {
+              if (details.querySelector('summary').textContent === openDetailsText) {
+                details.setAttribute('open', 'open');
+              }
+            });
+          }
+        }
+
         // Get all test item links
         const testLinks = document.querySelectorAll('.is-submenu a');
 
@@ -72,15 +84,7 @@
         });
 
         // Open the correct details element based on localStorage
-        const openDetailsText = localStorage.getItem('openDetails');
-        if (openDetailsText) {
-          const allDetails = document.querySelectorAll('details.is-submenu');
-          allDetails.forEach(details => {
-            if (details.querySelector('summary').textContent === openDetailsText) {
-              details.setAttribute('open', 'open');
-            }
-          });
-        }
+        openDetailsFromStorage();
       }
     };
   </script>
