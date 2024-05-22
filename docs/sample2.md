@@ -39,16 +39,12 @@
 | [BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0300000_WAIT_ORD_DISPATCH_MOCA_V001.md) |This test builds on other BASE outbound tests.  The test will wait for the outbound order to be completely dispatched.  |
 | [BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001](./tests_docs/BASE_OUB_0301000_TRLR_CLOSE_DISPATCH_MOCA_V001.md) |Close and dispatch a shipping trailer  |
 
-
-
 **WEB**
 | Tests | Descriptions |
 |-----------|----------|
 | [BASE_OUB_0020100_WAVE_PLAN_WEB_V001](./tests_docs/BASE_OUB_0020100_WAVE_PLAN_WEB_V001.md) |Plan a wave using web screen  |
 | [BASE_OUB_0030100_WAVE_ALLOC_WEB_V001](./tests_docs/BASE_OUB_0030100_WAVE_ALLOC_WEB_V001.md) |Allocate a wave using web screen  |
 | [BASE_OUB_0035100_WAVE_REL_WEB_V001](./tests_docs/BASE_OUB_0035100_WAVE_REL_WEB_V001.md) |Release a wave using web screen  |
-
-
 
 **RF**
 | Tests | Descriptions |
