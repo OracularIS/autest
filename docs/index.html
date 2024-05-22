@@ -2,40 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Smart Automated Test</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* Add custom styles here */
+    .table-container {
+      width: 50%;
+      float: left;
+    }
+    .sidebar {
+      width: 50%;
+      float: left;
+      padding: 20px;
+    }
+    .sidebar-content {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="table-container"></div>
+  <div class="sidebar">
+    <div class="sidebar-content" id="sidebar-content"></div>
+  </div>
+  
   <script>
-    window.$docsify = {
-      name: 'Smart Automated Test',
-      repo: 'OracularIS/autest',
-      homepage: 'readme.md',
-      coverpage: true,
-      search: 'auto', // default,
-      loadSidebar: true,
-      subMaxLevel: 4,
-      auto2top: true,
-       // complete configuration parameters
-      search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto', // or 'auto'
-        placeholder: 'Type to search',
-              // Headline depth, 1 - 6
-        depth: 6,
-
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-
-        // To avoid search index collision
-        // between multiple websites under the same domain
-        namespace: 'smart-automated-test',
-      },
+    // Function to load content into sidebar
+    function loadSidebarContent(link) {
+        fetch(link)
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('sidebar-content').innerHTML = text;
+            })
+            .catch(error => console.error('Error loading Markdown file:', error));
     }
+
+    // Parse main table Markdown file and generate HTML
+    fetch('./sample2.md') // Relative path to main table Markdown file
+        .then(response => response.text())
+        .then(text => {
+            const regex = /\[(.*?)\]\((.*?)\)/g; // Regex to match links and descriptions
+            let match;
+            let tableHtml = '<table>'; // HTML for the main table
+            while ((match = regex.exec(text)) !== null) {
+                tableHtml += '<tr>';
+                tableHtml += '<td>' + match[1] + '</td>';
+                tableHtml += '<td><a href="#" class="sidebar-link" data-link="' + match[2] + '">' + match[1] + '</a></td>';
+                tableHtml += '</tr>';
+            }
+            tableHtml += '</table>';
+            document.getElementById('table-container').innerHTML = tableHtml;
+
+            // Add click event listeners to main table links
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    loadSidebarContent(this.getAttribute('data-link'));
+                });
+            });
+        })
+        .catch(error => console.error('Error loading main table Markdown file:', error));
   </script>
+
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
