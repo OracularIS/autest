@@ -7,9 +7,11 @@ Check in receive truck to an empty door
 
 ## **Test Category**
 
-- [x] Standard
-- [ ] Custom
-- [ ] Smart IS
+<input type="checkbox" checked disabled> Standard
+<br>
+<input type="checkbox" disabled> Custom
+<br>
+<input type="checkbox" disabled> Smart IS
 
 ## **Overview**
 
