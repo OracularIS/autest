@@ -65,7 +65,7 @@
         while ((match = regex.exec(text)) !== null) {
           tableHtml += '<div class="test">';
           tableHtml += '<p class="test-name">' + match[1] + '</p>';
-          tableHtml += '<a href="#" class="sidebar-link" data-link="' + match[2] + '">Expand</a>';
+          tableHtml += '<a href="#" class="sidebar-link" data-link="' + match[2].replace('.md', '_sidebar.md') + '">Expand</a>';
           tableHtml += '</div>';
         }
         tableHtml += '</div>';
