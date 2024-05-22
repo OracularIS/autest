@@ -48,11 +48,19 @@
     // Function to load content into sidebar
     function loadSidebarContent(link) {
       fetch(link)
-        .then(response => response.text())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
         .then(text => {
           document.getElementById('sidebar-content').innerHTML = text;
         })
-        .catch(error => console.error('Error loading Markdown file:', error));
+        .catch(error => {
+          console.error('Error loading Markdown file:', error);
+          document.getElementById('sidebar-content').innerHTML = 'Error loading content. Please try again later.';
+        });
     }
 
     // Parse main table Markdown file and generate HTML
