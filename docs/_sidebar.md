@@ -5,7 +5,7 @@
 - [Tests](./sample2.md)
       
   <details>
-    <summary>MOCA</summary>
+    <summary class="ml-10">MOCA</summary>
 
   - [BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001](./tests_docs/BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.md)
   - [BASE_INB_0002100_TRLR_CKIN_MOCA_V001](./tests_docs/BASE_INB_0002100_TRLR_CKIN_MOCA_V001.md)
