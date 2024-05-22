@@ -4,7 +4,7 @@
 
 [Why Use AuTest?](./Why_AuTest.md)
 
-[Tests1](./sample2.md)
+[Tests](./sample2.md)
    
 
 <details>
