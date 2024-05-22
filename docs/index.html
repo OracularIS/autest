@@ -50,7 +50,7 @@
       coverpage: true,
       search: 'auto', // default,
       loadSidebar: true,
-      subMaxLevel: 4,
+      subMaxLevel: 6,
       auto2top: true,
        // complete configuration parameters
       search: {
@@ -73,7 +73,7 @@
   function addOpenAttributeToParentSummary() {
     // Select all li elements with class "active"
     const activeItems = document.querySelectorAll('.is-submenu li.active');
-
+        console.log("called");
     // Loop through each active li element
     activeItems.forEach(item => {
       // Get the parent <details> element
