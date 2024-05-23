@@ -2,41 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Smart Automated Test</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- Include the custom CSS styles -->
   <style>
-    /* Hide arrows for details/summary */
     details > summary {
-        list-style-type: none;
-        display: inline-block;
-        margin-right: 10px; /* Adjust margin as needed */
-        cursor: pointer;
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
     }
 
-    /* Hide the default marker (arrow) */
     details > summary::-webkit-details-marker {
-        display: none;
+      display: none;
     }
 
-    /* Hide bullet points for unordered list items */
     ul {
-        list-style-type: none;
-        padding-left: 0; /* Remove the left padding */
+      list-style-type: none;
+      padding-left: 0;
     }
 
-    /* Optional: Remove margin for list items to ensure consistency */
     ul > li {
-        margin-left: 0;
+      margin-left: 0;
     }
-    .ml-10{
-      margin-left:10px;
+
+    .ml-10 {
+      margin-left: 10px;
     }
-    .ml-25{
-      margin-left:25px;
+
+    .ml-25 {
+      margin-left: 25px;
     }
   </style>
 </head>
@@ -52,39 +49,60 @@
       loadSidebar: true,
       subMaxLevel: 6,
       auto2top: true,
-      executeScript: true, // Enable executing scripts in Markdown files
-      doneEach: function () {
-        // Get the current page URL
-        const currentPage = window.location.hash.split('?')[0];
-        
-        // Get all test item links
-        const testLinks = document.querySelectorAll('.is-submenu a');
-
-        // Add click event listener to each test item link
-        testLinks.forEach(link => {
-          link.addEventListener('click', function () {
-            // Store the parent details element's ID in localStorage
-            const parentDetails = link.closest('details');
-            if (parentDetails) {
-              localStorage.setItem('openDetails', parentDetails.querySelector('summary').textContent);
+      executeScript: true,
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function () {
+            // Function to open the correct details element based on localStorage
+            function openDetailsFromStorage() {
+              const openDetailsText = localStorage.getItem('openDetails');
+              if (openDetailsText) {
+                const allDetails = document.querySelectorAll('details.is-submenu');
+                allDetails.forEach(details => {
+                  if (details.querySelector('summary').textContent === openDetailsText) {
+                    details.setAttribute('open', 'open');
+                  }
+                });
+              }
             }
+
+            // Add click event listeners to each test link
+            const testLinks = document.querySelectorAll('.is-submenu a');
+            testLinks.forEach(link => {
+              link.addEventListener('click', function () {
+                const parentDetails = link.closest('details');
+                if (parentDetails) {
+                  localStorage.setItem('openDetails', parentDetails.querySelector('summary').textContent);
+                }
+              });
+            });
+
+            // Open the details element if it matches the saved one in localStorage
+            openDetailsFromStorage();
           });
-        });
 
-        // Open the correct details element based on localStorage
-        const openDetailsText = localStorage.getItem('openDetails');
-        if (openDetailsText) {
-          const allDetails = document.querySelectorAll('details.is-submenu');
-          allDetails.forEach(details => {
-            if (details.querySelector('summary').textContent === openDetailsText) {
-              details.setAttribute('open', 'open');
-            }
+          hook.beforeEach(function (content) {
+            const page = window.location.hash.split('?')[0];
+            const allDetails = document.querySelectorAll('details.is-submenu');
+
+            allDetails.forEach(details => {
+              const summary = details.querySelector('summary');
+              const links = details.querySelectorAll('a');
+
+              links.forEach(link => {
+                if (link.href.includes(page)) {
+                  localStorage.setItem('openDetails', summary.textContent);
+                  details.setAttribute('open', 'open');
+                }
+              });
+            });
+
+            return content;
           });
         }
-      }
+      ]
     };
   </script>
-  <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
