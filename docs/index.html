@@ -52,6 +52,11 @@
       executeScript: true,
       plugins: [
         function (hook, vm) {
+          hook.init(function() {
+            // Clear localStorage to ensure details elements are closed on refresh
+            localStorage.removeItem('openDetails');
+          });
+
           hook.doneEach(function () {
             // Function to open the correct details element based on localStorage
             function openDetailsFromStorage() {
@@ -60,7 +65,7 @@
                 const allDetails = document.querySelectorAll('details.is-submenu');
                 allDetails.forEach(details => {
                   if (details.querySelector('summary').textContent === openDetailsText) {
-                     details.setAttribute('open', 'open');
+                    details.setAttribute('open', 'open');
                   }
                 });
               }
