@@ -2,9 +2,9 @@
 
 The Smart AuTest solution is designed to streamline and automate the testing of WMS (Warehouse Management System) use cases for BY WMS users, eliminating the need for manual intervention. This advanced testing solution supports several types of tests, ensuring a versatile and robust testing environment:
 
-1. **MOCA Based Tests**: These tests utilize MOCA commands to perform tasks and validate functionalities within the WMS.
+1. **MOCA Based Tests**: These tests performed work by MOCA Commands.
 
-2. **RF Based Tests**: These tests performed work by MTF form.
+2. **RF Based Tests**: These tests performed work by MTF forms.
 
 3. **Web UI Based Tests**: These tests performed work in the WEB UI.
 
