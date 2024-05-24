@@ -6,7 +6,7 @@ The Smart AuTest solution is designed to streamline and automate the testing of 
 
 2. **RF Based Tests**: These tests performed work by MTF form.
 
-3. **Web UI Based Tests**: These tests interact with the WMS via the web user interface, mimicking user actions to validate the web-based functionalities.
+3. **Web UI Based Tests**: These tests performed work in the WEB UI.
 
 #### Run Sets for End-to-End Scenarios
 
