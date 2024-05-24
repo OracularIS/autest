@@ -1,10 +1,11 @@
 <!-- docs/_sidebar.md -->
 - [Overview](./overview.md)
-- [Getting AuTest](./readme.md)
+- [Getting AuTest](./.md)
 - [Concepts](./concepts.md)
+- [Case Study ](./.md)
 - [Architecture](./arch_overview.md)
-- [Executing](./Why_AuTest.md)
-- [How to create Tests](./Why_AuTest.md)
+- [Executing](./.md)
+- [How to create Tests](./.md)
 - [Packaged Tests](./sample2.md)
       
   <details class="is-submenu ml-10">
