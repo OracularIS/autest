@@ -34,7 +34,12 @@ To support waving tests, the “some identifier” should be such that we can ut
 
 ## Global Metadata
 
-As part of the auTest subscription, you have access to a rich set of commands, tests, test cases, and run sets. They will show up in the suite as `world` tenant and are named with the `BASE_` prefix. We are always working on enriching this set, and you will always have access to the latest set as part of the subscription.
+As part of the auTest subscription, you have access to a rich set of commands, tests, test cases, and run sets. They will show up in the suite as `world` tenant and are named with the `BASE_` prefix.
+
+![](Images/image2.png)
+
+
+We are always working on enriching this set, and you will always have access to the latest set as part of the subscription.
 
 While customers can create their own metadata, at Smart IS, we strive to make this set as comprehensive as possible so that customers can simply use these on day one.
 
@@ -58,7 +63,6 @@ When using the commands in various contexts, we can either mention them by name 
 
 publish data where uc_src_trknum = `'RCVSMP001'` and uc_return_colnam='prtnum' | Script(`base_get_ossibot_rcv_id_detail`) 
 
-Include screenshot: 
 ## Providing Values for Arguments
 
 When providing values for the arguments in various contexts, we have the following capabilities:

@@ -28,5 +28,5 @@ The Smart AuTest solution is built on a secure cloud framework that supports ten
 
 To launch the tests, users can use our “Smart MOCA Client”.
 
-![](overview/image1.png)
+![](Images/image1.png)
 
