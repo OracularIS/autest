@@ -38,7 +38,7 @@ As part of the auTest subscription, you have access to a rich set of commands, t
 
 While customers can create their own metadata, at Smart IS, we strive to make this set as comprehensive as possible so that customers can simply use these on day one.
 
-You can see the available tests here: [URL of tests]
+You can see the available tests here: [Tests](./sample2.md)
 
 ## Commands
 
