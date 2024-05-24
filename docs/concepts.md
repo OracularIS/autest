@@ -139,7 +139,7 @@ Web UI application flows follow the same concepts. For example, we have an appli
   - We say that `VARNAM` is `wave_set`
   - And for its value, we have an expression that calls a script. This script will return the wave name to use per our conventions:
     - `
-      ##publish data where @* and uc_return_colnam='schbat'|Script("base_get_ossibot_hdr_key_data")##
+      publish data where @* and uc_return_colnam='schbat'|Script("base_get_ossibot_hdr_key_data")
       `
 - Then we have “BUTTON”
   - We find the button by saying “TEXT” is “Search”
@@ -148,7 +148,7 @@ Web UI application flows follow the same concepts. For example, we have an appli
 - Then we have another text box
   - The name of the text field is “waveNumber” and for its value we use a command:
     - `
-      ##publish data where @* and uc_return_colnam='schbat'|Script("base_get_ossibot_hdr_key_data")##
+      publish data where @* and uc_return_colnam='schbat'|Script("base_get_ossibot_hdr_key_data")
       `
 - Then we press another button
   - The button text is `OK`
