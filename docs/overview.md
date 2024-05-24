@@ -2,9 +2,9 @@
 
 Smart AuTest solution allows the BY WMS users to run through WMS use cases without user intervention. This solution supports the following types of tests:
 
-- **MOCA based tests**   : where the work is performed by the MOCA commands.
-- **RF based tests**     : where the work is performed by MTF forms.
-- **Web UI based tests** : where the work is performed in the Web UI.
+** - MOCA based tests**   : where the work is performed by the MOCA commands.
+** - RF based tests**     : where the work is performed by MTF forms.
+** - Web UI based tests** : where the work is performed in the Web UI.
 
 The various tests can be strung together using the concept of “Run Sets”. This allows for scripting end-to-end scenarios. The tests can be executed in a “stress test” mode as well, where we can simulate stress on the system, for example simulating multiple users.
 
