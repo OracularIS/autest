@@ -1,5 +1,4 @@
-
-The Smart auTest suite offers a convenient subscription model, eliminating the need for customers to install additional software within their existing ecosystem. This approach streamlines the testing process, allowing users to launch tests directly from the Smart MOCA Client interface. Meanwhile, all underlying data is securely managed within the cloud infrastructure.
+The Smart auTest suite is available in a subscription model. This implies that customers do not need to install any software in their ecosystem. The tests are launched from the Smart MOCA Client but the underlying data is managed from the cloud. 
 
 ## Key Features
 
