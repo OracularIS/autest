@@ -50,11 +50,9 @@ We need to provide specific instructions at various points to influence the exec
 
 To improve reuse, the commands can call other commands as well by using the `Script` keyword. For example, in the snippet below, the command is calling another command: 
 `
-      { 
-          publish data 
-          where dstloc = @nxtloc 
+      { publish data where dstloc = @nxtloc 
          |
-          Script("base_inv_load_deposit_v001") 
+        Script("base_inv_load_deposit_v001") 
        }
 `
 
