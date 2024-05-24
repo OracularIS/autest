@@ -8,7 +8,7 @@
 - [Packaged Tests](./sample2.md)
       
   <details class="is-submenu ml-10">
-    <summary> - Outbound</summary>
+    <summary> - outbound</summary>
 
   - [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md)
   - [BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001](./tests_docs/BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001.md)
