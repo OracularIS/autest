@@ -4,6 +4,7 @@
 - [Concepts](./readme.md)
 - [Architecture](./arch_overview.md)
 - [Executing](./Why_AuTest.md)
+- [How to create Tests](./Why_AuTest.md)
 - [Packaged Tests](./sample2.md)
       
   <details class="is-submenu ml-10">
