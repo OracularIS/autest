@@ -5,7 +5,7 @@ The Smart Automated Testing Solution, is designed to revolutionize traditional t
 The frontend of AuTest provides a user-friendly interface for managing and executing automated tests. It includes features such as test case management, scheduling, and result reporting. Built using modern web technologies like HTML, CSS, and JavaScript, the frontend ensures accessibility from any web browser, facilitating seamless interaction with the testing platform.
 
 #### Backend
-The backend of AuTest serves as the core logic of the application, responsible for handling test execution, result processing, and integration with testing tools and frameworks. Developed using Java, a robust and scalable programming language, the backend ensures high performance and reliability. Interactions between the frontend and backend are facilitated through RESTful APIs, enabling efficient communication and data exchange.
+The backend of AuTest serves as the core logic of the application, responsible for handling test execution, result processing, and integration with testing tools and frameworks. Developed using Java, a robust and scalable programming language, the backend ensures high performance and reliability. Interactions between the frontend and backend are facilitated through APIs, enabling efficient communication and data exchange.
 
 #### Database Integration
 AuTest seamlessly integrates with the OOGY database, providing robust support for test data management and retrieval. It supports various database options, including MySQL and Oracle, offering flexibility to choose the database that best suits your needs. The database integration ensures efficient storage and retrieval of test-related data, enhancing the overall testing process.
