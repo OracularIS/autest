@@ -18,9 +18,8 @@ Stick to the conventions that we have for the template data – that will simpli
 
 ## Type of Data
 
-| Data Type                  | Description                                                                                  |
+| Data Type                  | Rules                                                                                  |
 |----------------------------|----------------------------------------------------------------------------------------------|
-| **Rules**                  |                                                                                              |
 | **Source Orders to Copy**  | Named with prefix `ATST-TMPL-`. Set `template_flg` to 1                                       |
 | **Test Orders Created**    | Named with prefix `ADATA-` and suffix of the test execution sequence number                   |
 | **Wave Set**               | Orders created as part of one test run get the same value for `ord_line.wave_set`. This is `AW-` followed by the test execution sequence number |
