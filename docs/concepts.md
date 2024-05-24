@@ -32,3 +32,37 @@ Stick to the conventions that we have for the template data – that will simpli
 
 To support waving tests, the “some identifier” should be such that we can utilize wild card to plan waves such that shipments get a single shipment for multiple orders. For example, we can create `ATST-TMPL-X01` and `ATST-TMPL-X02` orders. Then run the test with source order number expression of `ATST-TMPL-X%`. This will create a single shipment for both.
 
+## Global Metadata
+
+As part of the auTest subscription, you have access to a rich set of commands, tests, test cases, and run sets. They will show up in the suite as “world” tenant and are named with the “BASE_” prefix. We are always working on enriching this set, and you will always have access to the latest set as part of the subscription.
+
+While customers can create their own metadata, at Smart IS, we strive to make this set as comprehensive as possible so that customers can simply use these on day one.
+
+You can see the available tests here: [URL of tests]
+
+## Commands
+
+We need to provide specific instructions at various points to influence the execution. These are referred to as “Commands”. We have the following categories of commands:
+
+- The core logic of MOCA-based tests is represented in MOCA snippets.
+- The validation commands are MOCA snippets as well.
+- We can use the snippets to set the values of the arguments.
+
+To improve reuse, the commands can call other commands as well by using the “Script” keyword. For example, in the snippet below, the command is calling another command:
+
+                                { 
+
+                                    publish data 
+
+                                    where dstloc = @nxtloc 
+
+                                    | 
+
+                                    Script("base_inv_load_deposit_v001") 
+
+                                } 
+When using the commands in various contexts, we can either mention them by name or by using special syntax, for example: 
+
+publish data where uc_src_trknum = 'RCVSMP001' and uc_return_colnam='prtnum' | Script("base_get_ossibot_rcv_id_detail") 
+
+Include screenshot: 
