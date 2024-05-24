@@ -13,3 +13,6 @@ The execution results are captured in a comprehensive manner and in addition to 
 The metadata of the solution is in a secure cloud framework that supports tenant-based security. The execution results are saved in the cloud as well. This implies that the solution can be used without any local footprint.
 
 To launch the tests, users can use our “Smart MOCA Client”.
+
+![](overview/image1.png)
+
