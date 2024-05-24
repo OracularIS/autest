@@ -1,18 +1,30 @@
-# Overview
+### Overview 
 
-Smart AuTest solution allows the BY WMS users to run through WMS use cases without user intervention. This solution supports the following types of tests:
+The Smart AuTest solution is designed to streamline and automate the testing of WMS (Warehouse Management System) use cases for BY WMS users, eliminating the need for manual intervention. This advanced testing solution supports several types of tests, ensuring a versatile and robust testing environment:
 
-   **MOCA based tests**   : where the work is performed by the MOCA commands.
-   
-   **RF based tests**     : where the work is performed by MTF forms.
-   
-   **Web UI based tests** : where the work is performed in the Web UI.
+1. **MOCA Based Tests**: These tests utilize MOCA commands to perform tasks and validate functionalities within the WMS.
 
-The various tests can be strung together using the concept of “Run Sets”. This allows for scripting end-to-end scenarios. The tests can be executed in a “stress test” mode as well, where we can simulate stress on the system, for example simulating multiple users.
+2. **RF Based Tests**: These tests employ MTF (Mobile Transaction Framework) forms to carry out and verify operations through RF (Radio Frequency) devices.
 
-The execution results are captured in a comprehensive manner and in addition to that, we can have specific validation logic as well.
+3. **Web UI Based Tests**: These tests interact with the WMS via the web user interface, mimicking user actions to validate the web-based functionalities.
 
-The metadata of the solution is in a secure cloud framework that supports tenant-based security. The execution results are saved in the cloud as well. This implies that the solution can be used without any local footprint.
+#### Run Sets for End-to-End Scenarios
+
+Smart AuTest allows for the creation of “Run Sets,” which are sequences of tests combined to script comprehensive end-to-end scenarios. This feature enables users to test complex workflows and interactions within the WMS in a seamless and integrated manner.
+
+#### Stress Testing Capabilities
+
+The solution also supports stress testing, a mode where the system is subjected to simulated stress conditions, such as the simultaneous activity of multiple users. This helps in assessing the system’s performance and stability under heavy load conditions.
+
+#### Comprehensive Execution Results
+
+The results of test executions are meticulously captured, providing detailed insights into each test run. In addition to standard reporting, users can implement specific validation logic to verify that the system behaves as expected under various conditions.
+
+#### Secure Cloud Framework
+
+The Smart AuTest solution is built on a secure cloud framework that supports tenant-based security, ensuring that data and metadata are protected and isolated per tenant. The execution results are also stored in the cloud, which means the solution can be used without requiring any local installation or footprint. This cloud-based approach enhances accessibility and scalability while maintaining high security standards.
+
+#### Launching Tests with Smart MOCA Client
 
 To launch the tests, users can use our “Smart MOCA Client”.
 
