@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 - [Overview](./overview.md)
-- [Getting AuTest](./.md)
+- [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
 - [Case Study ](./.md)
 - [Architecture](./arch_overview.md)
