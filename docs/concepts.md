@@ -49,10 +49,12 @@ We need to provide specific instructions at various points to influence the exec
 - We can use the snippets to set the values of the arguments.
 
 To improve reuse, the commands can call other commands as well by using the `Script` keyword. For example, in the snippet below, the command is calling another command: 
+
          
     { publish data where dstloc = @nxtloc 
     |
     Script("base_inv_load_deposit_v001") }
+    
 
 When using the commands in various contexts, we can either mention them by name or by using special syntax, for example: 
 
