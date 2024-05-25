@@ -1,4 +1,4 @@
-## 1. Creating MOCA Based Tests
+## Creating MOCA Based Tests
 
 This section describes the steps involved in MOCA based tests:
 
@@ -185,7 +185,7 @@ The run set arguments may need to be created or changed to support test cases.
 |                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
 |                   | - Uc_ossi_correct_result is the correct result                 |
 
-## 2. Creating Web-Based Tests 
+## Creating Web-Based Tests 
 
 Web-based tests in the Smart AuTest suite are designed to automate interactions with the web user interface (UI), validating the functionality of web-based applications. This guide outlines the comprehensive steps required to create effective web-based tests.
 
@@ -253,7 +253,7 @@ Run sets are collections of test cases that represent comprehensive use cases. T
 - **Run Set Arguments**: Specify any necessary arguments required for the run set.
 
 
-## 3. Creating RF Based Tests
+## Creating RF Based Tests
 
 RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
 
