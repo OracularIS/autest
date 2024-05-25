@@ -185,3 +185,49 @@ The run set arguments may need to be created or changed to support test cases.
 |                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
 |                   | - Uc_ossi_correct_result is the correct result                 |
 
+##Creating RF Based Tests
+
+RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
+
+### 1. Define Application Flow Steps
+
+Application flow steps are the individual actions taken within an RF form, each corresponding to a specific interaction. Examples include:
+
+- **IDENTIFY_LOAD**: Represents the action of identifying a load in the RF form.
+- **ENTER_TEXT**: Simulates entering text into a field within the RF form.
+
+### 2. Create Application Flows
+
+Application flows are sequences of these steps that form complete RF workflows. They can include conditional logic to handle different workflow branches. Examples include:
+
+- **AF_IDENTIFY_LOAD**: A flow dedicated to the load identification process.
+- **AF_LOAD_ID_MAIN_V002**: A comprehensive flow that includes sub-flows and steps for navigating through various RF forms.
+
+### 3. Define Tests
+
+An RF test combines various application flows and consists of the following components:
+
+- **Name**: A descriptive name for the test.
+- **Type**: Specify the test type as RF.
+- **Commands**: Commands to be executed at different stages of the test:
+  - **Pre-Test Command**: Initializes the test environment.
+  - **Main Command**: Executes the primary logic of the test.
+  - **Post-Test Command**: Performs cleanup or verification tasks after the main test execution.
+  - **Validation Command**: Ensures the test results are as expected.
+
+### 4. Create Test Cases
+
+Test cases specify the input parameters and scenarios for testing. Each test case includes:
+
+- **Name**: A unique identifier for the test case.
+- **Environment**: The environment in which the test case will run (typically set to `%` to denote all environments).
+- **Arguments**: Specific input values for the test.
+- **Validation Command**: A command executed to verify the outcome of the test case.
+
+### 5. Combine in Run Sets
+
+Run sets are sequences of test cases that represent complete use cases. To manage run sets:
+
+- **Define Run Set**: Create or update a run set to include new test cases.
+- **Run Set Arguments**: Specify any necessary arguments for the run set.
+
