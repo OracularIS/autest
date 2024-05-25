@@ -1,5 +1,20 @@
 ## Creating MOCA Based Tests
 
+### Overview
+Creating MOCA based tests requires intimate knowledge of the MOCA language and some concepts. As we create tests, we will utilize some concepts heavily: 
+
+Some of these tests may be performing a series of complex tasks.  When  they are executed in the context of auTest, we want to publish the details about each step.  This requires appropriate use of “&” so that the output of the whole script is then published to the auTest framework.  For example: 
+```moca
+Publish data where a=1 
+
+& 
+publish data where a=2 
+```
+
+Will return two rows to the framework which can then be logged.  We utilize this technique in a MOCA test to publish information about each step in the script. 
+
+Developing MOCA based tests requires us to trace the use case first from the front-end to extract the MOCA Commands.  We need to understand how we can easily identify the commands that were executed from the front-end, as those are the ones that will then be used in the test.  The idea is to make the MOCA based test run the same commands as the front-end so that it can expose issues easily. 
+
 This section describes the steps involved in MOCA based tests:
 
 ### Get Traces
@@ -256,6 +271,7 @@ Run sets are collections of test cases that represent comprehensive use cases. T
 ## Creating RF Based Tests
 
 RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
+For RF based tests, you can use the `MTF trace` option.  That easily provides the commands that were executed by the MTF framework to perform a use case
 
 ### Define Application Flow Steps
 
@@ -277,13 +293,17 @@ An RF test combines various application flows and consists of the following comp
 
 - **Name**: A descriptive name for the test.
 - **Type**: Specify the test type as RF.
+- - **Commands**: Define commands to be executed at different stages of the test:
+  - **Pre-Test Command**: Initializes the test environment and prepares the necessary preconditions.
+  - **Post-Test Command**: Performs cleanup operations or additional verifications after the main test execution.
 
 ### Create Test Cases
 
 Test cases specify the input parameters and scenarios for testing. Each test case includes:
 
 - **Name**: A unique identifier for the test case.
-- **Environment**: The environment in which the test case will run (typically set to `%` to denote all environments).
+- **Arguments**: Specific values for the test arguments to tailor the test scenario.
+- **Validation Command**: A command executed to verify the outcome of the test case.
 
 
 ### Combine in Run Sets
