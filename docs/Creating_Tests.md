@@ -86,22 +86,18 @@ start_ms = System.currentTimeMillis() catch(@?)
 }
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
-`{ 
-<step 1> 
-} 
+
+{ <step 1> } 
 & 
-{ 
-<step 2> 
-}
-`
+{ <step 2> }
+
 
 ### Decide on how the script should behave for no data 
 
 Generally, we want the script to raise an error if it did not find any data to process. However, that should be a conscious decision.
 
 Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
-   
-"
+
 >> res_full 
 | 
 if ( rowcount(@res_full) = 0 ) 
@@ -109,7 +105,7 @@ if ( rowcount(@res_full) = 0 )
 else 
   publish data combination 
   where res = @res_full 
-"
+
 
 ### Version Proof Commands
 
