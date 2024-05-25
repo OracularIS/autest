@@ -44,8 +44,60 @@ In some cases, we will process one row – but for MOCA based tests, we will oft
 
 If we decide to work on more than one row, then it is a good practice to allow for optional input variables to limit how much data is processed. For example here I am defining that I want to process a single row.
 
-```sql
+```moca
 publish data
     where uc_autest_comflg = 1
     and uc_max_rows = 1
 ```
+Then later on I can use `uc_max_rows` to limit the results of a query or use other techniques like “session variables” to limit the processing to a single row.
+
+## Decide if Our Test Needs to Support Stress Testing
+
+Every test is not automatically a candidate for being run as a stress test. To be run as a stress test, we need to make sure that the code has appropriate logic to “lock” and with “nowait” (see concepts above). The test should then also respect `uc_stress_test_mode` to make determination and then should process one row of data.
+
+## Decide if Our Test Will Do a Commit or Rollback
+
+As a general rule, we do not want to do commit or rollback inside a test script. If in a certain case we want to do this as part of a test, then we should make it controllable via input arguments.
+
+The reason for doing commit or rollback will be to support stress testing and free locks such that it represents reality. For example, if we are going to pick up loads and deposit them as part of a script, it is a good idea to commit after pick and then after deposit as that is how the transaction works in reality. If we did not do that, then we would create artificial contention.
+
+## Decide if Your Script Needs to Include a Random “Sleep”
+
+It may be important in some cases to include a sleep inside the script. Typically that will be needed to support stress testing. If needed use `Thread.sleep` or the “go to sleep” MOCA command. But it is a good idea to define an optional input variable that must be set to do this.
+
+## Decide on the Output of the Test Script
+
+When our scripts run, their output is captured and recorded as part of the run. So the output becomes extremely valuable when we want to refer to the execution later.
+
+With that understanding, we should not be stingy in terms of the output we create for the scripts.
+
+Enclose each logical “step” of your test in a pair of braces. And then at the end of your logic, publish data that reflects the work done. Also refer to the concept above about capturing the timing. For example:
+
+```moca
+ - 
+start_ms = System.currentTimeMillis() catch(@?)
+
+{
+  <your logic>;
+  end_ms = System.currentTimeMillis() catch(@?)
+  |
+  publish data
+  where step = 'my step name'
+  and <data that describes what the step did>
+  and elapsed = @end_ms - @start_ms
+}
+```
+ - Use `“&”` for each logical “step” inside your test script, for example: 
+```moca{ 
+
+<step 1> 
+
+} 
+
+& 
+
+{ 
+
+<step 2> 
+
+} ```
