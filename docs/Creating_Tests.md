@@ -86,7 +86,7 @@ start_ms = System.currentTimeMillis() catch(@?)
 }
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
-```moca
+```
 { 
 
 <step 1> 
@@ -101,6 +101,7 @@ start_ms = System.currentTimeMillis() catch(@?)
 
 }
 ```
+
 ### Decide on how the script should behave for no data 
 
 Generally, we want the script to raise an error if it did not find any data to process. However, that should be a conscious decision.
