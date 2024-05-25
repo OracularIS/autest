@@ -2,19 +2,19 @@
 
 This section describes the steps involved in MOCA based tests:
 
-### 1. Get Traces
+### Get Traces
 
 When developing MOCA based tests, we want to execute the MOCA commands that are as close to the ones executed by the front-end as possible. This is to make sure that our test coverage is as close to the real world as possible.
 
 If the use case involves RF, then getting an MTF trace is a good first step as that shows the MOCA commands easily. Refer to the concepts section above to see how you can use traces to find appropriate commands.
 
-### 2. Decide Which Commands to Use
+### Decide Which Commands to Use
 
 It may not be important to run every command that the client issued. Generally, we are interested in only those commands that changed the state of the underlying data.
 
 There are exceptions to this rule though. For example, in some cases, it is possible that a “read” command has an error which fails the front-end. But generally, we want to take the middle path and as a first pass only focus on the commands that changed the state. If then we find that we missed something, we can add those “read” commands in the test as well.
 
-### 3. Decide on What Test You Will Create – One Use Case May Create More Than One Test
+### Decide on What Test You Will Create – One Use Case May Create More Than One Test
 
 When we execute tests, we typically run them as part of a run set. A run set has details where each row represents a test case (a test case is a test with some pre-defined data).
 
@@ -28,7 +28,7 @@ And the following shows how we process an outbound order:
 
 You can see that we have created tests at a manageable level and then we string them together for the final run set.
 
-### 4. Decide on the Arguments That You Need for the Test
+### Decide on the Arguments That You Need for the Test
 
 We need to then decide on the arguments for the test. There are certain arguments that are always there (see concepts above). In addition to that, we will have certain arguments that are based on the specific test or based on the type of run set that it will be called from. Please note:
 
@@ -38,7 +38,7 @@ Understand the concept of `uc_test_exec_seqnum`. This is central to how we write
 
 Decide input as expressions where appropriate – but at the same time, allow for exact input as well.
 
-### 5. Decide on What Data Will This Test Run On
+### Decide on What Data Will This Test Run On
 
 In some cases, we will process one row – but for MOCA based tests, we will often create them to process a set of data. For example, we may process all inventory in a truck and deposit to a destination.
 
@@ -51,21 +51,21 @@ publish data
 ```
 Then later on I can use `uc_max_rows` to limit the results of a query or use other techniques like “session variables” to limit the processing to a single row.
 
-### 6. Decide if Our Test Needs to Support Stress Testing
+### Decide if Our Test Needs to Support Stress Testing
 
 Every test is not automatically a candidate for being run as a stress test. To be run as a stress test, we need to make sure that the code has appropriate logic to “lock” and with “nowait” (see concepts above). The test should then also respect `uc_stress_test_mode` to make determination and then should process one row of data.
 
-### 7. Decide if Our Test Will Do a Commit or Rollback
+### Decide if Our Test Will Do a Commit or Rollback
 
 As a general rule, we do not want to do commit or rollback inside a test script. If in a certain case we want to do this as part of a test, then we should make it controllable via input arguments.
 
 The reason for doing commit or rollback will be to support stress testing and free locks such that it represents reality. For example, if we are going to pick up loads and deposit them as part of a script, it is a good idea to commit after pick and then after deposit as that is how the transaction works in reality. If we did not do that, then we would create artificial contention.
 
-### 8. Decide if Your Script Needs to Include a Random “Sleep”
+### Decide if Your Script Needs to Include a Random “Sleep”
 
 It may be important in some cases to include a sleep inside the script. Typically that will be needed to support stress testing. If needed use `Thread.sleep` or the “go to sleep” MOCA command. But it is a good idea to define an optional input variable that must be set to do this.
 
-### 9. Decide on the Output of the Test Script
+### Decide on the Output of the Test Script
 
 When our scripts run, their output is captured and recorded as part of the run. So the output becomes extremely valuable when we want to refer to the execution later.
 
@@ -92,7 +92,7 @@ start_ms = System.currentTimeMillis() catch(@?)
 { <step 2> }
 
 
-### 10. Decide on how the script should behave for no data 
+### Decide on how the script should behave for no data 
 
 Generally, we want the script to raise an error if it did not find any data to process. However, that should be a conscious decision.
 
@@ -108,7 +108,7 @@ if ( rowcount(@res_full) = 0 )
   where res = @res_full `
 
 
-### 11. Version Proof Commands
+### Version Proof Commands
 
 If we know of a version issue, then try to make the code version-proof. You can use the following techniques:
 
@@ -122,7 +122,7 @@ If we know of a version issue, then try to make the code version-proof. You can 
 - Prefer to use MOCA commands to get the data rather than SQL.
 - Use `catch` to try different commands based on version.
 
-### 12. Creating BASE Tests
+### Creating BASE Tests
 
 **Avoid Using Custom Commands:** The BASE tests are for all customers, so we should not use custom commands.
 
@@ -136,26 +136,26 @@ If we know of a version issue, then try to make the code version-proof. You can 
   - Starting from the fifth character for minor sorting.
   - After that put a meaningful name for the test.
 
-### 13. Naming the Test Script Command
+### Naming the Test Script Command
 
 - In many cases, the command is for a specific test (unless you are creating a reusable base command to be called from multiple tests or from other commands).
 - Use an appropriate prefix for the command.
 - Make a meaningful command name.
 - If it is for a certain test, you can name it `<test name>_EXEC`.
 
-### 14. Formally Create Test Arguments
+### Formally Create Test Arguments
 
 The input parameters are then defined for the test.
 
-### 15. Creating MOCA-Based Test Cases
+### Creating MOCA-Based Test Cases
 
 Once the test has been created, we always want to create at least one test case. For BASE tests, typically create a test case called `BASE_ALL_GEN`. We can define arguments for this test case.
 
-### 16. Create or Change a Run Set
+### Create or Change a Run Set
 
 Once a test case has been created, we need to see if a new run-set is needed or we need to add it to an existing run set.
 
-### 17. Create or change a run set arguments 
+### Create or change a run set arguments 
 
 The run set arguments may need to be created or changed to support test cases. 
 
@@ -189,21 +189,21 @@ The run set arguments may need to be created or changed to support test cases.
 
 RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
 
-### 1. Define Application Flow Steps
+### Define Application Flow Steps
 
 Application flow steps are the individual actions taken within an RF form, each corresponding to a specific interaction. Examples include:
 
 - **IDENTIFY_LOAD**: Represents the action of identifying a load in the RF form.
 - **ENTER_TEXT**: Simulates entering text into a field within the RF form.
 
-### 2. Create Application Flows
+### Create Application Flows
 
 Application flows are sequences of these steps that form complete RF workflows. They can include conditional logic to handle different workflow branches. Examples include:
 
 - **AF_IDENTIFY_LOAD**: A flow dedicated to the load identification process.
 - **AF_LOAD_ID_MAIN_V002**: A comprehensive flow that includes sub-flows and steps for navigating through various RF forms.
 
-### 3. Define Tests
+### Define Tests
 
 An RF test combines various application flows and consists of the following components:
 
@@ -215,7 +215,7 @@ An RF test combines various application flows and consists of the following comp
   - **Post-Test Command**: Performs cleanup or verification tasks after the main test execution.
   - **Validation Command**: Ensures the test results are as expected.
 
-### 4. Create Test Cases
+### Create Test Cases
 
 Test cases specify the input parameters and scenarios for testing. Each test case includes:
 
@@ -224,7 +224,7 @@ Test cases specify the input parameters and scenarios for testing. Each test cas
 - **Arguments**: Specific input values for the test.
 - **Validation Command**: A command executed to verify the outcome of the test case.
 
-### 5. Combine in Run Sets
+### Combine in Run Sets
 
 Run sets are sequences of test cases that represent complete use cases. To manage run sets:
 
