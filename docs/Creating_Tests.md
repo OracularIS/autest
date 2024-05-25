@@ -277,11 +277,6 @@ An RF test combines various application flows and consists of the following comp
 
 - **Name**: A descriptive name for the test.
 - **Type**: Specify the test type as RF.
-- **Commands**: Commands to be executed at different stages of the test:
-  - **Pre-Test Command**: Initializes the test environment.
-  - **Main Command**: Executes the primary logic of the test.
-  - **Post-Test Command**: Performs cleanup or verification tasks after the main test execution.
-  - **Validation Command**: Ensures the test results are as expected.
 
 ### Create Test Cases
 
@@ -289,8 +284,7 @@ Test cases specify the input parameters and scenarios for testing. Each test cas
 
 - **Name**: A unique identifier for the test case.
 - **Environment**: The environment in which the test case will run (typically set to `%` to denote all environments).
-- **Arguments**: Specific input values for the test.
-- **Validation Command**: A command executed to verify the outcome of the test case.
+
 
 ### Combine in Run Sets
 
@@ -298,49 +292,3 @@ Run sets are sequences of test cases that represent complete use cases. To manag
 
 - **Define Run Set**: Create or update a run set to include new test cases.
 - **Run Set Arguments**: Specify any necessary arguments for the run set.
-
-## Creating Web-Based Tests 
-
-Web-based tests in the Smart AuTest suite are designed to automate interactions with the web user interface (UI), validating the functionality of web-based applications. This guide outlines the comprehensive steps required to create effective web-based tests.
-
-### Define Application Flow Steps
-
-Application flow steps represent individual actions performed on web forms. These actions can include clicking buttons, entering text, and filtering data. Key examples of application flow steps include:
-
-- **wm.config/wm.config.warehouse**: Launches the specified web form.
-- **CLICK_LINKS**: Simulates clicking a hyperlink.
-- **ENTER_TEXT**: Simulates entering text into a form field.
-- **BUTTON**: Simulates pressing a button.
-
-### Create Application Flows
-
-Application flows are sequences of defined steps that represent complete web-based workflows. These flows can incorporate multiple steps and include conditional logic to handle various scenarios. The application flow refers to the sequence of actions and interactions that a user would typically perform when using an application. It involves navigating through different screens, entering data, interacting with buttons and links, and verifying expected outcomes. 
-
-### Define Tests
-
-A web test combines application flows to represent a complete web-based scenario. Each test consists of the following components:
-
-- **Name**: Assign a meaningful and descriptive name to the test.
-- **Type**: Specify the test type as WEB.
-- **Commands**: Define commands to be executed at different stages of the test:
-  - **Pre-Test Command**: Initializes the test environment and prepares the necessary preconditions.
-  - **Main Command**: Executes the primary logic of the test.
-  - **Post-Test Command**: Performs cleanup operations or additional verifications after the main test execution.
-  - **Validation Command**: Ensures that the test results align with the expected outcomes.
-
-### Create Test Cases
-
-Test cases define specific input parameters for the test arguments and outline the exact scenarios to be tested. Each test case includes:
-
-- **Name**: A unique identifier for the test case.
-- **Environment**: Specifies the environment in which the test case will run, typically set to `%` to denote all environments.
-- **Arguments**: Specific values for the test arguments to tailor the test scenario.
-- **Validation Command**: A command executed to verify the outcome of the test case.
-
-### Combine in Run Sets
-
-Run sets are collections of test cases that represent comprehensive use cases. To manage run sets effectively:
-
-- **Define Run Set**: Create or update a run set to include the newly defined test cases.
-- **Run Set Arguments**: Specify any necessary arguments required for the run set.
-
