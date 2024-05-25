@@ -98,13 +98,13 @@ Generally, we want the script to raise an error if it did not find any data to p
 
 Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
 
->> res_full 
-| 
-if ( rowcount(@res_full) = 0 ) 
+`>> res_full `
+`| `
+`if ( rowcount(@res_full) = 0 ) 
   [select 1 from invlod where 1=2] 
 else 
   publish data combination 
-  where res = @res_full 
+  where res = @res_full `
 
 
 ### Version Proof Commands
