@@ -191,7 +191,7 @@ Web-based tests in the Smart AuTest suite are designed to automate interactions 
 
 ### Define Application Flow
 
-the application flow refers to the sequence of actions and interactions that a user would typically perform when using an application. It involves navigating through different screens, entering data, interacting with buttons and links, and verifying expected outcomes. 
+The application flow refers to the sequence of actions and interactions that a user would typically perform when using an application. It involves navigating through different screens, entering data, interacting with buttons and links, and verifying expected outcomes. 
 
 ### Define Application Flow Steps
 
