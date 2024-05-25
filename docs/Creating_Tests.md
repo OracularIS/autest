@@ -185,6 +185,74 @@ The run set arguments may need to be created or changed to support test cases.
 |                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
 |                   | - Uc_ossi_correct_result is the correct result                 |
 
+## Creating Web-Based Tests 
+
+Web-based tests in the Smart AuTest suite are designed to automate interactions with the web user interface (UI), validating the functionality of web-based applications. This guide outlines the comprehensive steps required to create effective web-based tests.
+
+### Define Application Flow
+
+the application flow refers to the sequence of actions and interactions that a user would typically perform when using an application. It involves navigating through different screens, entering data, interacting with buttons and links, and verifying expected outcomes. 
+
+### Define Application Flow Steps
+
+Application flow steps represent individual actions performed on web forms. These actions can include clicking buttons, entering text, and filtering data. Key examples of application flow steps include:
+
+- **wm.config/wm.config.warehouse**: Launches the specified web form.
+- **CLICK_LINKS**: Simulates clicking a hyperlink.
+- **ENTER_TEXT**: Simulates entering text into a form field.
+- **BUTTON**: Simulates pressing a button.
+
+For example, to allocate a wave we'll do following setps
+
+-  The first step is to wave and pick screen link.
+-  Second step is for Quick filter click.
+-  Third step is for All Active Wave.
+-  The fourth step is to select the wave which we want to allocate.
+-  The fifth step is to go to actions tab and select allocate wave which is planned.
+-  Sixth is select OK to allocate wave.
+
+And we'll define these steps in application flow steps given below:
+
+- **wm.outboundplanner/wm.wavesandpicks**: Go to wave and pick screen.
+- **CLICK_LINKS**: For Quick filter click
+- **CLICK_TABLE_CELLS**: For All Active 
+- **CLICK**: To select a wave which we want to allocate
+- **CLICK_LINKS**: For go to actions tab and select allocate wave which is planned.
+- **CLICK**: To select OK to allocate wave.
+
+
+### Define Application Flow Detail Arguments
+
+Application flow details are typically provided as arguments to the test. These arguments define the specific steps and parameters required to execute the test accurately. By providing application flow details as arguments, testers can easily customize and parameterize their test. This allows for flexible and reusable test that can be executed with different data sets, configurations, or expected results. Moreover, it facilitates better test case management and maintenance, as changes to the application flow can be made by modifying the arguments without modifying the core logic.
+
+### Define Tests
+
+A web test combines application flows to represent a complete web-based scenario. Each test consists of the following components:
+
+- **Name**: Assign a meaningful and descriptive name to the test.
+- **Type**: Specify the test type as WEB.
+
+### Test Arguments
+
+Test arguments serve as the customizable parameters or inputs that are fed into test to tailor the test execution according to various scenarios or conditions. They play a crucial role in enhancing the flexibility and reusability of test cases by enabling the same test to be executed with different sets of data.
+
+By leveraging test arguments, testers can efficiently validate diverse scenarios within the application without the need to duplicate test. This flexibility allows for comprehensive testing coverage while minimizing redundancy in test case creation and maintenance efforts.
+
+### Create Test Cases
+
+Test cases define specific input parameters for the test arguments and outline the exact scenarios to be tested. Each test case includes:
+
+- **Name**: A unique identifier for the test case.
+- **Arguments**: Specific values for the test arguments to tailor the test scenario.
+
+### Combine in Run Sets
+
+Run sets are collections of test cases that represent comprehensive use cases. To manage run sets effectively:
+
+- **Define Run Set**: Create or update a run set to include the newly defined test cases.
+- **Run Set Arguments**: Specify any necessary arguments required for the run set.
+
+
 ## Creating RF Based Tests
 
 RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
@@ -246,9 +314,7 @@ Application flow steps represent individual actions performed on web forms. Thes
 
 ### Create Application Flows
 
-Application flows are sequences of defined steps that represent complete web-based workflows. These flows can incorporate multiple steps and include conditional logic to handle various scenarios. For example:
-
-- **BASE_WEB_PLAN_WAVE_V002**: This flow includes steps for planning a wave, such as launching the form, entering text, and clicking buttons.
+Application flows are sequences of defined steps that represent complete web-based workflows. These flows can incorporate multiple steps and include conditional logic to handle various scenarios. The application flow refers to the sequence of actions and interactions that a user would typically perform when using an application. It involves navigating through different screens, entering data, interacting with buttons and links, and verifying expected outcomes. 
 
 ### Define Tests
 
