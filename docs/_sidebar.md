@@ -5,7 +5,7 @@
 - [Case Study ](./.md)
 - [Architecture](./arch_overview.md)
 - [Executing](./.md)
-- [How to create Tests](./.md)
+- [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./sample2.md)
       
   <details class="is-submenu ml-10">
