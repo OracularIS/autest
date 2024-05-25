@@ -86,7 +86,7 @@ start_ms = System.currentTimeMillis() catch(@?)
 }
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
-```
+```moca
 { 
 
 <step 1> 
@@ -107,21 +107,22 @@ Generally, we want the script to raise an error if it did not find any data to p
 
 Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
    
+```moca
 >> res_full 
 | 
 if ( rowcount(@res_full) = 0 ) 
-[select 1 from invlod where 1=2] 
-
+  [select 1 from invlod where 1=2] 
 else 
- publish data combination 
-where res = @res_full 
+  publish data combination 
+  where res = @res_full 
+```
 
 ### Version Proof Commands
 
 If we know of a version issue, then try to make the code version-proof. You can use the following techniques:
 
 - **Abstract `pckwrk` vs `pckwrk_view` as follows:**
-```
+```moca
 [select 1 from pckwrk_view where 1=2 ] catch(@?) 
 | 
 
@@ -163,5 +164,3 @@ Once the test has been created, we always want to create at least one test case.
 ### Create or Change a Run Set
 
 Once a test case has been created, we need to see if a new run-set is needed or we need to add it to an existing run set.
-
----
