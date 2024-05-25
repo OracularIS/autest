@@ -21,7 +21,7 @@ The Smart AuTest suite is available in a subscription model. This implies that c
 - Users from the organization log in to SmartApps and register.
     Screenshots of the login, registration process
 - Each named user creates an app key.
-  Screenshots of the app key creation are inserted.
+    Screenshots of the app key creation are inserted.
 - Link the Smart MOCA Client to Smart Apps using the created app key.
   Screenshots of using Smart Connect are inserted.
 - Users can now connect to auTest from the Smart MOCA Client.
