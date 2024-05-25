@@ -75,7 +75,6 @@ With that understanding, we should not be stingy in terms of the output we creat
 
 ```moca 
 start_ms = System.currentTimeMillis() catch(@?)
-
 {
   <your logic>;
   end_ms = System.currentTimeMillis() catch(@?)
@@ -88,7 +87,6 @@ start_ms = System.currentTimeMillis() catch(@?)
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
 ```
-
 { 
 
 <step 1> 
