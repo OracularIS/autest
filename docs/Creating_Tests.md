@@ -238,7 +238,7 @@ And we'll define these steps in application flow steps given below:
 
 ### Define Application Flow Detail Arguments
 
-Application flow details are typically provided as arguments to the test. These arguments define the specific steps and parameters required to execute the test accurately. By providing application flow details as arguments, testers can easily customize and parameterize their test. This allows for flexible and reusable test that can be executed with different data sets, configurations, or expected results. Moreover, it facilitates better test case management and maintenance, as changes to the application flow can be made by modifying the arguments without modifying the core logic.
+Application flow details are typically provided as arguments to the test. These arguments define the specific steps and parameters required to execute the test accurately. By providing application flow details as arguments, testers can easily customize and parameterize their test. This allows for flexible and reusable test that can be executed with different data sets or expected results. Moreover, it facilitates better test case management and maintenance, as changes to the application flow can be made by modifying the arguments without modifying the core logic.
 
 ### Define Tests
 
@@ -251,7 +251,7 @@ A web test combines application flows to represent a complete web-based scenario
 
 Test arguments serve as the customizable parameters or inputs that are fed into test to tailor the test execution according to various scenarios or conditions. They play a crucial role in enhancing the flexibility and reusability of test cases by enabling the same test to be executed with different sets of data.
 
-By leveraging test arguments, testers can efficiently validate diverse scenarios within the application without the need to duplicate test. This flexibility allows for comprehensive testing coverage while minimizing redundancy in test case creation and maintenance efforts.
+By leveraging test arguments, testers can efficiently validate diverse scenarios within the application without the need to duplicate test. This flexibility allows for comprehensive testing coverage while minimizing redundancy in test creation and maintenance efforts.
 
 ### Create Test Cases
 
