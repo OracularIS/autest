@@ -185,7 +185,7 @@ The run set arguments may need to be created or changed to support test cases.
 |                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
 |                   | - Uc_ossi_correct_result is the correct result                 |
 
-##Creating RF Based Tests
+## Creating RF Based Tests
 
 RF-based tests in the Smart AuTest suite are designed to simulate user interactions with RF forms, ensuring the workflows function correctly. Here's a step-by-step guide to creating RF-based tests:
 
