@@ -154,3 +154,34 @@ Once the test has been created, we always want to create at least one test case.
 ### Create or Change a Run Set
 
 Once a test case has been created, we need to see if a new run-set is needed or we need to add it to an existing run set.
+
+### Create or change a run set arguments 
+
+The run set arguments may need to be created or changed to support test cases. 
+
+**AuTest Data Dictionary** 
+
+| Table             | Comments                                                        |
+|-------------------|-----------------------------------------------------------------|
+| Les_cmd           | This table maintains all test script commands                   |
+| Usr_ossi_test     | This table has all the tests:                                   |
+|                   | - Uc_ossi_cmd points to the command that has the test script. It is possible to use ##<command> syntax as well. For example: `##base_gen_sample001_moca_v001_exec##` |
+|                   | - Uc_ossi_test_grp_id is MOCA                                   |
+|                   | - Uc_ossi_validate_cmd can also be set to a command. Here too we can call command directly or use ##<command> syntax |
+|                   | - Uc_ossi_grp is used to categorize the tests. For example INBOUND, INV, OUTBOUND |
+| Usr_ossi_test_arg| This table has the arguments for a test                         |
+|                   | - Uc_oasi_af_arg_id is the name of the argument. This is the name which is used in the MOCA snippet (in les_cmd) |
+|                   | - Uc_ossi_descr is detailed description                         |
+|                   | - Uc_ossi_srtseq is used for sorting                            |
+|                   | - Uc_ossi_default_value_cmnt is for documentation               |
+|                   | - Uc_ossi_example is for documentation                          |
+|                   | - Uc_ossi_default_value is the literal default. It can also call a command, or expression, for example: An expression `[['STOLOC' + '@uc_test_exec_seqnum']]` Call a command directly or via “Script” `##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")##` |
+| Usr_ossi_test_case| This is used to define test cases for a test                    |
+|                   | - Uc_ossi_test_case_id is the name of the test case            |
+|                   | - Uc_env_id is used to define a specific environment. Typically we will set to % to imply all |
+|                   | - Uc_ossi_client_id is to define a specific client. We leave it as null |
+|                   | - Uc_ossi_descr is detailed description                         |
+|                   | - Uc_ossi_valdidate_cmd is executed after the test case has run. Call script directly or as ## |
+|                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
+|                   | - Uc_ossi_correct_result is the correct result                 |
+
