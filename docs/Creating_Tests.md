@@ -98,11 +98,12 @@ Generally, we want the script to raise an error if it did not find any data to p
 
 Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
 
-`>> res_full `
-`| `
-`if ( rowcount(@res_full) = 0 ) 
-  [select 1 from invlod where 1=2] 
-else 
+`>> res_full 
+| 
+if ( rowcount(@res_full) = 0 ) 
+  [select 1 from invlod where 1=2]`
+  
+`else 
   publish data combination 
   where res = @res_full `
 
@@ -113,9 +114,9 @@ If we know of a version issue, then try to make the code version-proof. You can 
 
 - **Abstract `pckwrk` vs `pckwrk_view` as follows:**
 
-"[select 1 from pckwrk_view where 1=2 ] catch(@?) 
-| 
-publish data where uc_pckwrk_table = iif ( @? = 0 or @? = -1403 or @? = 510, 'pckwrk_view', 'pckwrk' )"
+`[select 1 from pckwrk_view where 1=2 ] catch(@?)` 
+`| `
+`publish data where uc_pckwrk_table = iif ( @? = 0 or @? = -1403 or @? = 510, 'pckwrk_view', 'pckwrk' )`
 
 - You can call “list library versions” if you need to know the exact version.
 - Prefer to use MOCA commands to get the data rather than SQL.
