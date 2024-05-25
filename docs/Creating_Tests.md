@@ -71,10 +71,9 @@ When our scripts run, their output is captured and recorded as part of the run. 
 
 With that understanding, we should not be stingy in terms of the output we create for the scripts.
 
-Enclose each logical “step” of your test in a pair of braces. And then at the end of your logic, publish data that reflects the work done. Also refer to the concept above about capturing the timing. For example:
+ - Enclose each logical “step” of your test in a pair of braces. And then at the end of your logic, publish data that reflects the work done. Also refer to the concept above about capturing the timing. For example:
 
-```moca
- - 
+```moca 
 start_ms = System.currentTimeMillis() catch(@?)
 
 {
@@ -88,7 +87,9 @@ start_ms = System.currentTimeMillis() catch(@?)
 }
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
-```moca{ 
+```
+
+{ 
 
 <step 1> 
 
@@ -100,4 +101,74 @@ start_ms = System.currentTimeMillis() catch(@?)
 
 <step 2> 
 
-} ```
+}
+```
+### Decide on how the script should behave for no data 
+
+Generally, we want the script to raise an error if it did not find any data to process. However, that should be a conscious decision.
+
+Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
+` 
+>> res_full 
+
+| 
+
+if ( rowcount(@res_full) = 0 ) 
+
+    [select 1 from invlod where 1=2] 
+
+else 
+
+    publish data combination 
+
+    where res = @res_full ` 
+
+### Version Proof Commands
+
+If we know of a version issue, then try to make the code version-proof. You can use the following techniques:
+
+- **Abstract `pckwrk` vs `pckwrk_view` as follows:**
+```
+[select 1 from pckwrk_view where 1=2 ] catch(@?) 
+| 
+
+publish data where uc_pckwrk_table = iif ( @? = 0 or @? = -1403 or @? = 510, 'pckwrk_view', 'pckwrk' )
+```
+- You can call “list library versions” if you need to know the exact version.
+- Prefer to use MOCA commands to get the data rather than SQL.
+- Use `catch` to try different commands based on version.
+
+### Creating BASE Tests
+
+**Avoid Using Custom Commands:** The BASE tests are for all customers, so we should not use custom commands.
+
+### Naming the Test
+
+- It is important to decide on a good name for the test.
+- The test should have a suitable prefix. For example, all tests that are done for the “world” tenant have a “base_” prefix. If commands are created for a certain tenant, then they need to have a proper prefix.
+- The second part of the name (delimited by `_`) should indicate `INB` (for inbound), `OUB` (for outbound), `INV` (for inventory).
+- It is suggested that for complex use cases, like inbound and outbound, we use a 7-digit (0 prefixed) number here so that they sort properly.
+  - First four for main category, e.g., 0001 for order create, etc.
+  - Starting from the fifth character for minor sorting.
+  - After that put a meaningful name for the test.
+
+### Naming the Test Script Command
+
+- In many cases, the command is for a specific test (unless you are creating a reusable base command to be called from multiple tests or from other commands).
+- Use an appropriate prefix for the command.
+- Make a meaningful command name.
+- If it is for a certain test, you can name it `<test name>_EXEC`.
+
+### Formally Create Test Arguments
+
+The input parameters are then defined for the test.
+
+### Creating MOCA-Based Test Cases
+
+Once the test has been created, we always want to create at least one test case. For BASE tests, typically create a test case called `BASE_ALL_GEN`. We can define arguments for this test case.
+
+### Create or Change a Run Set
+
+Once a test case has been created, we need to see if a new run-set is needed or we need to add it to an existing run set.
+
+---
