@@ -11,9 +11,11 @@ The primary objective of this case study is to execute a MOCA-based test for rec
 ### Sample Data Creation
 
 **Sample RCVTRK Data**
+
 For the purpose of testing inbound inventory, we create sample RCVTRK data. For example, we use the identifier **RCVSMP001** to represent a sample truck. This data will be utilized to simulate the presence of incoming inventory on a truck.
 
 **Relevant Tables**
+
 - **rcvtrk**: This table contains information about the trucks and their status.
 - **rcvinv**: This table contains information about the inventory received.
 - **rcvlin**: This table contains line items related to the received inventory.
@@ -87,9 +89,11 @@ The primary objective of this case study is to execute an RF-based test for rece
 ### Sample Data Creation
 
 **Sample RCVTRK Data**
+
 For the purpose of testing inbound inventory, we create sample RCVTRK data. For example, we use the identifier **RCVSMP001** to represent a sample truck. This data will be utilized to simulate the presence of incoming inventory on a truck.
 
 ** Relevant Tables**
+
 - **rcvtrk**: This table contains information about the trucks and their status.
 - **rcvinv**: This table contains information about the inventory received.
 - **rcvlin**: This table contains line items related to the received inventory.
@@ -154,14 +158,15 @@ The execution console provides real-time feedback on the test process. Key featu
 ## Web-Based Test for Wave Planning
 
 ### Overview
+
 Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on web-based testing for the wave planning process, specifically for organizing and optimizing order fulfillment using the provided Smart AUtest framework.
 
 ### Objective
+
 The primary objective of this case study is to execute a web-based test for wave planning that simulates the organization and optimization of order fulfillment. The goal is to ensure that the system accurately groups and prioritizes orders, generates efficient picking plans, and updates relevant database tables accordingly.
 
 ### Sample Data Creation
 
-**Outbound Orders**
 For the purpose of testing wave planning, we create sample orders with the following criteria:
  - **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
  - Orders are named with a **“ATST-TMPL-“** prefix.
@@ -222,7 +227,7 @@ The objective of this run set is to execute a series of RF-based tests for recei
 
 For inbound testing, we create sample RCVTRK data, using identifiers such as **RCVSMP001**. This data includes `rcvtrk`, `rcvinv`, and `rcvlin` records. Optionally, inventory data can be included for ASN testing.
 
-#### Run Set Definition
+### Run Set Definition
 
 For this illustration, we use the `BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF` run set, which consists of the following steps:
 
