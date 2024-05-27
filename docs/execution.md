@@ -4,7 +4,9 @@ To execute a run set, select the desired run set and click Execute or start butt
 
 
 ### RUN Sets Steps
+
 Following steps will be used in run set `BASE_INB_000000_CREATE_TO_DISPATCH`.
+
 | **Step (Test)**                                        | **Description**                                                                                                                                                              |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001`      | This step copies a `RCVTRK` record and creates new `rcvtrk`, `rcvinv`, and `rcvlin` records for our test run. It utilizes the `uc_test_exec_seqnum` variable to ensure unique record creation. |
