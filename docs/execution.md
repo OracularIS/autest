@@ -34,7 +34,6 @@ When we click on the execute button, we are asked to enter some arguments on the
 After clicking OK, execution of run set will start.
 -	See that wh_id is a script that calls: 
 ##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## 
--	We will give our sample truck in uc_src_trknum, i.e. RCVSMP001 
 -	And then we will press OK 
 
 ### Execution Console shows the execution 
