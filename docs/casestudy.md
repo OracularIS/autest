@@ -112,6 +112,10 @@ We can execute the test by pressing the “Start” button
 
 ![](Images/image16.png)
 
+Then here we have to provide URL and press OK to start the test.
+
+![](Images/image17.png)
+
 
 ### Execution Console shows the execution 
 
