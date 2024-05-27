@@ -210,65 +210,51 @@ The execution console provides real-time feedback on the test process. Key featu
    - The execution console displays each step, with the current step highlighted.
    - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
 
-## Run Set for RF receiving
+## Run Set for RF Receiving
 
 ### Overview
-Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on run set of RF-based tests for the receiving process, specifically aimed at verifying the identification and processing of incoming inventory using the provided Smart AUtest framework.
+Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on a run set of RF-based tests for the receiving process, specifically aimed at verifying the identification and processing of incoming inventory using the provided Smart AUtest framework.
 
 ### Objective
-To execute a run set of RF-based tests for receiving that simulates the identification and processing of incoming inventory. The tests aim to ensure that the system accurately identifies inventory, processes incoming items efficiently, and updates the relevant database tables. This includes scenarios where the truck inventory is already identified, supporting ASN processes by returning success if inventory identification is pre-existing.
+The objective of this run set is to execute a series of RF-based tests for receiving to simulate the identification and processing of incoming inventory. The tests aim to ensure that the system accurately identifies inventory, processes incoming items efficiently, and updates the relevant database tables. This includes scenarios where the truck inventory is already identified, supporting ASN processes by returning success if inventory identification is pre-existing.
 
-### Have some samples created first 
+### Sample Data Creation
 
-For inbound, we create sample RCVTRK data, for example RCVSMP001
+For inbound testing, we create sample RCVTRK data, using identifiers such as **RCVSMP001**. This data includes `rcvtrk`, `rcvinv`, and `rcvlin` records. Optionally, inventory data can be included for ASN testing.
 
-We have rcvtrk, rcvinv, rcvlin
+#### Run Set Definition
 
-We could optionally have inventory as well for ASN testing 
+For this illustration, we use the `BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF` run set, which consists of the following steps:
 
+| **Step (Test)**                             | **Description**                                                                                                                                                              |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001` | This step copies a `RCVTRK` record and creates new `rcvtrk`, `rcvinv`, and `rcvlin` records for our test run. It utilizes the `uc_test_exec_seqnum` variable to ensure unique record creation. |
+| `BASE_INB_0002100_TRLR_CKIN_MOCA_V001`    | Using `uc_test_exec_seqnum`, this step checks in the truck against an open door.                                                                                            |
+| `BASE_INB_0003200_IDENTIFY_RF_V001`       | Identifies all inventory in the truck. Supports ASN scenarios, returning success if truck inventory is already identified.                                                    |
+| `BASE_INV_0020100_MOVE_RF_V001`           | Moves inventory to the destination location.                                                                                                                                  |
+| `BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001` | Closes and dispatches the truck.                                                                                                                                             |
 
-### The final run set defines how we run this 
+### Executing the Run Set
 
-For this illustration, see BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF run set.  This has following steps for the run set: 
+To execute the run set, follow these steps:
 
-| **Step (Test)**                           | **Description**                                                                                                                                                              |
-|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001` | This step copies a `RCVTRK` record and creates a new `rcvtrk`, `rcvinv`, `rcvlin` for our run. It will use the `uc_test_exec_seqnum` variable (set by the framework) to help in creating a new `rcvtrk`. |
-| `BASE_INB_0002100_TRLR_CKIN_MOCA_V001`    | We have `uc_test_exec_seqnum`, so it uses that to find the data we created. It then checks in the truck against an open door.                                                  |
-| `BASE_INB_0003200_IDENTIFY_RF_V001`       | Now that we have the truck checked in, it will identify all inventory in the truck. This supports the ASN scenario as well – if truck inventory is already identified, it simply returns success. |
-| `BASE_INV_0020100_MOVE_RF_V001`           | This will move inventory to the destination location.                                                                                                                         |
-| `BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001` | This step will close and dispatch the truck we just created.                                                                                                                   |
+1. Press the “Start” button on the Smart AUtest interface.
+   - ![](Images/image20.png)
+   - ![](Images/image21.png)
+2. Provide the required information, including the sample truck identifier (`RCVSMP001`).
+3. Press "OK" to proceed with the execution.
 
-### Executing the run set 
+### Execution Console
 
-We can execute the run set by pressing the “Start” button 
+The execution console provides real-time feedback on the test process, displaying each step as it executes. Key features include:
 
-![](Images/image20.png)
+- **Step Highlighting**: The currently executing step is highlighted in yellow.
+- **Status Display**: Each row's status is shown, indicating success or failure.
+- **Elapsed Time**: The time taken for each step is displayed, providing insights into test duration and performance.
 
-![](Images/image21.png)
+### Steps Execution
 
-
-See that wh_id is a script that calls: 
-
-##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## 
-
-We will give the our sample truck in uc_src_trknum, i.e. RCVSMP001 
-
-And then we will press OK 
-
-### Execution Console shows the execution 
-
-The execution is displayed for each step: 
-
- - As it executes, the step we are executing is in yellow 
-
- - It shows status of each row 
-
- - It shows elapsed time for each row 
-
-### Steps execute
-
-Below steps will execute for this runset
+The following steps are executed as part of this run set:
 
 ![](Images/image22.png)
 
