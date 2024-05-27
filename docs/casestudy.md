@@ -3,47 +3,54 @@
 ## MOCA Based Test for Receiving
 
 ### Overview
-Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on MOCA-based test for the receiving process, specifically for identifying and processing incoming inventory using the provided Smart AUtest framework.
+Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on MOCA-based tests for the receiving process, specifically for identifying and processing incoming inventory using the provided Smart AUtest framework.
 
 ### Objective
-To execute a MOCA-based test for receiving that simulates the identification and processing of incoming inventory, ensuring that the system accurately handles inventory data, including the generation of unique identifiers and the updating of relevant database tables.
+The primary objective of this case study is to execute a MOCA-based test for receiving that simulates the identification and processing of incoming inventory. The goal is to ensure that the system accurately handles inventory data, including the generation of unique identifiers and the updating of relevant database tables.
 
-### Have some samples created first
- 
-For inbound, we create sample RCVTRK data, for example RCVSMP001 
+### Sample Data Creation
 
-We have rcvtrk, rcvinv, rcvlin 
+**Sample RCVTRK Data**
+For the purpose of testing inbound inventory, we create sample RCVTRK data. For example, we use the identifier **RCVSMP001** to represent a sample truck. This data will be utilized to simulate the presence of incoming inventory on a truck.
 
-We could optionally have inventory as well for ASN testing 
+**Relevant Tables**
+- **rcvtrk**: This table contains information about the trucks and their status.
+- **rcvinv**: This table contains information about the inventory received.
+- **rcvlin**: This table contains line items related to the received inventory.
 
-### How we run a test 
+Optionally, we can include inventory data for ASN testing.
 
-For MOCA based test for receiving, we have truck and that is checked in as well, it will identify all inventory in the truck.  We have created this to support ASN scenario as well – so if truck inventory is already identified it simply returns success 
+### Running the Test
 
-### Executing the test
+#### MOCA-Based Test for Receiving
+For the MOCA-based test for receiving, we assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
-We can execute the test by pressing the “Start” button 
+#### Execution Steps
 
-![](Images/image10.png)
+1. **Initiating the Test**
+   - To execute the test, press the “Start” button on the Smart AUtest interface.
+   - ![](Images/image10.png)
+   - ![](Images/image11.png)
 
-![](Images/image11.png)
+2. **Script Execution for Warehouse Identification**
+   - The following script will be called to identify the warehouse ID:
+     ```
+     ##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")##
+     ```
+   - In this script, we will input our sample truck identifier in the variable `uc_src_trknum`, i.e., `RCVSMP001`.
 
-For wh_id below script will call 
+3. **Confirming the Sample Truck**
+   - After entering the truck identifier, press "OK" to proceed.
 
-##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## 
+### Execution Console
 
-We will give the our sample truck in uc_src_trknum, i.e. RCVSMP001 
+The execution console provides real-time feedback on the test process. Key features include:
 
-And then we will press OK 
-
-### Execution Console shows the execution 
-
-The execution is displayed for each step: 
- - As it executes, the step we are executing is in yellow 
- - It shows status of each row 
- - It shows elapsed time for each row 
- 
- ![](Images/image12.png)
+- **Step Highlighting**: The current step being executed is highlighted in yellow.
+- **Status Display**: Each row's status is displayed, indicating success or failure.
+- **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
+  
+  ![](Images/image12.png)
 
  
 ## RF Based Test for Receiving
