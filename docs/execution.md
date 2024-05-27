@@ -4,13 +4,14 @@ To execute a run set, select the desired run set and click Execute or start butt
 
 ### RUN Sets Steps
 Following steps will be used in run set `BASE_INB_000000_CREATE_TO_DISPATCH`.
-| **Step (Test)**                             | **Description**                                                                                                                                                              |
-|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001` | This step copies a `RCVTRK` record and creates new `rcvtrk`, `rcvinv`, and `rcvlin` records for our test run. It utilizes the `uc_test_exec_seqnum` variable to ensure unique record creation. |
-| `BASE_INB_0002100_TRLR_CKIN_MOCA_V001`    | Using `uc_test_exec_seqnum`, this step checks in the truck against an open door.                                                                                            |
-| ` BASE_INB_0003100_IDENTIFY_MOCA_V001 `       | Now that we have truck and that is checked in as well, it will identify all inventory in the truck.  We have created this to support ASN scenario as well – so if truck inventory is already identified it simply returns success.                                                    |
-| ` BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001 `           | We use this test twice and use test case concept.  The first run moves inventory to receive stage and next one will allocate a putaway location and drop it there.These steps support the concepts to run in a stress test mode as well.  So when run normally, they will process everything in the truck. But when run in stress test mode they will process one record only                               |
-| `BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001` | Closes and dispatches the truck.                                                                                                                                             |
+| **Step (Test)**                                        | **Description**                                                                                                                                                              |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001`      | This step copies a `RCVTRK` record and creates new `rcvtrk`, `rcvinv`, and `rcvlin` records for our test run. It utilizes the `uc_test_exec_seqnum` variable to ensure unique record creation. |
+| `BASE_INB_0002100_TRLR_CKIN_MOCA_V001`                 | Using `uc_test_exec_seqnum`, this step checks in the truck against an open door.                                                                                             |
+| `BASE_INB_0003100_IDENTIFY_MOCA_V001`                  | Now that we have a truck that is checked in as well, it will identify all inventory in the truck. We have created this to support ASN scenario as well – so if truck inventory is already identified it simply returns success. |
+| `BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001` | We use this test twice and use test case concept. The first run moves inventory to receive stage and the next one will allocate a putaway location and drop it there. These steps support the concepts to run in a stress test mode as well. So when run normally, they will process everything in the truck. But when run in stress test mode they will process one record only. |
+| `BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001`     | Closes and dispatches the truck.                                                                                                                                             |
+
 
 ### How Run Set will execute
 
