@@ -10,7 +10,7 @@ The Smart AuTest solution is designed to streamline and automate the testing of 
 
 ## Run Sets for End-to-End Scenarios
 
-Smart AuTest allows for the creation of “Run Sets,” which are sequences of tests combined to script comprehensive end-to-end scenarios. This feature enables users to test complex workflows and interactions within the WMS in a seamless and integrated manner.
+Smart AuTest empowers users to create customized "Run Sets," which serve as meticulously crafted sequences of tests tailored to script comprehensive end-to-end scenarios. By amalgamating individual tests into cohesive sequences, users can effectively evaluate complex workflows and interactions, thereby ensuring the holistic functionality of the WMS.
 
 ## Stress Testing Capabilities
 
@@ -18,7 +18,7 @@ The solution also supports stress testing, a mode where the system is subjected 
 
 ## Comprehensive Execution Results
 
-The results of test executions are meticulously captured, providing detailed insights into each test run. In addition to standard reporting, users can implement specific validation logic to verify that the system behaves as expected under various conditions.
+The execution results are captured in a comprehensive manner and in addition to that, we can have specific validation logic as well. The results of test executions are meticulously captured, providing detailed insights into each test run. 
 
 ## Secure Cloud Framework
 
