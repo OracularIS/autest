@@ -1,6 +1,6 @@
 # Case Study
 
-##MOCA Based Test for Receiving
+## MOCA Based Test for Receiving
 
 ### Overview
 Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on MOCA-based test for the receiving process, specifically for identifying and processing incoming inventory using the provided Smart AUtest framework.
