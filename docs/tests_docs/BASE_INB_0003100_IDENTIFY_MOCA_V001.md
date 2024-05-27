@@ -87,6 +87,7 @@ This section details the various RunSets that utilize this test as part of their
 | Run Set ID | Run Set Description |
 | ---------- | ------------------- |
 | BASE_INB_000000_CREATE_TO_DISPATCH | This takes rcvtrk data, copies it, checks in, reeives, and dispatches |
+| BASE_INB_000000_CREATE_TO_DISPATCH_STRESSTEST | This takes rcvtrk data, copies it, checks in, receives (with multiple users), and dispatches |
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
