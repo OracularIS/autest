@@ -52,6 +52,28 @@ The execution console provides real-time feedback on the test process. Key featu
   
   ![](Images/image12.png)
 
+### Detailed Execution Flow
+
+1. **Start Button Pressed**:
+   - The test initiates upon pressing the "Start" button.
+   - The system begins by verifying the presence of the sample truck (`RCVSMP001`) in the `rcvtrk` table.
+
+2. **Warehouse ID Retrieval**:
+   - The script `##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## ` is executed, fetching the warehouse ID where the truck 
+     is supposed to be received.
+   - This ensures that the system is contextually aware of the warehouse environment.
+
+3. **Inventory Identification**:
+   - The system then moves to identify all inventory items associated with the truck. This includes checking the `rcvinv` and `rcvlin` tables.
+   - If the inventory has already been identified (supporting ASN scenarios), the test will return a success status without re-processing the inventory.
+
+4. **Database Updates**:
+   - Unique identifiers for the received inventory are generated.
+   - Relevant database tables (`rcvtrk`, `rcvinv`, `rcvlin`) are updated with the latest inventory data.
+
+5. **Completion**:
+   - The execution console displays each step, with the current step highlighted.
+   - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
  
 ## RF Based Test for Receiving
 
