@@ -75,7 +75,6 @@ The execution console provides real-time feedback on the test process. Key featu
    - The execution console displays each step, with the current step highlighted.
    - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
  
-## RF Based Test for Receiving
 
 ## RF-Based Test for Receiving
 
@@ -152,43 +151,64 @@ The execution console provides real-time feedback on the test process. Key featu
    - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
 
 
-## Web Based Test for Wave Planning 
+## Web-Based Test for Wave Planning
 
 ### Overview
-
 Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on web-based testing for the wave planning process, specifically for organizing and optimizing order fulfillment using the provided Smart AUtest framework.
 
 ### Objective
+The primary objective of this case study is to execute a web-based test for wave planning that simulates the organization and optimization of order fulfillment. The goal is to ensure that the system accurately groups and prioritizes orders, generates efficient picking plans, and updates relevant database tables accordingly.
 
-To execute a web-based test for wave planning that simulates the organization and optimization of order fulfillment, ensuring that the system accurately groups and prioritizes orders, generates efficient picking plans, and updates relevant database tables accordingly.
+### Sample Data Creation
 
-### Have some samples created first
- 
-For outbound we create orders  
+**Outbound Orders**
+For the purpose of testing wave planning, we create sample orders with the following criteria:
+ - **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
+ - Orders are named with a **“ATST-TMPL-“** prefix.
+ - We generate both orders and order line data to simulate a realistic scenario.
 
- - Template_flg = 1 
- - Orders are named with “ATST-TMPL-“ prefix. 
- - We have orders and order line data. 
+### Running the Test
 
-### Executing the test 
+#### Executing the Test
+To execute the test, follow these steps:
+1. Press the “Start” button on the Smart AUtest interface.
+   - ![](Images/image15.png)
+   - ![](Images/image16.png)
+2. Provide the URL for the web-based wave planning module.
+   - After pressing the "Start" button, a prompt will appear requesting the URL.
+   - Enter the URL and press "OK" to start the test.
+   - ![](Images/image17.png)
 
-We can execute the test by pressing the “Start” button 
+### Execution Console
 
-![](Images/image15.png)
+The execution console provides real-time feedback on the test process. Key features include:
 
-![](Images/image16.png)
+- **Step Highlighting**: The current step being executed is highlighted in yellow.
+- **Status Display**: Each row's status is displayed, indicating success or failure.
+- **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
-Then here we have to provide URL and press OK to start the test.
+### Detailed Execution Flow
 
-![](Images/image17.png)
+1. **Start Button Pressed**:
+   - The test initiates upon pressing the "Start" button.
+   - The system begins by loading the web-based wave planning module.
 
+2. **URL Prompt**:
+   - After initiating the test, a prompt appears requesting the URL.
+   - Enter the URL and confirm to proceed with the test.
 
-### Execution Console shows the execution 
+3. **Wave Planning Execution**:
+   - The system simulates the wave planning process, which involves organizing and optimizing order fulfillment.
+   - Orders are grouped and prioritized based on predefined criteria.
+   - Efficient picking plans are generated to streamline the fulfillment process.
 
-The execution is displayed for each step: 
- - As it executes, the step we are executing is in yellow 
- - It shows status of each row 
- - It shows elapsed time for each row 
+4. **Database Updates**:
+   - Relevant database tables are updated to reflect the changes made during wave planning.
+   - This includes updating order statuses, generating picking lists, and recording any modifications to order details.
+
+5. **Completion**:
+   - The execution console displays each step, with the current step highlighted.
+   - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
 
 ## Run Set for RF receiving
 
