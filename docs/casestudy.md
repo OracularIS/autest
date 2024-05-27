@@ -144,7 +144,6 @@ We could optionally have inventory as well for ASN testing
 ### The final run set defines how we run this 
 
 For this illustration, see BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF run set.  This has following steps for the run set: 
-Sure, here's the information in a tabular format using Markdown:
 
 | **Step (Test)**                           | **Description**                                                                                                                                                              |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
