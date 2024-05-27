@@ -69,7 +69,7 @@ When providing values for the arguments in various contexts, we have the followi
 
 - We can provide a literal value
 - We can call a `command` by using ## syntax mentioned above
-- Within this context, we can use `Script` capability to call any command.
+ - Within this context, we can use `Script` capability to call any command.
 - We can use `[<function key>]` to press any function key
 - We can use `[Enter]`
 - We can scrape anything from an RF form using `<<>>` syntax. Within this, we put the name of the field or form.field.
