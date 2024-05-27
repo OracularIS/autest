@@ -181,5 +181,9 @@ The execution is displayed for each step:
 
  - It shows elapsed time for each row 
 
+### Steps execute
 
+Below steps will execute for this runset
+
+![](Images/image22.png)
 
