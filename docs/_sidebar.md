@@ -2,7 +2,7 @@
 - [Overview](./overview.md)
 - [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
-- [Case Study ](./.md)
+- [Case Study ](./casestudy.md)
 - [Architecture](./arch_overview.md)
 - [Executing](./.md)
 - [How to create Tests](./Creating_Tests.md)
