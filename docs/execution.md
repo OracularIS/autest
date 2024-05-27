@@ -1,3 +1,5 @@
+### Overview
+
 To execute a run set, select the desired run set and click Execute or start button. In this demonstration, we will be executing run set `BASE_INB_000000_CREATE_TO_DISPATCH`. 
 
 ### RUN Sets Steps
@@ -17,9 +19,12 @@ Following steps will used to execute run set
 **Step:1**
 
 Select the desired click on start button.
+
 ![](Images/image41.png)
+
 **Step:2**
-When we click on the execute button, we are asked to enter some arguments on the next screen, so we need to have some data (inbound order/ template) that we want to copy. We will enter values of that inbound order/template here and click ‘OK’
+When we click on the execute button, we are asked to enter some arguments on the next screen, so we need to have some data (inbound order/ template) that we want to copy. We will enter values of that inbound order/template here and click ‘OK’.
+
 ![](Images/image42.png)
 
 After clicking OK, execution of run set will start.
@@ -36,21 +41,27 @@ The execution is displayed for each step:
 
 When each row above is highlighted, the results associated with that specific MOCA snippet are displayed. This allows for an easy and direct examination of the outcomes linked to individual MOCA segments, ensuring clarity and facilitating a thorough review of the data provided in each snippet.
 -	**Step:1**
+  
 ![](Images/image43.png)
 
 -	**Step:2**
+  
 ![](Images/image44.png)
 
 -	**Step:3**
+  
 ![](Images/image45.png)
 
 -	**Step:4**
+  
 ![](Images/image46.png)
 
 -	**Step:5**
+  
 ![](Images/image47.png)
 
 -	**Step:6**
+  
 ![](Images/image48.png)
 
 As you can see from this illustration, highlighting each row above displays the results corresponding to that specific MOCA snippet. This makes the output of each command extremely useful in analysing the execution, as it allows for an easy and direct examination of the outcomes linked to individual MOCA segments. This approach ensures clarity and facilitates a thorough review of the data provided in each snippet.
