@@ -20,7 +20,7 @@ We could optionally have inventory as well for ASN testing
 
 For MOCA based test for receiving, we have truck and that is checked in as well, it will identify all inventory in the truck.  We have created this to support ASN scenario as well – so if truck inventory is already identified it simply returns success 
 
-### Executing the run set 
+### Executing the test
 
 We can execute the test by pressing the “Start” button 
 
@@ -66,7 +66,7 @@ We could optionally have inventory as well for ASN testing
 
 For RF based test for receiving, we have truck and that is checked in as well, it will identify all inventory in the truck.  We have created this to support ASN scenario as well – so if truck inventory is already identified it simply returns success 
 
-### Executing the run set 
+### Executing the test 
 
 We can execute the test by pressing the “Start” button 
 
