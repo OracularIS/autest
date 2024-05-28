@@ -57,11 +57,8 @@ Decide input as expressions where appropriate – but at the same time, allow fo
 In some cases, we will process one row – but for MOCA based tests, we will often create them to process a set of data. For example, we may process all inventory in a truck and deposit to a destination.
 
 If we decide to work on more than one row, then it is a good practice to allow for optional input variables to limit how much data is processed. For example here I am defining that I want to process a single row.
-
-```moca
-publish data
-    where uc_autest_comflg = 1
-    and uc_max_rows = 1
+```
+publish data where uc_autest_comflg = 1 and uc_max_rows = 1
 ```
 Then later on I can use `uc_max_rows` to limit the results of a query or use other techniques like “session variables” to limit the processing to a single row.
 
