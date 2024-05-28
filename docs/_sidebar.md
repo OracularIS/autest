@@ -3,10 +3,10 @@
 - [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
 - [Case Study ](./casestudy.md)
-- [Architecture](./arch_overview.md)
+- [Architecture](./architecture.md)
 - [Executing](./execution.md)
 - [How to create Tests](./Creating_Tests.md)
-- [Packaged Tests](./sample2.md)
+- [Packaged Tests](./packaged_tests.md)
   - Outbound
     - [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md)
     - [BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001](./tests_docs/BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001.md)
