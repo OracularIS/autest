@@ -7,7 +7,7 @@
 - [Executing](./execution.md)
 - [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./sample2.md)
-  - [Outbound]
+  - [Outbound](./outbound.md)
     - [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md)
     - [BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001](./tests_docs/BASE_OUB_0010A00_ORD_SUBCONTR_MOCA_V001.md)
     - [BASE_OUB_0020000_WAVE_PLAN_MOCA_V001](./tests_docs/BASE_OUB_0020000_WAVE_PLAN_MOCA_V001.md)
