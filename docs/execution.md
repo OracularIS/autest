@@ -43,28 +43,44 @@ The execution is displayed for each step:
 -	It shows elapsed time for each row. 
 
 When each row above is highlighted, the results associated with that specific MOCA snippet are displayed. This allows for an easy and direct examination of the outcomes linked to individual MOCA segments, ensuring clarity and facilitating a thorough review of the data provided in each snippet.
--	**Step:1**
+
+#### **Step:1**
+
+This is showing result of BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.
   
 ![](Images/image43.png)
 
--	**Step:2**
-  
+#### **Step:2**
+
+This is showing result of BASE_INB_0002100_TRLR_CKIN_MOCA_V001.
+
+
 ![](Images/image44.png)
 
--	**Step:3**
-  
+#### **Step:3**
+
+This is showing result of BASE_INB_0003100_IDENTIFY_MOCA_V001.
+
+
 ![](Images/image45.png)
 
--	**Step:4**
-  
+#### **Step:4**
+
+This is showing result of BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001.
+
+
 ![](Images/image46.png)
 
--	**Step:5**
-  
+#### **Step:5**
+
+This is showing result of BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001.
+
 ![](Images/image47.png)
 
--	**Step:6**
-  
+#### **Step:6**
+
+This is showing result of BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001.
+
 ![](Images/image48.png)
 
 As you can see from this illustration, highlighting each row above displays the results corresponding to that specific MOCA snippet. This makes the output of each command extremely useful in analysing the execution, as it allows for an easy and direct examination of the outcomes linked to individual MOCA segments. This approach ensures clarity and facilitates a thorough review of the data provided in each snippet.
