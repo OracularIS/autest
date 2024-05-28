@@ -25,23 +25,27 @@ Optionally, we can include inventory data for ASN testing.
 ### Running the Test
 
 **MOCA-Based Test for Receiving**
+
 For the MOCA-based test for receiving, we assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
 **Execution Steps**
 
 1. **Initiating the Test**
+   
    - To execute the test, press the “Start” button on the Smart AUtest interface.
    - ![](Images/image10.png)
    - ![](Images/image11.png)
 
-2. **Script Execution for Warehouse Identification**
+3. **Script Execution for Warehouse Identification**
+   
    - The following script will be called to identify the warehouse ID:
      ```
      ##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")##
      ```
    - In this script, we will input our sample truck identifier in the variable `uc_src_trknum`, i.e., `RCVSMP001`.
 
-3. **Confirming the Sample Truck**
+4. **Confirming the Sample Truck**
+   
    - After entering the truck identifier, press "OK" to proceed.
 
 ### Execution Console
@@ -57,23 +61,28 @@ The execution console provides real-time feedback on the test process. Key featu
 ### Detailed Execution Flow
 
 1. **Start Button Pressed**:
+   
    - The test initiates upon pressing the "Start" button.
    - The system begins by verifying the presence of the sample truck (`RCVSMP001`) in the `rcvtrk` table.
 
-2. **Warehouse ID Retrieval**:
+3. **Warehouse ID Retrieval**:
+   
    - The script `##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## ` is executed, fetching the warehouse ID where the truck 
      is supposed to be received.
    - This ensures that the system is contextually aware of the warehouse environment.
 
-3. **Inventory Identification**:
+5. **Inventory Identification**:
+   
    - The system then moves to identify all inventory items associated with the truck. This includes checking the `rcvinv` and `rcvlin` tables.
    - If the inventory has already been identified (supporting ASN scenarios), the test will return a success status without re-processing the inventory.
 
-4. **Database Updates**:
+7. **Database Updates**:
+   
    - Unique identifiers for the received inventory are generated.
    - Relevant database tables (`rcvtrk`, `rcvinv`, `rcvlin`) are updated with the latest inventory data.
 
-5. **Completion**:
+9. **Completion**:
+    
    - The execution console displays each step, with the current step highlighted.
    - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
  
@@ -81,9 +90,11 @@ The execution console provides real-time feedback on the test process. Key featu
 ## RF-Based Test for Receiving
 
 ### Overview
+
 Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on RF-based tests for the receiving process, specifically for identifying and processing incoming inventory using the provided Smart AUtest framework.
 
 ### Objective
+
 The primary objective of this case study is to execute an RF-based test for receiving that simulates the identification and processing of incoming inventory. The goal is to ensure that the system accurately handles inventory data, including the generation of unique identifiers and the updating of relevant database tables.
 
 ### Sample Data Creation
@@ -102,24 +113,28 @@ Optionally, we can include inventory data for Advanced Shipping Notice (ASN) tes
 
 ### Running the Test
 
-#### RF-Based Test for Receiving
+ **RF-Based Test for Receiving**
+ 
 For the RF-based test for receiving, we assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
 **Execution Steps**
 
 1. **Initiating the Test**
+   
    - To execute the test, press the “Start” button on the Smart AUtest interface.
    - ![](Images/image13.png)
    - ![](Images/image14.png)
 
-2. **Script Execution for RCV_ID Generation**
+3. **Script Execution for RCV_ID Generation**
+   
    - The following expression will be executed to generate the `rcv_id`:
      ```sql
      [['ARTRK-' || '@uc_test_exec_seqnum']]
      ```
    - This expression concatenates the prefix `ARTRK-` with the unique test execution sequence number, ensuring a unique identifier for each test run.
 
-3. **Confirming the Sample Truck**
+5. **Confirming the Sample Truck**
+   
    - After generating the `rcv_id`, the system will use this identifier to track the sample truck (`RCVSMP001`) in the `rcvtrk` table.
 
 ### Execution Console
@@ -135,22 +150,27 @@ The execution console provides real-time feedback on the test process. Key featu
 ### Detailed Execution Flow
 
 1. **Start Button Pressed**:
+   
    - The test initiates upon pressing the "Start" button.
    - The system begins by verifying the presence of the sample truck (`RCVSMP001`) in the `rcvtrk` table.
 
-2. **RCV_ID Generation**:
+3. **RCV_ID Generation**:
+   
    - The expression `[['ARTRK-' || '@uc_test_exec_seqnum']]` is executed to generate a unique `rcv_id`.
    - This `rcv_id` is used to uniquely identify the test run and associate it with the specific truck and its inventory.
 
-3. **Inventory Identification**:
+5. **Inventory Identification**:
+   
    - The system then moves to identify all inventory items associated with the truck. This includes checking the `rcvinv` and `rcvlin` tables.
    - If the inventory has already been identified (supporting ASN scenarios), the test will return a success status without re-processing the inventory.
 
-4. **Database Updates**:
+7. **Database Updates**:
+   
    - Unique identifiers for the received inventory are generated.
    - Relevant database tables (`rcvtrk`, `rcvinv`, `rcvlin`) are updated with the latest inventory data.
 
-5. **Completion**:
+9. **Completion**:
+    
    - The execution console displays each step, with the current step highlighted.
    - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
 
@@ -218,9 +238,11 @@ The execution console provides real-time feedback on the test process. Key featu
 ## Run Set for RF Receiving
 
 ### Overview
+
 Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on a run set of RF-based tests for the receiving process, specifically aimed at verifying the identification and processing of incoming inventory using the provided Smart AUtest framework.
 
 ### Objective
+
 The objective of this run set is to execute a series of RF-based tests for receiving to simulate the identification and processing of incoming inventory. The tests aim to ensure that the system accurately identifies inventory, processes incoming items efficiently, and updates the relevant database tables. This includes scenarios where the truck inventory is already identified, supporting ASN processes by returning success if inventory identification is pre-existing.
 
 ### Sample Data Creation
