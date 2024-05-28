@@ -1,5 +1,5 @@
 <!-- docs/_sidebar.md -->
-- [Overview](./overview.md)
+- [Overview](./readme.md)
 - [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
 - [Case Study ](./casestudy.md)
