@@ -21,8 +21,9 @@
 }
 .sidebar-nav ul:not(.app-sub-sidebar)>li:not(.file)::before {
     top: 11px;
-}.sidebar-nav ul>li.folder.level-2.open::before {
-    top: 10px !important;
+}
+.sidebar-nav ul>li.folder.level-2.open::before {
+    top: 8px !important;
 }
 li.folder.level-2 {
     color: #505d6b;
