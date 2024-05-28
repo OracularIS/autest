@@ -103,7 +103,7 @@ The primary objective of this case study is to execute an RF-based test for rece
 
 For the purpose of testing inbound inventory, we create sample RCVTRK data. For example, we use the identifier **RCVSMP001** to represent a sample truck. This data will be utilized to simulate the presence of incoming inventory on a truck.
 
-** Relevant Tables**
+**Relevant Tables**
 
 - **rcvtrk**: This table contains information about the trucks and their status.
 - **rcvinv**: This table contains information about the inventory received.
