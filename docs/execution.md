@@ -32,8 +32,10 @@ When we click on the execute button, we are asked to enter some arguments on the
 ![](Images/image42.png)
 
 After clicking OK, execution of run set will start.
--	See that wh_id is a script that calls: 
-##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")## 
+-	See that wh_id is a script that calls:
+```
+##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")##
+``` 
 -	And then we will press OK 
 
 ### Execution Console shows the execution 
@@ -87,8 +89,8 @@ As you can see from this illustration, highlighting each row above displays the 
 
 ### Execution Console also shows what was executed 
 
-See the tab “Commands on Target Env” 
+See the tab 'Commands on Target Env' 
 
 ![](Images/image49.png)
 
-If you get an error, you can copy the “command” from here and try running it directly 
+If you get an error, you can copy the 'command' from here and try running it directly 
