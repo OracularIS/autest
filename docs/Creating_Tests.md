@@ -84,7 +84,7 @@ With that understanding, we should not be stingy in terms of the output we creat
 
  - Enclose each logical “step” of your test in a pair of braces. And then at the end of your logic, publish data that reflects the work done. Also refer to the concept above about capturing the timing. For example:
 
-```moca 
+```
 start_ms = System.currentTimeMillis() catch(@?)
 {
   <your logic>;
@@ -97,38 +97,38 @@ start_ms = System.currentTimeMillis() catch(@?)
 }
 ```
  - Use `“&”` for each logical “step” inside your test script, for example: 
-
-{ <step 1> } 
+```
+{ <step 1> }
 & 
 { <step 2> }
-
+```
 
 ### Decide on how the script should behave for no data 
 
 Generally, we want the script to raise an error if it did not find any data to process. However, that should be a conscious decision.
 
 Sometimes, we may be processing a result set – and in those cases, you can use the following technique to raise an error at the end of your script:
-
-`>> res_full 
+```
+>> res_full 
 | 
 if ( rowcount(@res_full) = 0 ) 
-  [select 1 from invlod where 1=2]`
+  [select 1 from invlod where 1=2]
   
-`else 
+else 
   publish data combination 
-  where res = @res_full `
-
+  where res = @res_full 
+```
 
 ### Version Proof Commands
 
 If we know of a version issue, then try to make the code version-proof. You can use the following techniques:
 
 - **Abstract `pckwrk` vs `pckwrk_view` as follows:**
-
-`[select 1 from pckwrk_view where 1=2 ] catch(@?)` 
-`| `
-`publish data where uc_pckwrk_table = iif ( @? = 0 or @? = -1403 or @? = 510, 'pckwrk_view', 'pckwrk' )`
-
+```
+[select 1 from pckwrk_view where 1=2 ] catch(@?)
+| 
+publish data where uc_pckwrk_table = iif ( @? = 0 or @? = -1403 or @? = 510, 'pckwrk_view', 'pckwrk' )
+```
 - You can call “list library versions” if you need to know the exact version.
 - Prefer to use MOCA commands to get the data rather than SQL.
 - Use `catch` to try different commands based on version.
