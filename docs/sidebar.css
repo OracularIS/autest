@@ -2,17 +2,14 @@
     margin-left: 4%;
 }
 .sidebar-nav ul li ul li::before {
-    top: 9px !important;
+    top: 11px !important;
 }
-
 .sidebar-nav>ul>li ul {
     display: none;
 }
-
 .app-sub-sidebar {
     display: none;
 }
-
 .app-sub-sidebar.open {
     display: block;
 }
