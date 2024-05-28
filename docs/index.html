@@ -42,7 +42,7 @@
             document.body.addEventListener('click', function(event) {
               const sidebar = document.querySelector('.sidebar-nav');
               if (sidebar && !sidebar.contains(event.target)) {
-                event.stopPropagation(); // Prevent the sidebar from collapsing
+                event.stopPropagation();
               }
             });
           });
