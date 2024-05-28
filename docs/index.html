@@ -66,32 +66,5 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-  console.log('DOM fully loaded and parsed');
-
-  const sidebarNav = document.querySelector('.sidebar-nav');
-  if (sidebarNav) {
-    sidebarNav.addEventListener('click', function (event) {
-      const target = event.target;
-      console.log('Sidebar clicked:', target.tagName);
-      if (target.tagName === 'A' || target.tagName === 'LI') {
-        event.stopPropagation();
-      }
-    });
-  } else {
-    console.error('Sidebar navigation not found');
-  }
-
-  document.body.addEventListener('click', function (event) {
-    const sidebar = document.querySelector('.sidebar');
-    console.log('Body clicked:', event.target);
-    if (sidebar && !sidebar.contains(event.target)) {
-      // Prevent sidebar from collapsing
-      event.stopPropagation();
-    }
-  });
-});
-  </script>
 </body>
 </html>
