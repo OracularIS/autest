@@ -1,3 +1,6 @@
+.sidebar ul, .sidebar ul li {
+    margin-left: 4%;
+}
 .sidebar-nav ul li ul li::before {
     top: 11px !important;
 }
@@ -20,4 +23,13 @@
     top: 11px;
 }.sidebar-nav ul>li.folder.level-2.open::before {
     top: 10px !important;
+}
+li.folder.level-2 {
+    color: #505d6b;
+    font-size: 14px;
+    font-weight: 400;
+    /* overflow: hidden; */
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
