@@ -24,10 +24,10 @@ Optionally, we can include inventory data for ASN testing.
 
 ### Running the Test
 
-#### MOCA-Based Test for Receiving
+**MOCA-Based Test for Receiving**
 For the MOCA-based test for receiving, we assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
-#### Execution Steps
+**Execution Steps**
 
 1. **Initiating the Test**
    - To execute the test, press the “Start” button on the Smart AUtest interface.
@@ -105,7 +105,7 @@ Optionally, we can include inventory data for Advanced Shipping Notice (ASN) tes
 #### RF-Based Test for Receiving
 For the RF-based test for receiving, we assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
-#### Execution Steps
+**Execution Steps**
 
 1. **Initiating the Test**
    - To execute the test, press the “Start” button on the Smart AUtest interface.
@@ -174,7 +174,7 @@ For the purpose of testing wave planning, we create sample orders with the follo
 
 ### Running the Test
 
-#### Executing the Test
+**Executing the Test**
 To execute the test, follow these steps:
 1. Press the “Start” button on the Smart AUtest interface.
    - ![](Images/image15.png)
