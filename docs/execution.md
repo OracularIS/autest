@@ -69,7 +69,7 @@ When each row above is highlighted, the results associated with that specific MO
 
 As you can see from this illustration, highlighting each row above displays the results corresponding to that specific MOCA snippet. This makes the output of each command extremely useful in analysing the execution, as it allows for an easy and direct examination of the outcomes linked to individual MOCA segments. This approach ensures clarity and facilitates a thorough review of the data provided in each snippet.
 
-#### Execution Console also shows what was executed 
+### Execution Console also shows what was executed 
 
 See the tab “Commands on Target Env” 
 
