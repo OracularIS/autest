@@ -128,7 +128,7 @@ For the RF-based test for receiving, we assume a scenario where a truck has arri
 3. **Script Execution for RCV_ID Generation**
    
    - The following expression will be executed to generate the `rcv_id`:
-     ```sql
+     ```
      [['ARTRK-' || '@uc_test_exec_seqnum']]
      ```
    - This expression concatenates the prefix `ARTRK-` with the unique test execution sequence number, ensuring a unique identifier for each test run.
