@@ -39,6 +39,14 @@
       plugins: [
         function(hook, vm) {
           hook.doneEach(function() {
+               document.querySelectorAll('.sidebar-nav li').forEach(function(item) {
+              item.addEventListener('click', function(event) {
+                const target = event.target;
+                if (target.nodeName=='UL') {
+                event.stopPropagation();
+                }
+              });
+            });
             document.body.addEventListener('click', function(event) {
               const sidebar = document.querySelector('.sidebar-nav');
               if (sidebar && !sidebar.contains(event.target)) {
