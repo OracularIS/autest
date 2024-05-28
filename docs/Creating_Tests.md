@@ -4,9 +4,8 @@
 Creating MOCA based tests requires intimate knowledge of the MOCA language and some concepts. As we create tests, we will utilize some concepts heavily: 
 
 Some of these tests may be performing a series of complex tasks.  When  they are executed in the context of auTest, we want to publish the details about each step.  This requires appropriate use of “&” so that the output of the whole script is then published to the auTest framework.  For example: 
-```moca
+```
 Publish data where a=1 
-
 & 
 publish data where a=2 
 ```
