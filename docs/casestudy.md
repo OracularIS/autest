@@ -41,10 +41,11 @@ For the MOCA-based test for receiving, we assume a scenario where a truck has ar
 **Execution Steps**
 
 1. **Initiating the Test**
-   
    - To execute the test, press the “Start” button on the Smart AUtest interface.
-   - ![](Images/image10.png)
-   - ![](Images/image11.png)
+
+     ![](Images/image10.png)
+
+     ![](Images/image11.png)
 
 3. **Script Execution for Warehouse Identification**
    
@@ -130,8 +131,10 @@ For the RF-based test for receiving, we assume a scenario where a truck has arri
 1. **Initiating the Test**
    
    - To execute the test, press the “Start” button on the Smart AUtest interface.
-   - ![](Images/image13.png)
-   - ![](Images/image14.png)
+     
+     ![](Images/image13.png)
+     
+     ![](Images/image14.png)
 
 3. **Script Execution for RCV_ID Generation**
    
@@ -204,12 +207,16 @@ For the purpose of testing wave planning, we create sample orders with the follo
 **Executing the Test**
 To execute the test, follow these steps:
 1. Press the “Start” button on the Smart AUtest interface.
-   - ![](Images/image15.png)
-   - ![](Images/image16.png)
-2. Provide the URL for the web-based wave planning module.
+   
+   ![](Images/image15.png)
+   
+   ![](Images/image16.png)
+   
+3. Provide the URL for the web-based wave planning module.
    - After pressing the "Start" button, a prompt will appear requesting the URL.
    - Enter the URL and press "OK" to start the test.
-   - ![](Images/image17.png)
+     
+    ![](Images/image17.png)
 
 ### Execution Console
 
@@ -273,10 +280,13 @@ For this illustration, we use the `BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF` 
 To execute the run set, follow these steps:
 
 1. Press the “Start” button on the Smart AUtest interface.
-   - ![](Images/image20.png)
-   - ![](Images/image21.png)
-2. Provide the required information, including the sample truck identifier (`RCVSMP001`).
-3. Press "OK" to proceed with the execution.
+   
+   ![](Images/image20.png)
+   
+   ![](Images/image21.png)
+   
+3. Provide the required information, including the sample truck identifier (`RCVSMP001`).
+4. Press "OK" to proceed with the execution.
 
 ### Execution Console
 
