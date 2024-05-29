@@ -225,6 +225,9 @@ For the purpose of testing wave planning, we create sample orders with the follo
 - Orders are named with a **“ATST-TMPL-“** prefix.
 - We generate both orders and order line data to simulate a realistic scenario.
 
+For detailed information on available tests, refer to the [Packaged Tests](./packaged_tests.md) documentation
+
+
 ### Running the Test
 
 **Executing the Test**
@@ -296,15 +299,22 @@ By following these recommendations and utilizing the comprehensive testing capab
 
 ### Overview
 
-Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on a run set of RF-based tests for the receiving process, specifically aimed at verifying the identification and processing of incoming inventory using the provided Smart AUtest framework.
+Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on a run set of RF-based tests for the receiving process, specifically aimed at verifying the identification and processing of incoming inventory using the Smart AUtest framework.
 
 ### Objective
 
-The objective of this run set is to execute a series of RF-based tests for receiving to simulate the identification and processing of incoming inventory. The tests aim to ensure that the system accurately identifies inventory, processes incoming items efficiently, and updates the relevant database tables. This includes scenarios where the truck inventory is already identified, supporting ASN processes by returning success if inventory identification is pre-existing.
+The objective of this run set is to execute a series of RF-based tests for receiving to simulate the identification and processing of incoming inventory. The tests aim to ensure that the system accurately identifies inventory, processes incoming items efficiently, and updates the relevant database tables. This includes scenarios where the truck inventory is already identified, supporting Advanced Shipping Notice (ASN) processes by returning success if inventory identification is pre-existing.
 
 ### Sample Data Creation
 
-For inbound testing, we create sample RCVTRK data, using identifiers such as **RCVSMP001**. This data includes `rcvtrk`, `rcvinv`, and `rcvlin` records. Optionally, inventory data can be included for ASN testing.
+For inbound testing, we create sample RCVTRK data, using identifiers such as **RCVSMP001**. This data includes records in the following tables:
+
+- **rcvtrk**: Contains information about the trucks and their status.
+- **rcvinv**: Contains information about the inventory received.
+- **rcvlin**: Contains line items related to the received inventory.
+
+Optionally, inventory data can be included for ASN testing to simulate scenarios where the inventory details are already known before the truck arrives.
+For detailed information on available tests, refer to the [Packaged Tests](./packaged_tests.md) documentation
 
 ### Run Set Definition
 
@@ -320,18 +330,23 @@ For this illustration, we use the `BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF` 
 
 ### Executing the Run Set
 
+**Initiating the Test**
+
 To execute the run set, follow these steps:
 
-1. Press the “Start” button on the Smart AUtest interface.
-   
-   ![](Images/image20.png)
-   
-   ![](Images/image21.png)
-   
-3. Provide the required information, including the sample truck identifier (`RCVSMP001`).
-4. Press "OK" to proceed with the execution.
+1. **Press the "Start" Button**
+   - Open the Smart AUtest interface.
+   - Press the “Start” button to initiate the test.
 
-### Execution Console
+     ![](Images/image20.png)
+
+     ![](Images/image21.png)
+
+2. **Provide Required Information**
+   - Enter the sample truck identifier (`RCVSMP001`) when prompted.
+   - Press "OK" to proceed with the execution.
+
+**Execution Console**
 
 The execution console provides real-time feedback on the test process, displaying each step as it executes. Key features include:
 
@@ -339,10 +354,43 @@ The execution console provides real-time feedback on the test process, displayin
 - **Status Display**: Each row's status is shown, indicating success or failure.
 - **Elapsed Time**: The time taken for each step is displayed, providing insights into test duration and performance.
 
-### Steps Execution
+
+### Detailed Execution Flow
 
 The following steps are executed as part of this run set:
 
+1. **Step: `BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001`**
+   - This step copies a `RCVTRK` record and creates new `rcvtrk`, `rcvinv`, and `rcvlin` records for the test run.
+   - It utilizes the `uc_test_exec_seqnum` variable to ensure unique record creation.
+   - This step ensures that the test has a fresh set of data to work with, simulating a real scenario of incoming inventory.
+
+2. **Step: `BASE_INB_0002100_TRLR_CKIN_MOCA_V001`**
+   - This step checks in the truck using the `uc_test_exec_seqnum` variable against an open door.
+   - The system verifies that the truck (`RCVSMP001`) is checked in correctly, updating the `rcvtrk` table to reflect the check-in status.
+
+3. **Step: `BASE_INB_0003200_IDENTIFY_RF_V001`**
+   - This step identifies all inventory in the truck.
+   - Supports ASN scenarios by returning success if the truck inventory is already identified.
+   - The system ensures that all items in the truck are accounted for and updates the `rcvinv` and `rcvlin` tables accordingly.
+
+4. **Step: `BASE_INV_0020100_MOVE_RF_V001`**
+   - This step moves inventory to the destination location.
+   - It simulates the physical movement of inventory within the warehouse, updating the system to reflect the new locations of the items.
+
+5. **Step: `BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001`**
+   - This step closes and dispatches the truck.
+   - The system updates the `rcvtrk` table to reflect the dispatch status, completing the receiving process.
+
 ![](Images/image22.png)
 
+### Conclusion
 
+This case study demonstrates the effectiveness of Smart AUtest in executing a run set of RF-based tests for the receiving process. By simulating the identification and processing of incoming inventory, the system ensures accurate handling of inventory data, efficient processing of items, and updating of relevant database tables. This comprehensive testing approach verifies the system's functionality and enhances the reliability and efficiency of inventory management.
+
+### Recommendations
+
+- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
+- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
+- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+
+By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
