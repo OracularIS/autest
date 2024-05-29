@@ -212,7 +212,7 @@ By following these recommendations and utilizing the comprehensive testing capab
 
 ### Overview
 
-Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on web-based testing for the wave planning process, specifically for organizing and optimizing order fulfillment using the provided Smart AUtest framework.
+Smart AUtest is an advanced automated testing suite designed to facilitate comprehensive testing with minimal setup. This case study focuses on web-based testing for the wave planning process, specifically for organizing and optimizing order fulfillment using the Smart AUtest framework.
 
 ### Objective
 
@@ -221,25 +221,29 @@ The primary objective of this case study is to execute a web-based test for wave
 ### Sample Data Creation
 
 For the purpose of testing wave planning, we create sample orders with the following criteria:
- - **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
- - Orders are named with a **“ATST-TMPL-“** prefix.
- - We generate both orders and order line data to simulate a realistic scenario.
+- **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
+- Orders are named with a **“ATST-TMPL-“** prefix.
+- We generate both orders and order line data to simulate a realistic scenario.
 
 ### Running the Test
 
 **Executing the Test**
+
 To execute the test, follow these steps:
-1. Press the “Start” button on the Smart AUtest interface.
-   
-   ![](Images/image15.png)
-   
-   ![](Images/image16.png)
-   
-3. Provide the URL for the web-based wave planning module.
-   - After pressing the "Start" button, a prompt will appear requesting the URL.
+
+1. **Initiating the Test**
+   - Open the Smart AUtest interface.
+   - Press the “Start” button to initiate the test.
+
+     ![](Images/image15.png)
+
+     ![](Images/image16.png)
+
+2. **URL Prompt**
+   - After pressing the "Start" button, a prompt will appear requesting the URL for the web-based wave planning module.
    - Enter the URL and press "OK" to start the test.
-     
-    ![](Images/image17.png)
+
+     ![](Images/image17.png)
 
 ### Execution Console
 
@@ -249,6 +253,7 @@ The execution console provides real-time feedback on the test process. Key featu
 - **Status Display**: Each row's status is displayed, indicating success or failure.
 - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
+
 ### Detailed Execution Flow
 
 1. **Start Button Pressed**:
@@ -257,20 +262,35 @@ The execution console provides real-time feedback on the test process. Key featu
 
 2. **URL Prompt**:
    - After initiating the test, a prompt appears requesting the URL.
-   - Enter the URL and confirm to proceed with the test.
+   - Enter the URL for the wave planning module and confirm to proceed with the test.
 
 3. **Wave Planning Execution**:
    - The system simulates the wave planning process, which involves organizing and optimizing order fulfillment.
    - Orders are grouped and prioritized based on predefined criteria.
    - Efficient picking plans are generated to streamline the fulfillment process.
+   - The system simulates user interactions with the web interface, ensuring the correct execution of wave planning activities.
 
 4. **Database Updates**:
    - Relevant database tables are updated to reflect the changes made during wave planning.
    - This includes updating order statuses, generating picking lists, and recording any modifications to order details.
+   - The system ensures that all changes are accurately recorded in the database, maintaining data integrity and consistency.
 
 5. **Completion**:
-   - The execution console displays each step, with the current step highlighted.
-   - Status and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
+   - The execution console displays each step of the process, with the current step highlighted for easy tracking.
+   - The status (success or failure) and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
+   - On completion, the test provides a detailed report, including any discrepancies or errors encountered during the execution.
+
+### Conclusion
+
+This case study demonstrates the effectiveness of Smart AUtest in executing web-based tests for the wave planning process. By simulating the organization and optimization of order fulfillment, the system ensures accurate grouping and prioritization of orders, generation of efficient picking plans, and updating of relevant database tables. This process not only verifies the system's functionality but also enhances the reliability and efficiency of order fulfillment operations.
+
+### Recommendations
+
+- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the wave planning process.
+- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the wave planning process or database schema.
+- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+
+By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their order fulfillment processes and ensure seamless operations in their wave planning departments.
 
 ## Run Set for RF Receiving
 
