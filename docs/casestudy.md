@@ -171,7 +171,7 @@ The execution console provides real-time feedback on the test process. Key featu
 - **Status Display**: Each row's status is displayed, indicating success or failure.
 - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
-## Detailed Execution Flow
+### Detailed Execution Flow
 
 1. **Start Button Pressed**:
    - The test initiates upon pressing the "Start" button.
@@ -196,11 +196,11 @@ The execution console provides real-time feedback on the test process. Key featu
    - The status (success or failure) and elapsed time for each row are shown, providing a clear overview of the test progress and performance.
    - On completion, the test provides a detailed report, including any discrepancies or errors encountered during the execution.
 
-## Conclusion
+### Conclusion
 
 This case study demonstrates the effectiveness of Smart AUtest in executing RF-based tests for the receiving process. By simulating the identification and processing of incoming inventory, the system ensures accurate handling of inventory data, generation of unique identifiers, and updating of relevant database tables. This process not only verifies the system's functionality but also enhances the reliability and efficiency of inventory management.
 
-## Recommendations
+### Recommendations
 
 - **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
 - **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
