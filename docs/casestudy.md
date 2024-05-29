@@ -30,7 +30,7 @@ Optionally, we can include inventory data for ASN testing.
 
 **Tests Documentation**
 
-You can see the available tests here: [Packaged_Tests](./packaged_tests.md)
+You can see the available tests here: [Packaged Tests](./packaged_tests.md)
 
 ### Running the Test
 
