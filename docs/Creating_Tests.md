@@ -195,3 +195,7 @@ The run set arguments may need to be created or changed to support test cases.
 |                   | - Uc_ossi_valdidate_cmd is executed after the test case has run. Call script directly or as ## |
 |                   | - Uc_exepected_exec_ms is the expected execution milliseconds  |
 |                   | - Uc_ossi_correct_result is the correct result                 |
+
+## Creating WEB Based Tests
+## Creating RF Based Tests
+## Creating Stress Tests
