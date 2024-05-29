@@ -8,7 +8,7 @@ Smart AUtest is an advanced automated testing suite designed to facilitate compr
 ### Objective
 The primary objective of this case study is to execute a MOCA-based test for receiving that simulates the identification and processing of incoming inventory. The goal is to ensure that the system accurately handles inventory data, including the generation of unique identifiers and the updating of relevant database tables.
 
-### Creating MOCA-Based Test
+### How to Create MOCA Based Test
 
 This section brief how we create MOCA based test
 
@@ -152,8 +152,7 @@ The execution console provides real-time feedback on the test process. Key featu
 - **Step Highlighting**: The current step being executed is highlighted in yellow.
 - **Status Display**: Each row's status is displayed, indicating success or failure.
 - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
-  
-  ![](Images/image12.png)
+
 
 ### Detailed Execution Flow
 
