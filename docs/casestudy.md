@@ -110,7 +110,7 @@ This case study demonstrates the effectiveness of Smart AUtest in executing MOCA
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
  
-## RF-Based Test for Receiving
+## RF Based Test for Receiving
 
 ### Overview
 
@@ -139,7 +139,7 @@ For detailed information on available tests, refer to the [Packaged Tests](./pac
 
 ### Running the Test
 
-**RF-Based Test for Receiving**
+**RF Based Test for Receiving**
 
 We will assume a scenario where a truck has arrived and has been checked in. The system will identify all inventory items on the truck. This setup supports ASN scenarios, ensuring that if the truck's inventory is already identified, the test simply returns a success status.
 
@@ -208,7 +208,7 @@ This case study demonstrates the effectiveness of Smart AUtest in executing RF-b
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
 
-## Web-Based Test for Wave Planning
+## Web Based Test for Wave Planning
 
 ### Overview
 
