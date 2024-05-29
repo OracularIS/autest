@@ -12,7 +12,7 @@ The primary objective of this case study is to execute a MOCA-based test for rec
 
 This section brief how we create MOCA based test
 
-[Creating MOCA Based Test][./Creating_Tests.md#Creating-MOCA-Based-Tests]
+[Creating MOCA Based Test][./Creating_Tests.md##Creating-MOCA-Based-Tests]
 
 ### Sample Data Creation
 
