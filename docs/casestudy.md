@@ -171,8 +171,6 @@ The execution console provides real-time feedback on the test process. Key featu
 - **Status Display**: Each row's status is displayed, indicating success or failure.
 - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
-![](Images/image50.png)
-
 ## Detailed Execution Flow
 
 1. **Start Button Pressed**:
