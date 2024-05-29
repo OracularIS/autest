@@ -43,7 +43,7 @@ We are always working on enriching this set, and you will always have access to 
 
 While customers can create their own metadata, at Smart IS, we strive to make this set as comprehensive as possible so that customers can simply use these on day one.
 
-You can see the available tests here: [Tests](./sample2.md)
+You can see the available tests here: [Packaged_Tests](./packaged_tests.md)
 
 ## Commands
 
