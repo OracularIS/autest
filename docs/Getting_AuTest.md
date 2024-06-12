@@ -22,7 +22,7 @@ Following steps are used for registration and setup for SmartApps and AuTest
 
 ### Step:1
 
-Users from the organization log in to SmartApps and register.
+Users from the organization log in to SmartApps and register. You can also login through Microsoft and Google account.
 
 ![](Images/image5.png)
 
