@@ -10,7 +10,7 @@ The Smart AuTest solution is designed to streamline and automate the testing of 
 
 ## Run Sets for End-to-End Scenarios
 
-Smart AuTest empowers users to create customized "Run Sets," which serve as meticulously crafted sequences of tests tailored to script comprehensive end-to-end scenarios. By amalgamating individual tests into cohesive sequences, users can effectively evaluate complex workflows and interactions, thereby ensuring the holistic functionality of the WMS.
+Smart AuTest allows you to create custom "Run Sets." These are groups of tests put together to check if everything in your Warehouse Management System (WMS) works well from start to finish. By combining different tests into one sequence, you can make sure that all parts of your system work smoothly together. This helps ensure that your entire workflow and all interactions are functioning correctly.
 
 ## Stress Testing Capabilities
 
