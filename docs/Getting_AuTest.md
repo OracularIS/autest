@@ -1,8 +1,8 @@
-## Introduction
+## Overview
 
 The Smart AuTest suite is available in a subscription model. This implies that customers do not need to install any software in their ecosystem. The tests are launched from the Smart MOCA Client but the underlying data is managed from the cloud. 
 
-## Key Features
+There are following key features that are listed below:
 
 1. **Cloud-Based Infrastructure**: All test data is stored and managed within the cloud, ensuring scalability, accessibility, and robust security measures.
 
