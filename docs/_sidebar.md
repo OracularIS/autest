@@ -2,9 +2,14 @@
 - [Overview](./readme.md)
 - [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
-- [Case Study ](./casestudy.md)
 - [Architecture](./architecture.md)
-- [Executing](./execution.md)
+- [Result managemnet](./result_mangement.md)
+- Autest for unit testing
+   - [Case Study ](./casestudy.md)
+   - [Executing](./execution.md)
+- Autest for stress testing
+   - [Case Study ](./casestudy.md)
+   - [Executing](./execution.md)
 - [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./packaged_tests.md)
   - Outbound
