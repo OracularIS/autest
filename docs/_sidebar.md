@@ -8,8 +8,17 @@
    - [Case Study ](./casestudy.md)
    - [Executing](./execution.md)
 - Autest for stress testing
-   - [Case Study ](./casestudy.md)
-   - [Executing](./execution.md)
+   - [Concept ](./concept_ST.md)
+   - [Pre_Requisite ](./prereq_ST.md)
+   - [Setup ](./setup_ST.md)
+   - [Case Study ](./casestudy_ST.md)
+   - [Executing](./execution_ST.md)
+- Autest for Regression testing
+   - [Concept ](./concept_RT.md)
+   - [Pre_Requisite ](./prereq_RT.md)
+   - [Setup ](./setup_RT.md)
+   - [Case Study ](./casestudy_RT.md)
+   - [Executing](./execution_ST.md)
 - [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./packaged_tests.md)
   - Outbound
