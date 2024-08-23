@@ -46,6 +46,8 @@ different sets of data or configurations. The input is as follows:
 <!-- SMART_DOC_GEN_TEST_ARG - Start -->
 <table>
 <tr><th>Arguments</th><th>Argument Description</th></tr>
+<tr><td>begloc</td><td>Can pass in locattion range optionally</td></tr>
+<tr><td>endloc</td><td>Can pass in endloc for a range</td></tr>
 <tr><td>uc_dstloc</td><td>Specify where you want to move inventory from the source location.</td></tr>
 <tr><td>uc_dstloc_expr</td><td>If the destination location is not provided, this expression helps determine it. By default, it is 'AMOVLOC-' || @uc_test_exec_seqnum</td></tr>
 <tr><td>uc_max_load_cnt</td><td>Specify the maximum number of loads to move based on the source location and load number expression conditions. If not provided, all loads meeting the condition will be moved.</td></tr>
@@ -65,6 +67,7 @@ This section provides a comprehensive list of test cases that are associated wit
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - Start -->
 | Test Case ID | Test Case Description |
 | ------------ | --------------------- |
+| BASE_ALL_ADJ_OUT | Adjust out all loads |
 
 <!-- SMART_DOC_GEN_TEST_CASE_USING_THIS - End -->
 
@@ -76,6 +79,8 @@ This section details the various RunSets that utilize this test as part of their
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - Start -->
 | Run Set ID | Run Set Description |
 | ---------- | ------------------- |
+| BASE_INV_C00000_COUNT_SCHEDULE_TO_COUNT | Schedule a count and then perform it as well |
+| BASE_INV_C00000_COUNT_SCHEDULE_TO_COUNT_USING_FRONT_END | This run set will schedule a count, then perform  count, audit, and then approval if needed.  It allows for provding the count and audit quantities as expressions.  In order to force audit, it allows for temporarily adjusting the user threshold as well |
 
 <!-- SMART_DOC_GEN_RUN_SET_USING_THIS - End -->
 
