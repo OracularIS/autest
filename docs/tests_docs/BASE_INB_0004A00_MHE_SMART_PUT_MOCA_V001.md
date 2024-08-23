@@ -23,7 +23,7 @@ inventory management processes, ensuring precise allocation and optimal
 utilization of resources within the system. The primary objective of
 this approach is to enhance operational efficiency by strategically
 assigning inventory to specific MHE locations, thereby promoting
-streamlined handling procedures, and minimizing logistical bottlenecks.
+streamlined handling procedures, and minimizing logistical bottlenecks..
 
 By implementing this refined approach, the organization aims to achieve
 greater efficiency in inventory management, leading to improved overall
