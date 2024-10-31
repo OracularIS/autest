@@ -99,6 +99,7 @@ When the Smart auTest suite processes such tests, following concepts come into p
 These protcols allow the tests to run in a smooth way.  We always start from a known test case (template) and can run through all the steps in a predictable fashion.
 
 #### Outbound
+
 ##### Orders
 This covers the common scenario where the outbound flow in the WMS starts with an order.  The orders are typically downlaoded into the WMS.  Smart IS test data methodology suggests that:
 - Identify some real orders that represent the business use cases.
