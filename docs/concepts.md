@@ -24,7 +24,7 @@ This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN,
 - Identify sine real master receipts (RCVTRK.TRKNUM) that represent the business use cases.
 - Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
     - You can use the following snippet to copy an existing master receipt
-      `
+      >`
       publish data
       where src_trknum = '<provide the soruce rcvtrk.trknum>'
       and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
