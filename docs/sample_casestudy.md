@@ -4,8 +4,9 @@ This is a sample case study.  Going through the case study will allow us to visu
 
 ### Gather existing test scripts
 It helps if we have manual test scripts that are already in use which will be migrated to the automated testing suite.  For illustration note that a typical manual test script may look something like:
+
 | Step | Description | Expected Result |
-|------------------|-------|----|
+|------|-------------|-----------------|
 | 1000 |Prepare an ASN| ASN Exists in the system |
 | 1100 |Create a trailer and check it in | - Trailer Created  - Workflows for the check in (e.g. temperature) were prompted  |
 
