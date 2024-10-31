@@ -16,21 +16,171 @@ Understanding how we should manage the test data is central to the whole project
 
 Stick to the conventions that we have for the template data – that will simplify using the tests we have provided.
 
-## Type of Data
+### Type of Data
+Following section provides details about the various types of data and how the template data should be managed for each:
+#### Inbound
+##### ASN (receipts with or without inventory data)
+This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN, INVDTL, INVSUB, and INVLOD data.  In business terms this represents the scenario where the shipping or manufcaturing side sent the detailed data to the WMS.  Smart IS test data methodology suggests that:
+- Identify sine real master receipts (RCVTRK.TRKNUM) that represent the business use cases.
+- Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
+    - You can use the following snippet to copy an existing master receipt
+      `
+      publish data
+      where src_trknum = '<provide the soruce rcvtrk.trknum>'
+      and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
+      |
+      {
+          publish data
+          where uc_new_trknum_expr = "'" || @new_trknum || "'"
+          and uc_new_invnum_expr = "@invnum"
+          and uc_new_ponum_expr = "decode (@po_num,null,null,@po_num)"
+          |
+          {
+              Script("BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001_EXEC")
+          }
+      }
+      `
+- The copied master receipt, that will serve as a template, should follow following naming convention:
+  | Concept          | Rules |
+  |------------------|-------|
+  | Master Receipt (trknum) Prefix | `RCVSMP` |
+  | Do not receive it | The RCVLIN data should be as if it is not yet received.  So rcvqty should be 0 |
+  | Example          | `RCVSMP001`, `RCVSMP002`.  You may also append after the prefix something meaningful to represent the scenario |
+When the Smart auTest suite processes such tests, following concepts come into play:
+- The tests start by providing the template master receipt number (RCVTRK.TRKNUM).  The user should provide an exact value.
+- This data is copied to a new data structure that follows following conventions:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Master Receipt (trknum) Prefix | `ARTRK-` prefix.  The suffix is `-` follwed by the generated test execution number  |
+  | Invoice Number (invnum) | The rcvinv.invnum of the template master receipt will become a prefix followed by a `-` and then the test execution number |
+  | PO Number   |If the source master receipt had a po number, then the copied data will have a new po number with source po number as prefix followed a `-` and then the test execution number |
+- If this ASN has inventory data as well:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Load Number | Load number of the source master receipt followed by `-` and then the test execution number  |
+  | Sub Number | Sub number of the source master receipt followed by `-` and then the test execution number  |
+  | Detail Number | Detail number of the source master receipt followed by `-` and then the test execution number  |
+  | Serial Number | Serial number of the source master receipt followed by `-` and then the test execution number  |
+- If the source ASN inventory detail had a hold, then the new copied inventory detail will have the same hold - but with a new generated hold number.
 
-| Data Type                  | Rules                                                                                  |
-|----------------------------|----------------------------------------------------------------------------------------------|
-| **Source Orders to Copy**  | Named with prefix `ATST-TMPL-`. Set `template_flg` to 1                                       |
-| **Test Orders Created**    | Named with prefix `ADATA-` and suffix of the test execution sequence number                   |
-| **Wave Set**               | Orders created as part of one test run get the same value for `ord_line.wave_set`. This is `AW-` followed by the test execution sequence number |
-| **Wave**                   | Waves created are named with prefix `ADATAW-` and suffix of the test execution sequence number|
-| **Carrier Move – Host External Id** | For outbound tests starting with a carrier move, the host external id of the generated carrier move has the prefix `ADATA-` and the suffix is the test execution sequence number |
-| **Receive Truck**          | New receive trucks are created with prefix `ARTRK-` and suffix of the test execution sequence number |
-| **Receive Invoice**        | The receive invoice numbers are copied from the template data and the test execution sequence number is appended |
-| **Receive PO Number**      | The receive PO numbers are copied from the template data and the test execution sequence number is appended |
-| **Receipt ASN Data**       | For receiving tests, the ASN data (invlod, invsub, invdtl) for the source ASN is copied and the test execution sequence number is appended to identifiers like `lodnum`, `subnum`, `dtlnum`. The same applies to serial numbers and hold records. |
+These protcols allow the tests to run in a smooth way.  We always start from a known test case (template) and can run through all the steps in a predictable fashion.
 
-To support waving tests, the “some identifier” should be such that we can utilize wild card to plan waves such that shipments get a single shipment for multiple orders. For example, we can create `ATST-TMPL-X01` and `ATST-TMPL-X02` orders. Then run the test with source order number expression of `ATST-TMPL-X%`. This will create a single shipment for both.
+##### Receive Invoice Master (RIM)
+This represents the use case where we have receive invoice master data that is stored in RIMHDR and RIMLIN tables.
+- Identify some real business data (RIMHDR.INVNUMM) that represent the business use cases.
+- Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
+    - You can use the following snippet to copy an existing master receipt
+      `
+      publish data
+      where src_invnum = '<provide the soruce rcvtrk.trknum>'
+      and new_invnum = '<provide the new truck we want to create - to serve as a sample>'
+      and uc_create_rcv = '0'
+      |
+      {
+          publish data
+          where uc_new_invnum_expr = "@invnum"
+          |
+          {
+              Script("BASE_INB_0001050_COPY_TEMPLATE_RIM_MOCA_V001_EXEC")
+          }
+      }
+      `
+- The copied receive invouce master, that will serve as a template, should follow following naming convention:
+  | Concept          | Rules |
+  |------------------|-------|
+  | RIMHDR.INVNUM | `RIMSMP` |
+  | Do not receive it | Do not create RCV structure for it |
+  | Example          | `RIMSMP001`, `RIMSMP002`.  You may also append after the prefix something meaningful to represent the scenario |
+When the Smart auTest suite processes such tests, following concepts come into play:
+- The tests start by providing the template receive invoice master  (RIMHDR.INVNUM).  The user should provide an exact value.
+- This data is copied to a new data structure that follows following conventions:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Receive Invoice Master Prefix | `ARINV-` prefix.  The suffix is `-` follwed by the generated test execution number  |
+- The test will also create a RCV structure for it:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | rcvtrk.trknum | `ARTRK-` prefix.  The suffix is `-` follwed by the generated test execution number   |
+These protcols allow the tests to run in a smooth way.  We always start from a known test case (template) and can run through all the steps in a predictable fashion.
+
+#### Outbound
+##### Orders
+This covers the common scenario where the outbound flow in the WMS starts with an order.  The orders are typically downlaoded into the WMS.  Smart IS test data methodology suggests that:
+- Identify some real orders that represent the business use cases.
+- Simplify the orders if possible.  For example the real order may have a large number of lines - we should simplify it if possible.
+- Then copy that real order as a template order:
+   - You can use the UI to copy the order.  You may also use the "copy order" MOCA Comamnd.
+   - Then copied order, that would serve as a template, should follow the following naming convention
+     | Concept          | Rules |
+     |------------------|-------|
+     | Order Prefix     | `ATST-TMPL-`  **We stronlgly recommend that this exact prefix is used which has length of 10.  This makes the copy order process yield meaningful test order numbers.** |
+     | Other attributes | We suggest that `ord.template_flg` is 1 so that these are easy to identify |
+     | Example          | `ATST-TMPL-TEST001`, `ATST-TMPL-TEST002`.  You may also append after the prefix something meaningful to represent the scenario |
+When the Smart auTest suite processes such tests, following concpts come into play:
+- The user provides the template order number.
+    - Note that user can alsp provide wild card expression.  When that happens then we copy all orders that match the wild card to new order numbers
+    - **And then the copied orders are put into the same wave**
+- The copied order number follows the following conventions:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Order Number     | `ADATA-` prefix.  The suffix is `-` follwed by the generated test execution number.  The part of the template order number starting at position 11 is also part of this order number  |
+  | Wave Set         | `ord.wave_set` is set to the same value for all orders that are processed together.  The wave set is set to `AW-` followed by the test execution number for this run |
+  | Wave             | `schbat` is set to `ADATAW-` followed by the test execution number |
+- **We can provide an explicit order number when running the test as well**
+    - There are scenarios where we want to process an exact order.  For example, host may send a specific order that we need to complete.  For those scenarios, we can simply provide the order number as "New Order Number"
+    - The concepts described above regarding setting ord.wave_set and wave name still apply
+
+These protcols allow the tests to run in a smooth way.  We always start from a known test case (template) and can run through all the steps in a predictable fashion.
+
+
+##### Traffic Plans (Carrier Moves)
+This covers the common scenario where the outbound flow in the WMS starts with a complete traffic plan.  This means that we have car_move, stop, shipment, shipment_line, ord, ord_line data already. Smart IS test data methodology suggests that:
+- Identify some real traffic plans that represent the business use cases
+- Simplify the orders if possible.  For example the real order may have a large number of lines - we should simplify it if possible.
+- Then copy that traffic plan as a template:
+    - Note that we do not have to copy it.  See the section below - all we need to do is set the car_move.host_ext_id
+    - The copied data should follow following conventions:
+      | Concept          | Rules |
+      |------------------|-------|
+      | Carrier Move Host External Id  | The car_move.car_move_id does not matter.  The car_move.host_ext_id will identify it as a sample.  Name it with a prefox `CMSAMPLE` and put a reasonable suffix |
+      | Other | Leave this carrier move in an unprocessed state |
+      | Example          | `CMSAMPLE001`.  You may also append after the prefix something meaningful to represent the scenario |
+When the Smart auTest suite processes such tests, following concpts come into play:
+- The user provides the template load number (car_move.host_ext_id)
+- The copied data follows the following conventions:
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Carrier Move Id  | This is generated based on sequence car_move_id |
+  | car_move.host_ext_id | `ADATA-` followed by the host_ext_id of the template.  Then `-` and then the test execution number for this run |
+  | stop Id | This is generated based on sequence stop_id |
+  | Shipment Id | This is generated based on sequence ship_id |
+  | Order Number     | `ADATA-` prefix.  Then the source order number.  Then `-` and  then the test execution number for this run  |
+  | Wave Set         | `ord.wave_set` and `shipment.wave_set` is set to the same value which is `AW-` followed by the test execution number for this run |
+  | Wave             | `schbat` is set to `ADATAW-` followed by the test execution number |
+These protcols allow the tests to run in a smooth way.  We always start from a known test case (template) and can run through all the steps in a predictable fashion.
+
+
+#### Inventory Operations
+We may want to perform some inventory operations to validate that the various operations are working correctly.  The strategy mentioned above is not suitable for such scenarios.  Smart IS test data methodology suggests that:
+- We **create** some template test locations in the environment to test certain special scenarios.
+    - For example, we can create some special locations in a typical area/zone in the test environment for special tests.
+    - Ideally we should create a new area/zone so that we can seggregate it easily
+ - We have a standard run set called `BASE_INV_A00000_INV_OPS` which would then peform several inventory operations
+    - We can pass it a "Soruce Location" and "Destination Location".  The script would move inventory back and forth.
+    - It allows us to a coma-separted list of statuses.  It will move inventory through all statuses provided.
+    - It will also do partial inventory moves
+
+#### Count Operations
+We may want to perform counts to validate that the use cases are working correctly.  Smart IS test data methodology suggests that:
+- While the standard product creates counts using its own naming convention, **we rename the cntwav and cntbat to include test execution number**
+  |  Data Element    |  Rules    |
+  |------------------|-----------|
+  | Count Wave (cnthdr.cntwav)  | We update it to `ACNTWAV-` follwed by the test execution sequence number formatted as a 6 digit base-36 value with leading 0s.  |
+  | Count Batch (cntbat)  | We update it after it is generated but keep the generated value in the name as well.  We **prefx** the cntwav value.   |
+  | Example Count Wave | Count Wave `ACNTWAV-0000YH` |
+  | Example Count Batch | Say the system generated a count batch of CID00007MQ and we have detremined count wave of `ACNTWAV-0000YH`.  We will update the cntbat to `ACNTWAV-0000YH--CID00007MQ` |
+
+These protcols allow the tests to run in a smooth way.  The count batch becomes a predictable value which allows us to control the execution.
 
 ## Global Metadata
 
