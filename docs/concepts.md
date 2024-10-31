@@ -25,9 +25,9 @@ This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN,
 - Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
     - You can use the following snippet to copy an existing master receipt
       >`
-      publish data
-      where src_trknum = '<provide the soruce rcvtrk.trknum>'
-      and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
+    publish data
+    where src_trknum = '<provide the soruce rcvtrk.trknum>'
+    and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
       |
       {
           publish data
