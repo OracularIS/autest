@@ -7,6 +7,6 @@ It helps if we have manual test scripts that are already in use which will be mi
 | Step | Description | Expected Result |
 |------------------|-------|----|
 | 1000 |Prepare an ASN| ASN Exists in the system |
-| 1100 |Create a trailer and check it in | <ul> <li> Trailer Created </li> <li> Workflows for the check in (e.g. temperature) were prompted </li> <li>Item 3</li></ul> |
+| 1100 |Create a trailer and check it in | - Trailer Created  - Workflows for the check in (e.g. temperature) were prompted  |
 
 
