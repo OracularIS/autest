@@ -19,6 +19,7 @@
    - [Setup ](./setup_RT.md)
    - [Case Study ](./casestudy_RT.md)
    - [Executing](./execution_ST.md)
+- [Sample Case Study](./sample_casestudy.md)
 - [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./packaged_tests.md)
   - Outbound
