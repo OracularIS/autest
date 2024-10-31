@@ -48,4 +48,8 @@ Users can now connect to auTest from the Smart MOCA Client.
 
 ![](Images/image9.png)
 
+## Preparing the target environment for Smart auTest
+In order to implement a secure protocol where we do not accidently run automated tests against the wrong environment (e.g. production), we require that the target environment has a registry setting called `UC_SMART_AUTEST_ALLOWED` set to `1`.  The registry file (which is typically located in %LESDIR%\registry and is typically called registry.  Environment variable MOCA_REGISTRY points to it as well) will have the following section in `[ENVIRONMENT]` section:
+>`UC_SMART_AUTEST_ALLOWED=1`
 
+If this setting is not in place, we will receive an error when trying to execute a test.
