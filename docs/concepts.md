@@ -24,21 +24,21 @@ This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN,
 - Identify sine real master receipts (RCVTRK.TRKNUM) that represent the business use cases.
 - Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
     - You can use the following snippet to copy an existing master receipt
-      >```
-    publish data
-    where src_trknum = '<provide the soruce rcvtrk.trknum>'
-    and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
-      |
-      {
-          publish data
-          where uc_new_trknum_expr = "'" || @new_trknum || "'"
-          and uc_new_invnum_expr = "@invnum"
-          and uc_new_ponum_expr = "decode (@po_num,null,null,@po_num)"
-          |
-          {
-              Script("BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001_EXEC")
-          }
-      }
+      ```sql
+         publish data
+         where src_trknum = '<provide the soruce rcvtrk.trknum>'
+         and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
+        |
+        {
+           publish data
+           where uc_new_trknum_expr = "'" || @new_trknum || "'"
+           and uc_new_invnum_expr = "@invnum"
+           and uc_new_ponum_expr = "decode (@po_num,null,null,@po_num)"
+           |
+           {
+             Script("BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001_EXEC")
+           }
+         }
       
 - The copied master receipt, that will serve as a template, should follow following naming convention:
   | Concept          | Rules |
