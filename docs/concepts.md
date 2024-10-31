@@ -9,12 +9,8 @@ The test metadata primarily follows a low-code solution where tests are executed
 Understanding how we should manage the test data is central to the whole project. Our vision is that customers can start using the solution immediately and require little day-to-day maintenance. We suggest the following paradigm to support this vision:
 
 - Whenever a test is run, the framework always pushes a globally unique, base-36 string to the stack. This allows us to generate new data that is guaranteed to be unique. The name of this parameter is `uc_test_exec_seqnum`.
-
-- For outbound tests, create some sample orders in the system with order lines and name them with specific conventions:
-  - The `template_flg` for the orders will be set to 1.
-  - Name them as `ATST-TMPL-<some identifier>`.
-
-Stick to the conventions that we have for the template data – that will simplify using the tests we have provided.
+- The test run sets utilize this concept to simplify the process of reusing the various components.
+- This strategy also simplifies managing the test data.  We often have the test cases defined in spreadsheets - the Smart IS strategy suggests that we represent the same test cases as actual objects in the WMS instance.
 
 ### Type of Data
 Following section provides details about the various types of data and how the template data should be managed for each:
@@ -70,7 +66,7 @@ This represents the use case where we have receive invoice master data that is s
 - Identify some real business data (RIMHDR.INVNUMM) that represent the business use cases.
 - Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
     - You can use the following snippet to copy an existing master receipt
-      `
+      ```sql
       publish data
       where src_invnum = '<provide the soruce rcvtrk.trknum>'
       and new_invnum = '<provide the new truck we want to create - to serve as a sample>'
@@ -84,7 +80,6 @@ This represents the use case where we have receive invoice master data that is s
               Script("BASE_INB_0001050_COPY_TEMPLATE_RIM_MOCA_V001_EXEC")
           }
       }
-      `
 - The copied receive invouce master, that will serve as a template, should follow following naming convention:
   | Concept          | Rules |
   |------------------|-------|
