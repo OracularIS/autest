@@ -46,9 +46,9 @@ For the MOCA-based test for receiving, we assume a scenario where a truck has ar
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
 
-     ![](Images/image10.png)
-
-     ![](Images/image11.png)
+     <img src="./images/case_study/startingtest.png" alt="undirectedmenu" style= "margin:auto;display:block">
+     </br>
+      <img src="./images/case_study/arguments.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 3. **Script Execution for Warehouse Identification**
    
@@ -70,7 +70,7 @@ The execution console provides real-time feedback on the test process. Key featu
 - **Status Display**: Each row's status is displayed, indicating success or failure.
 - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
-![](Images/image50.png)
+ <img src="./images/case_study/Execution_console.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 
 ### Detailed Execution Flow
@@ -149,9 +149,9 @@ We will assume a scenario where a truck has arrived and has been checked in. The
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
 
-     ![](Images/image13.png)
-
-     ![](Images/image14.png)
+     <img src="./images/case_study/rf_test_init.png" alt="undirectedmenu" style= "margin:auto;display:block">
+     </br>
+     <img src="./images/case_study/Rf_test_arg.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 2. **Script Execution for RCV_ID Generation**
    - The system will execute the following expression to generate the `rcv_id`:
@@ -238,15 +238,15 @@ To execute the test, follow these steps:
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
 
-     ![](Images/image15.png)
-
-     ![](Images/image16.png)
+    <img src="./images/case_study/web_init.png" alt="undirectedmenu" style= "margin:auto;display:block">
+    </br>
+     <img src="./images/case_study/web_Argu.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 2. **URL Prompt**
    - After pressing the "Start" button, a prompt will appear requesting the URL for the web-based wave planning module.
    - Enter the URL and press "OK" to start the test.
 
-     ![](Images/image17.png)
+     <img src="./images/case_study/web_url.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 ### Execution Console
 
@@ -338,9 +338,10 @@ To execute the run set, follow these steps:
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
 
-     ![](Images/image20.png)
+      <img src="./images/case_study/runset_Start.png" alt="undirectedmenu" style= "margin:auto;display:block">
+      </br>
 
-     ![](Images/image21.png)
+      <img src="./images/case_study/runset_arg.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 2. **Provide Required Information**
    - Enter the sample truck identifier (`RCVSMP001`) when prompted.
@@ -381,7 +382,7 @@ The following steps are executed as part of this run set:
    - This step closes and dispatches the truck.
    - The system updates the `rcvtrk` table to reflect the dispatch status, completing the receiving process.
 
-![](Images/image22.png)
+ <img src="./images/case_study/runset_step.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 ### Conclusion
 
