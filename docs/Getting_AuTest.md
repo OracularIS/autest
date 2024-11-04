@@ -24,29 +24,31 @@ Following steps are used for registration and setup for SmartApps and AuTest
 
 Users from the organization log in to SmartApps and register. You can also login through Microsoft and Google account.
 
-![](Images/image5.png)
+ <img src="./images/getting_started/SIGNUP.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
+<br/>
 
-![](Images/image5a.png)
+ <img src="./images/getting_started//Registers.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
 
 ### Step:2
 
 Each named user creates an app key.
 
-![](Images/image6.png)
+ <img src="./images/getting_started/gen_appkey.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
 
 ### Step:3
 
 Link the Smart MOCA Client to Smart Apps using the created app key.
 
-![](Images/image7.png)
+ <img src="./images/getting_started/cldconnect.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
+<br/>
 
-![](Images/image8.png)
+ <img src="./images/getting_started/APP_key.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
 
 ### Step:4
 
 Users can now connect to auTest from the Smart MOCA Client.
 
-![](Images/image9.png)
+ <img src="./images/getting_started/Autest.png" alt="undirectedmenu" style="height: 200px;margin:auto;display:block">
 
 ## Preparing the target environment for Smart auTest
 In order to implement a secure protocol where we do not accidently run automated tests against the wrong environment (e.g. production), we require that the target environment has a registry setting called `UC_SMART_AUTEST_ALLOWED` set to `1`.  The registry file (which is typically located in %LESDIR%\registry and is typically called registry.  Environment variable MOCA_REGISTRY points to it as well) will have the following section in `[ENVIRONMENT]` section:

@@ -24,12 +24,12 @@ Following steps will used to execute run set
 
 Select the desired click on start button.
 
-![](Images/image41.png)
+ <img src="./images/executions/Selectrunset.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 **Step:2**
 When we click on the execute button, we are asked to enter some arguments on the next screen, so we need to have some data (inbound order/ template) that we want to copy. We will enter values of that inbound order/template here and click ‘OK’.
 
-![](Images/image42.png)
+ <img src="./images/executions/arguments.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 After clicking OK, execution of run set will start.
 -	See that wh_id is a script that calls:
@@ -50,40 +50,41 @@ When each row above is highlighted, the results associated with that specific MO
 
 This is showing result of BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001.
   
-![](Images/image43.png)
+ <img src="./images/executions/copytemp_result.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 #### **Step:2**
 
 This is showing result of BASE_INB_0002100_TRLR_CKIN_MOCA_V001.
 
 
-![](Images/image44.png)
+ <img src="./images/executions/IDNTIFY_RESULT.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 #### **Step:3**
 
 This is showing result of BASE_INB_0003100_IDENTIFY_MOCA_V001.
 
 
-![](Images/image45.png)
+ <img src="./images/executions/trlrchkin_result.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 #### **Step:4**
 
 This is showing result of BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001.
 
 
-![](Images/image46.png)
+ <img src="./images/executions/alloc_deposit_result.png.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 #### **Step:5**
 
 This is showing result of BASE_INB_0004100_ALLOCATE_LOCATION_PICKUP_DEPOSIT_MOCA_V001.
 
-![](Images/image47.png)
+ <img src="./images/executions/alloc_loc_result.png
+ " alt="undirectedmenu" style= "margin:auto;display:block">
 
 #### **Step:6**
 
 This is showing result of BASE_INB_0009100_CLOSE_DISPATCH_RCVTRK_MOCA_V001.
 
-![](Images/image48.png)
+ <img src="./images/executions/close_dispatch_result.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 As you can see from this illustration, highlighting each row above displays the results corresponding to that specific MOCA snippet. This makes the output of each command extremely useful in analysing the execution, as it allows for an easy and direct examination of the outcomes linked to individual MOCA segments. This approach ensures clarity and facilitates a thorough review of the data provided in each snippet.
 
@@ -91,6 +92,6 @@ As you can see from this illustration, highlighting each row above displays the 
 
 See the tab 'Commands on Target Env' 
 
-![](Images/image49.png)
+ <img src="./images/executions/Results.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 If you get an error, you can copy the 'command' from here and try running it directly 

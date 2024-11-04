@@ -34,11 +34,11 @@ When we execute tests, we typically run them as part of a run set. A run set has
 
 It helps if we create smaller tests so that they are easily manageable and then string them together in a run-set. For example, the following run set shows how we receive a truck:
 
-![](Images/image3.png)
+ <img src="./images/creatingtests/runset_testcase.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 And the following shows how we process an outbound order:
 
-![](Images/image4.png)
+ <img src="./images/creatingtests/outboundrunset.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 You can see that we have created tests at a manageable level and then we string them together for the final run set.
 

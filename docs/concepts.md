@@ -182,7 +182,7 @@ These protcols allow the tests to run in a smooth way.  The count batch becomes 
 
 As part of the auTest subscription, you have access to a rich set of commands, tests, test cases, and run sets. They will show up in the suite as `world` tenant and are named with the `BASE_` prefix.
 
-![](Images/image2.png)
+ <img src="./images/Concepts/globalnaming.png" alt="undirectedmenu" style= "margin:auto;display:block">
 
 
 We are always working on enriching this set, and you will always have access to the latest set as part of the subscription.

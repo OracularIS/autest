@@ -37,7 +37,7 @@ For this scenario, we have following run sets that will work:
 | BASE_INB_000200_CREATE_TO_DISPATCH_USING_RF_AND_WEB | Same as RF based run set, but use web for trailer check in |
 
 We strongly encourage that for majority of scenarios, we employ MOCA based tests as they work much faster and call the same APIs - so that is the first run set.  Others are available as well, but if used to receive large master receipts, it will be slower.  This run set covers our steps 1000 - 1900 exactly.
-![](Images/sample_casestudy__runset__BASE_INB_000000_CREATE_TO_DISPATCH.jpg)
+ <img src="./images/smaple_casestudy/create_to_dispatch.jpg" alt="undirectedmenu" style= "margin:auto;display:block">
 We then have the option to change status of everything (so slightly different from how step 2100 and 2200 handle it).  The manual test are testing two pieces of functionality with one test:
 - That we can do partial inventory moe
 - And then that we sent transaction properly
@@ -53,7 +53,7 @@ So we have following options:
 - Or we could break up our tests into two.
     - We do a test for processing ASN all the way and change status
     - And then run a spearate run set which does every type of inventory move
-      ![](Images/sample_casestudy__runset__sample_casestudy__runset__BASE_INV_A00000_INV_OPS.jpg)
+     <img src="./images/smaple_casestudy/Runset_base_inv_ops.jpg" alt="undirectedmenu" style= "margin:auto;display:block">
 
 By following this strategy we get an even wider test coverage.  But both options are available when adopting Smart IS test suite.
 
