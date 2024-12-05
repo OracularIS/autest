@@ -27,14 +27,17 @@ It helps if we have manual test scripts that are already in use which will be mi
 A specific manual test sequence may or may not exist exactly in the same way in our test suite.  As indicated in the concpts section, we have two core concepts:
 - Test and test case
 - Run Sets
+
 Test cases are the building blocks that provide the core units of functionality.  So we already have test/test cases for the steps defined above.  Then they are brought together in the form of a run set.  Smart IS provides a rich set of test/test cases and also run sets.  While it is possible to easily create customer specific run sets, we encourage that the customers try to use the standard `BASE` run sets.
 
 For this scenario, we have following run sets that will work:
+
 | Run Set | Description |
 |---------|-------------|
 | BASE_INB_000000_CREATE_TO_DISPATCH | Perform the receiving end to end test using MOCA Commands |
 | BASE_INB_000100_CREATE_TO_DISPATCH_USING_RF | Same steps as above but the inventory is handled via RF |
 | BASE_INB_000200_CREATE_TO_DISPATCH_USING_RF_AND_WEB | Same as RF based run set, but use web for trailer check in |
+
 
 We strongly encourage that for majority of scenarios, we employ MOCA based tests as they work much faster and call the same APIs - so that is the first run set.  Others are available as well, but if used to receive large master receipts, it will be slower.  This run set covers our steps 1000 - 1900 exactly.
 ![](Images/sample_casestudy__runset__BASE_INB_000000_CREATE_TO_DISPATCH.jpg)
