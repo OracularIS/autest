@@ -46,6 +46,7 @@ We then have the option to change status of everything (so slightly different fr
 - And then that we sent transaction properly
 
 We have tests available for partial inventory move as well.  This is 
+
 | Test | Description |
 |------|-------------|
 | BASE_INV_MOVE_MOCA_V002 | Move inventory to another location |
@@ -62,6 +63,18 @@ By following this strategy we get an even wider test coverage.  But both options
 
 #### Same run set can test several scenarios
 We may have differnt types of ASNs.  Or differnt types of items.  Our expected results may differ based on the type of data **but in many cases the test steps will not chnage**.  Smart autest suite lets you take advantage if this common tesing pattern.  We encourage using the same run set for multiple scenarios.  While we may be running the same exact run set, we can create differnt "test cases" for each "run set".  
+
+#### Create the data for the tests
+Refer to the concepts described in [General Conepts](concepts?id=about-test-data) and then specifically about [Inbound Test Data](/concepts?id=inbound).  For our case study, we are dealing with ASN data so lets create some data as follows:
+
+| Data Set | Description | Table Name | Data |
+|----------|-------------|-------------|-----|
+| RCVSMP001 | This is the name of our sample to represent a specific scenario | RCVTRK | trknum = RCVSMP001 |
+|           |                                                                 | RCVINV | invnum = RCVSMP001 |
+|           |                                                                 | RCVLIN | one line 0001 for a typical part.  Set expqty.  Set rcvsts to A and leave all others as ---- |
+|           |                                                                 | INV    | create invlod, invsub, invdtl for the ASN.  Make sure that the invdtl.asnflg = 1 to properly declare as ASN |
+
+
 
 ### Outbound Tests
 
