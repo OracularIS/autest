@@ -30,20 +30,20 @@ This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN,
          and uc_new_ser_num_expr = "@ser_num||'-'||@dtlnum" /* if we had serials, the new serials will be created using this expression */
          |
          {
-            /*
-             * uc_new_trknum_expr defines how the record is created.  So it will use what was provided above
-             * uc_new_invnum_expr defines how he new RCVINV is creted.  Per this, the invnum of the source will be used in the new record
-             * uc_new_ponum_expr defines the ponum field value.  Per above it will be kept the same as source
-             */
-            publish data
-            where uc_new_trknum_expr = "'" || @new_trknum || "'"
-            and uc_new_invnum_expr = "@invnum"
-            and uc_new_ponum_expr = "decode (@po_num,null,null,@po_num)"
-            |
-            {
-               Script("BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001_EXEC")
-            }
-          }
+             /*
+              * uc_new_trknum_expr defines how the record is created.  So it will use what was provided above
+              * uc_new_invnum_expr defines how he new RCVINV is creted.  Per this, the invnum of the source will be used in the new record
+              * uc_new_ponum_expr defines the ponum field value.  Per above it will be kept the same as source
+              */
+             publish data
+             where uc_new_trknum_expr = "'" || @new_trknum || "'"
+             and uc_new_invnum_expr = "@invnum"
+             and uc_new_ponum_expr = "decode (@po_num,null,null,@po_num)"
+             |
+             {
+                 Script("BASE_INB_0001100_COPY_TEMPLATE_RCVTRK_MOCA_V001_EXEC")
+             }
+         }
       
 - The copied master receipt, that will serve as a template, should follow following naming convention:
   | Concept          | Rules |
@@ -77,7 +77,7 @@ This represents the use case where we have receive invoice master data that is s
     - You can use the following snippet to copy an existing master receipt
       ```sql
       publish data
-      where src_invnum = '<provide the soruce rcvtrk.trknum>'
+      where uc_src_invnum = '<provide the soruce rcvtrk.trknum>'
       and new_invnum = '<provide the new truck we want to create - to serve as a sample>'
       and uc_create_rcv = '0'
       |
