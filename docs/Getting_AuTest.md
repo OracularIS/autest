@@ -53,3 +53,14 @@ In order to implement a secure protocol where we do not accidently run automated
 >`UC_SMART_AUTEST_ALLOWED=1`
 
 If this setting is not in place, we will receive an error when trying to execute a test.
+
+## Define Connections in Smart MOCA Client
+You will need to create Connections in Smart MOCA Client with appropriate information to later launch the Smart AuTest suite against that environment.  It is strongly recommended that this page defines the various settings first and then we launch the Smart AuTest.  By following this approach, the various connection settings will be used for the automated testing session.
+
+![](Images/launch_connection_setup_in_moca_client.jpg)
+
+It will show the following page:
+
+![](Images/moca_client_connection_page.jpg)
+
+
