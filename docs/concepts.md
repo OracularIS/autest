@@ -17,15 +17,24 @@ Following section provides details about the various types of data and how the t
 #### Inbound
 ##### ASN (receipts with or without inventory data)
 This is the most common receiving scenario where we have RCVTRK, RCVINV, RCVLIN, INVDTL, INVSUB, and INVLOD data.  In business terms this represents the scenario where the shipping or manufcaturing side sent the detailed data to the WMS.  Smart IS test data methodology suggests that:
-- Identify sine real master receipts (RCVTRK.TRKNUM) that represent the business use cases.
+- Identify some real master receipts (RCVTRK.TRKNUM) that represent the business use cases.
 - Then copy that to serve as a template.  Unfortunately there is no standard screen available for this.
     - You can use the following snippet to copy an existing master receipt
       ```sql
          publish data
-         where src_trknum = '<provide the soruce rcvtrk.trknum>'
+         where uc_src_trknum = '<provide the soruce rcvtrk.trknum>'
          and new_trknum = '<provide the new truck we want to create - to serve as a sample>'
+         and uc_copy_rcvtrk_inv_flg = '1' /* 1 means that we copy inventory for the source truck as well.  This helps in properly representing an ASN */
+         and uc_generate_new_invtid = '1' /* 1 means that when copying inventory, it will create new identifiers from sysctl */
+         and uc_set_asnflg_on_invdtl = '1' /* 1 means that invdtl will be marked as ASN */
+         and uc_new_ser_num_expr = "@ser_num||'-'||@dtlnum" /* if we had serials, the new serials will be created using this expression */
          |
          {
+            /*
+             * uc_new_trknum_expr defines how the record is created.  So it will use what was provided above
+             * uc_new_invnum_expr defines how he new RCVINV is creted.  Per this, the invnum of the source will be used in the new record
+             * uc_new_ponum_expr defines the ponum field value.  Per above it will be kept the same as source
+             */
             publish data
             where uc_new_trknum_expr = "'" || @new_trknum || "'"
             and uc_new_invnum_expr = "@invnum"
