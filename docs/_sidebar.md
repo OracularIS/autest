@@ -6,19 +6,19 @@
 - [Result managemnet](./result_mangement.md)
 - Autest for unit testing
    - [Case Study ](./casestudy.md)
-   - [Executing](./execution.md)
+   - [Execution](./execution.md)
 - Autest for stress testing
    - [Concept ](./concept_ST.md)
    - [Pre_Requisite ](./prereq_ST.md)
    - [Setup ](./setup_ST.md)
    - [Case Study ](./casestudy_ST.md)
-   - [Executing](./execution_ST.md)
+   - [Execution](./execution_ST.md)
 - Autest for Regression testing
    - [Concept ](./concept_RT.md)
    - [Pre_Requisite ](./prereq_RT.md)
    - [Setup ](./setup_RT.md)
    - [Case Study ](./casestudy_RT.md)
-   - [Executing](./execution_ST.md)
+   - [Execution](./execution_ST.md)
 - [Sample Case Study](./sample_casestudy.md)
 - [How to create Tests](./Creating_Tests.md)
 - [Packaged Tests](./packaged_tests.md)
