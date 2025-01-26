@@ -80,6 +80,8 @@ Following steps will be used to execute run set:
 
 - After clicking OK, an execution of run set will start and an [Execution Console](#overview-of-execution-console) will get open to show an execution of run set and its associated tests. 
 
+### How to view Execution Result?
+
 ### Overview of Execution Console?
 
 An Execution Console is the central interface for monitoring and analyzing the execution of a runset. It consists of multiple tabs and grids, each designed to provide specific information about the execution process and results. 
@@ -314,6 +316,8 @@ It provides a summary of the runset execution, including:
 #### After Execution Completion
 
 - Once the execution is complete, all tabs become available, showing detailed information for further analysis.
+
+### Execution History
 
 ### Execution Console also shows what was executed
 
