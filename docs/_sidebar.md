@@ -2,7 +2,9 @@
 - [Overview](./readme.md)
 - [Getting AuTest](./Getting_AuTest.md)
 - [Concepts](./concepts.md)
-- [Architecture](./architecture.md)
+- [Architecture](./arch/architecture.md)
+    - [Maintenance Layer](./arch/maintenance.md)
+    - [Execution Layer](./arch/executionlayer.md)
 - [Result managemnet](./result_mangement.md)
 - Autest for unit testing
    - [Case Study ](./casestudy.md)
