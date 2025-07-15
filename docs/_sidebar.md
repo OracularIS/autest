@@ -5,7 +5,7 @@
 - [Architecture](./arch/architecture.md)
     - [Maintenance Layer](./arch/maintenance.md)
     - [Execution Layer](./arch/executionlayer.md)
-- [Result managemnet](./result_mangement.md)
+- [Result Managemnet](./results.md)
 - Autest for unit testing
    - [Case Study ](./casestudy.md)
    - [Execution](./execution.md)

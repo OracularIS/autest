@@ -1,6 +1,6 @@
-## Creating MOCA Based Tests
+# Creating MOCA Based Tests
 
-### Overview
+## Overview
 Creating MOCA based tests requires intimate knowledge of the MOCA language and some concepts. As we create tests, we will utilize some concepts heavily: 
 
 Some of these tests may be performing a series of complex tasks.  When  they are executed in the context of auTest, we want to publish the details about each step.  This requires appropriate use of “&” so that the output of the whole script is then published to the auTest framework.  For example: 
@@ -16,19 +16,19 @@ Developing MOCA based tests requires us to trace the use case first from the fro
 
 This section describes the steps involved in MOCA based tests:
 
-### Get Traces
+## Get Traces
 
 When developing MOCA based tests, we want to execute the MOCA commands that are as close to the ones executed by the front-end as possible. This is to make sure that our test coverage is as close to the real world as possible.
 
 If the use case involves RF, then getting an MTF trace is a good first step as that shows the MOCA commands easily. Refer to the concepts section above to see how you can use traces to find appropriate commands.
 
-### Decide Which Commands to Use
+## Decide Which Commands to Use
 
 It may not be important to run every command that the client issued. Generally, we are interested in only those commands that changed the state of the underlying data.
 
 There are exceptions to this rule though. For example, in some cases, it is possible that a “read” command has an error which fails the front-end. But generally, we want to take the middle path and as a first pass only focus on the commands that changed the state. If then we find that we missed something, we can add those “read” commands in the test as well.
 
-### Decide on What Test You Will Create – One Use Case May Create More Than One Test
+## Decide on What Test You Will Create – One Use Case May Create More Than One Test
 
 When we execute tests, we typically run them as part of a run set. A run set has details where each row represents a test case (a test case is a test with some pre-defined data).
 

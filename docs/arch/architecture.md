@@ -10,8 +10,8 @@ Its architecture is structured into two key layers:
 
 For detailed information, refer to the individual modules:
 
-- [Maintenance Layer](./maintenance.md) 
-- [Execution Layer](executionlayer.md)
+- [Maintenance Layer](/arch/maintenance.md) 
+- [Execution Layer](/arch/executionlayer.md)
 ---
 
 <br><br>

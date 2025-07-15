@@ -1,66 +1,176 @@
-## Overview
+# Getting Started
 
-The Smart AuTest suite is available in a subscription model. This implies that customers do not need to install any software in their ecosystem. The tests are launched from the Smart MOCA Client but the underlying data is managed from the cloud. 
+ Setting up AuTest involves two main steps: generating an application key from SmartApps and using it to launch AuTest through MOCA.
 
-There are following key features that are listed below:
+ Follow these simple steps to start automating your WMS testing with ease.
 
-1. **Cloud-Based Infrastructure**: All test data is stored and managed within the cloud, ensuring scalability, accessibility, and robust security measures.
+## Application Key Generation 
 
-2. **Seamless Integration**: Tests are launched directly from the Smart MOCA Client, providing a user-friendly interface for initiating and monitoring testing processes.
+SmartApps is a centralized cloud-based platform used for maintaining all metadata, test cases, commands, and runsets for Smart AuTest. 
 
-3. **Subscription Flexibility**: Customers can choose from various subscription options tailored to their specific needs, whether opting for a trial period to evaluate the suite's capabilities or committing to a permanent subscription for ongoing testing requirements.
+To enable a secure connection between SmartApps and MOCA for launching Smart AuTest, you need to generate an **Application Key**.
 
-4. **Effortless Setup**: The subscription model simplifies the onboarding process, allowing users to request a tenant through a straightforward web form. Once the request is submitted, Smart promptly handles the setup process, creating user accounts and providing necessary login credentials.
+Following steps are used for generating key on Smart Apps:
 
-5. **Automated Confirmation**: Upon submission of the web form, key contacts receive a confirmation email containing essential details and login instructions. This automated process ensures a smooth transition for users into the Smart auTest environment.
+1. Go to the [Smart Apps portal](https://apps.smart-is.com/login).    
 
-6. **Trial Access**: During the trial period, organizations have access to both auTest and stress test functionalities, enabling comprehensive evaluation of the suite's capabilities and suitability for their testing requirements.
+2.  **Log in** using your organizational email, or sign in via **Microsoft** or **Google** account.  
 
-## Registration and Setup for SmartApps and AuTest
+    If you don’t have an account yet, you can easily **sign up** directly from the login page.
 
-Following steps are used for registration and setup for SmartApps and AuTest
 
-### Step:1
+<div style="text-align: left;">
+  <img src="./Images/log1.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-Users from the organization log in to SmartApps and register. You can also login through Microsoft and Google account.
+3. Navigate to your **Profile** section. 
 
-![](Images/image5.png)
+    <div style="text-align: left;">
+        <img src="./Images/log2.png"
+       alt="undirectedmenu"
+       style="height: 200px; width:980px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-![](Images/image5a.png)
+4. Now click on **Add** button to generate Application key.
 
-### Step:2
+    <div style="text-align: left;">
+        <img src="./Images/log3.png"
+       alt="undirectedmenu"
+       style="height: 200px width:980px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-Each named user creates an app key.
+5. Locate the **Application Key** section, add the description and click **Generate Key**.
 
-![](Images/image6.png)
+    <div style="text-align: left;">
+        <img src="./Images/log4.png"
+       alt="undirectedmenu"
+       style="height: 200px width:500px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-### Step:3
+6. Once generated, **copy** the Application Key and keep it **secure and private**.  
+   - You’ll need this key in the next step to launch Smart AuTest in MOCA.
 
-Link the Smart MOCA Client to Smart Apps using the created app key.
+    <div style="text-align: left;">
+        <img src="./Images/log5.png"
+       alt="undirectedmenu"
+       style="height: 200px width:980px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-![](Images/image7.png)
+## Launching AuTest from MOCA
 
-![](Images/image8.png)
+1. Open the **MOCA** interface.
 
-### Step:4
+2. Navigate to the **Smart Connect** section and select **Cloud Connect**.
 
-Users can now connect to auTest from the Smart MOCA Client.
+    <div style="text-align: left;">
+        <img src="./Images/moca1.png"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
-![](Images/image9.png)
+3. Paste the **Application Key** you copied from SmartApps and save key. 
 
-## Preparing the target environment for Smart auTest
+    <div style="text-align: left;">
+        <img src="./Images/moca2.png"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
+
+4. Now click **Add-On**.
+
+    <div style="text-align: left;">
+        <img src="./Images/moca3.png"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
+
+5. Select **Smart Innovations** and then select **AuTest** from the list.
+
+    <div style="text-align: left;">
+        <img src="./Images/moca4.png"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+     </div>
+
+6. Smart AuTest will now be launched and ready to use.
+
+
+
+## Preparing the target environment for Smart AuTest
 In order to implement a secure protocol where we do not accidently run automated tests against the wrong environment (e.g. production), we require that the target environment has a registry setting called `UC_SMART_AUTEST_ALLOWED` set to `1`.  The registry file (which is typically located in %LESDIR%\registry and is typically called registry.  Environment variable MOCA_REGISTRY points to it as well) will have the following section in `[ENVIRONMENT]` section:
 >`UC_SMART_AUTEST_ALLOWED=1`
 
 If this setting is not in place, we will receive an error when trying to execute a test.
 
-## Define Connections in Smart MOCA Client
-You will need to create Connections in Smart MOCA Client with appropriate information to later launch the Smart AuTest suite against that environment.  It is strongly recommended that this page defines the various settings first and then we launch the Smart AuTest.  By following this approach, the various connection settings will be used for the automated testing session.
+## Define Connections in MOCA Client
 
-![](Images/launch_connection_setup_in_moca_client.jpg)
+Before launching Smart AuTest, it's important to set up the correct connection settings in the **Smart MOCA Client**. This ensures your tests run against the right environment with the proper configuration.
 
-It will show the following page:
+### Why it Matters
+Defining connections in advance allows Smart AuTest to automatically use these settings for a consistent and reliable testing session.
 
-![](Images/moca_client_connection_page.jpg)
+Following steps are required for setting up the environment:
 
+1. Open the **Smart MOCA Client**.
+2. Go to the **Files** menu and select **Edit Servers**.
+
+    <div style="text-align: left;">
+        <img src="./Images/connection.png"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+     </div>
+
+3. In the server editor, **add all required connection details**, such as:
+   - **Service URL**
+   - **Port Number**
+   - **User ID**
+   - **Warehouse/Environment Name**
+
+    <div style="text-align: left;">
+        <img src="./Images/moca_client_connection_page.jpg"
+       alt="undirectedmenu"
+       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+     </div>
+
+4. Save the server configuration.
+
+Once this is done, you’re ready to launch Smart AuTest with your predefined settings.
+
+---
+<br>
 
