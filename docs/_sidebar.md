@@ -6,6 +6,7 @@
     - [Maintenance Layer](./arch/maintenance.md)
     - [Execution Layer](./arch/executionlayer.md)
 - [Result Managemnet](./results.md)
+- [Execution Analytics](./analytics.md)
 - Autest for unit testing
    - [Case Study ](./casestudy.md)
    - [Execution](./execution.md)
