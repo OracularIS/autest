@@ -31,9 +31,9 @@ Following steps are used for generating key on Smart Apps:
 3. Navigate to your **Profile** section. 
 
     <div style="text-align: left;">
-        <img src="./Images/log2.png"
-       alt="undirectedmenu"
-       style="height: 200px; width:980px; margin: auto; display: block; cursor: zoom-in;
+     <img src="./Images/log2.png"
+    alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -44,7 +44,7 @@ Following steps are used for generating key on Smart Apps:
     <div style="text-align: left;">
         <img src="./Images/log3.png"
        alt="undirectedmenu"
-       style="height: 200px width:980px; margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -55,7 +55,7 @@ Following steps are used for generating key on Smart Apps:
     <div style="text-align: left;">
         <img src="./Images/log4.png"
        alt="undirectedmenu"
-       style="height: 200px width:500px; margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -67,7 +67,7 @@ Following steps are used for generating key on Smart Apps:
     <div style="text-align: left;">
         <img src="./Images/log5.png"
        alt="undirectedmenu"
-       style="height: 200px width:980px; margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -115,7 +115,7 @@ Following steps are used for generating key on Smart Apps:
     <div style="text-align: left;">
         <img src="./Images/moca4.png"
        alt="undirectedmenu"
-       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -146,7 +146,7 @@ Following steps are required for setting up the environment:
     <div style="text-align: left;">
         <img src="./Images/connection.png"
        alt="undirectedmenu"
-       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
@@ -161,7 +161,7 @@ Following steps are required for setting up the environment:
     <div style="text-align: left;">
         <img src="./Images/moca_client_connection_page.jpg"
        alt="undirectedmenu"
-       style="height: 200px margin: auto; display: block; cursor: zoom-in;
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
