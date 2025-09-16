@@ -10,47 +10,47 @@ SmartApps is responsible for several key functions, including:
 SmartApps acts as the central repository for all testing components. These include:
 - **Test Cases**: Define the individual testing logic for a specific scenario or function. Each test case can include multiple steps and validations.
 
-<div style="text-align: left;">
-  <img src="./Images/testcase.png"
-       alt="undirectedmenu"
-       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
-              border: 2px solid #000000; border-radius: 4px;"
-       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
-       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
-   </div>
- 
+  <div style="text-align: left;">
+       <img src="./Images/testcase.png"
+              alt="undirectedmenu"
+              style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+                     border: 2px solid #000000; border-radius: 4px;"
+              onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+              ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+       </div>
+
 - **Tests**: The most granular unit in Autest. A test is an individual script or action that performs a specific check or task.
 
-<div style="text-align: left;">
-  <img src="./Images/test.png"
-       alt="undirectedmenu"
-       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
-              border: 2px solid #000000; border-radius: 4px;"
-       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
-       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
-   </div>
- 
+  <div style="text-align: left;">
+       <img src="./Images/test.png"
+              alt="undirectedmenu"
+              style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+                     border: 2px solid #000000; border-radius: 4px;"
+              onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+              ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+       </div>
+
 - **Commands**: Scripts or reusable blocks of logic that define test flows, actions, or operations to be performed during testing.
 
-<div style="text-align: left;">
-  <img src="./Images/command.png"
-       alt="undirectedmenu"
-       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
-              border: 2px solid #000000; border-radius: 4px;"
-       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
-       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
-   </div>
+  <div style="text-align: left;">
+       <img src="./Images/command.png"
+              alt="undirectedmenu"
+              style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+                     border: 2px solid #000000; border-radius: 4px;"
+              onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+              ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+       </div>
  
 - **Runsets**: Groups of test cases bundled for sequential or parallel execution. Runsets are useful for managing larger test cycles or regression test suites.
 
-<div style="text-align: left;">
-  <img src="./Images/runset.png"
-       alt="undirectedmenu"
-       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
-              border: 2px solid #000000; border-radius: 4px;"
-       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
-       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
-   </div>
+  <div style="text-align: left;">
+       <img src="./Images/runset.png"
+              alt="undirectedmenu"
+              style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+                     border: 2px solid #000000; border-radius: 4px;"
+              onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+              ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+       </div>
  
 #### 2. **Full Lifecycle Control**
 Users can:
