@@ -167,6 +167,11 @@ Following steps are required for setting up the environment:
        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
      </div>
 
+   In the **Web URL** field, you can provide the portal link:
+    - If you are connecting to a **specific warehouse**, copy the link up to the `wh_id` parameter.
+    - If no specific warehouse is mentioned, it will automatically redirect you to the **default warehouse**.
+    - Don’t forget to enter the correct **Devcod** to ensure the connection opens the intended environment.
+
 4. Save the server configuration.
 
 Once this is done, you’re ready to launch Smart AuTest with your predefined settings.
