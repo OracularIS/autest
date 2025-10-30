@@ -233,19 +233,21 @@ When providing values for the arguments in various contexts, we have the followi
 
 As our vision is a `low-code` solution, we have introduced a concept of `Application Flow Step` which represents the front-end use cases in the form of data.
 
-| Application Flow Step Id | Type          | Description                       |
-|--------------------------|---------------|-----------------------------------|
-| IDENTIFY_LOAD            | RF Form       | This represents an RF form        |
-| ENTER_TEXT               | RF Form Action| This will allow us to enter text  |
-| wm.outboundplanner/wm.wavesandpicks | WEB Form      | This is how we call a web form    |
-| ACTION                   | WEB Action    | This performs an action on the web UI |
-| FILTER                   | WEB Action    | This uses the filter on the web   |
-| SAVE                     | WEB Action    | Indicates that we press save      |
-| CLOSE                    | WEB Action    | Indicates that we closed a form   |
-| CLICK                    | WEB Action    | Indicates click action            |
-| CLICK_LINKS              | WEB Action    | Indicates clicking a link         |
-| CLICK_TABLE_CELLS        | WEB Action    | Indicates clicking a table cell   |
-| BUTTON                   | WEB Action    | Indicates pressing a button on the web |
+| Application Flow Step Id | Type          | Argument    |Description                       |
+|--------------------------|---------------|-------------|-----------------------------------|
+| IDENTIFY_LOAD            | RF Form       |             |This represents an RF form        |
+| ENTER_TEXT               | RF Form Action|             |This will allow us to enter text  |
+| ENTER_TEXT               | WEB Form      | VARNAM,TEXT |This will allow us to enter text  |
+| wm.outboundplanner/wm.wavesandpicks | WEB Form |       |  This is how we call a web form    |
+| ACTION                   | WEB Action    |             |This performs an action on the web UI |
+| FILTER                   | WEB Action    | TEXT        |This uses the filter on the web   |
+| SAVE                     | WEB Action    |             |Indicates that we press save      |
+| CLOSE                    | WEB Action    |             |Indicates that we closed a form   |
+| CLICK                    | WEB Action    |             |Indicates click action            |
+| CLICK_LINKS              | WEB Action    |             |Indicates clicking a link         |
+| CLICK_TABLE_CELLS        | WEB Action    | TEXT        |Indicates clicking a table cell   |
+| CLICK_MENU_ITEMS         | Web Action    | TEXT        |Indicates pressing Actions and then choosing an action |
+| BUTTON                   | WEB Action    | TEXT        |Indicates pressing a button on the web |
 
 This data is pre-populated for the `world` tenant. Furthermore, we know which versions a specific form exists in. Smart IS maintains this metadata.
 
