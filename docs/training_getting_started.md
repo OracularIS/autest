@@ -13,10 +13,10 @@ At the end of this lesson:
 * Setup the connection in Smart AuTest for running the tests
 
 ### Get your application Key
-![Follow these steps to create your application key](./Getting_AuTest?id=application-key-generation)
+[Follow these steps to create your application key](./Getting_AuTest?id=application-key-generation)
 
 ### Connect Smart MOCA Client to the cloud backend
-![Follow these steps to connect Smart MOCA Client to the cloud backend](./Getting_AuTest?id=launching-autest-from-moca)
+[Follow these steps to connect Smart MOCA Client to the cloud backend](./Getting_AuTest?id=launching-autest-from-moca)
 
 ### Prepare Target environment for automated testing
 We want to prevent a user from accidently running a test against an environment.  In order to prevent it, we enforce that
