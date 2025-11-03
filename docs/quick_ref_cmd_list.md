@@ -1,7 +1,7 @@
 # Overview
 This is a list of commands for quick reference.  These are the ones typically used by other tests.
 
-## Code Translations
+## Translations
 ### BASE_GET_CODMST_DESC
 This command can be used to get the translated text for an input code.  This is useful when developing UI tests where the screen needs input as description.  
 For example, it can be used as follows to get the text of code trlr_typ.  The value passed in to trlr_typ is a code
@@ -23,6 +23,21 @@ Genrally it is going by the BY "codmst" but it has some special domains as well:
 | ctncod          |                             | Use list carton codes where ctncod=@codval and wh_id=@wh_id |
 | reacod          |                             | Use dscmst |
 | cnttyp          |                             | Use list count type |
+
+### BASE_GET_STOLOC_FOR_FRONT_END
+Locations have a concept of verrification code. This implies that we cannot type in location as our logic suggests instead we need
+to first find its verification code and that is what we need to type in.  So when we have any field on Web UI or RF where we need 
+to type in a location, we should always use this
+
+#### Input
+| Input Parmeter         | Description                 | Comments |
+|------------------------|-----------------------------|----------|
+| stoloc                 | Location we want to look up | Whatever location we want to type in |
+| uc_return_colnam       | What should we publish      | Default is stoloc |
+
+#### Output
+We publish the location verification code if defined
+
 
 ## General Purpose Values
 ### BASE_GET_GLOBAL_VALUE
