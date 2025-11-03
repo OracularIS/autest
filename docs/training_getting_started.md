@@ -52,13 +52,14 @@ If above steps were done properly you will be able to do following:
 ![Launch AuTest from Smart MOCA Client](Images/training_getting_started/training_autest_launch.jpg)
 
 * If you have access to multiple tenants, you will get a dropdown to select tenant.  If so, select the tenant
+  
 * You will see following screen
- 
-![You will see following screen](Images/training_getting_started/training_main_screen.jpg)
-
     * We have three basic testing objects.  Tests, Run Sets, and Ruin Set Groups
     * We can press "Find" to fetch the data from the cloud metadata store
-    * Settings will show the settings inherited from the Connection defined in MOCA Client.  We should always inherit from there and not overide here.
+    * Settings will show the settings inherited from the Connection defined in MOCA Client.  We should always inherit from there and not overide here
+  
+![You will see following screen](Images/training_getting_started/training_main_screen.jpg)
+
 * Navigate to each tab and press Find.  You will see the data
 * Recognize the "world" tenant objects.  These are maintained by Smart IS
 * If you were to create custom objects they will not be in the world tenant.
