@@ -27,9 +27,13 @@ an environment variable should be set in the target envirionment.  ![Follow thes
 * You will see subscriptions.
 
  ![You will see your subscriptions](Images/training_getting_started/training_web_subscription_screen.jpg)
+
+ 
 * On left hand side you will see AuTest Menu.
 
 ![AuTest Menu](Images/training_getting_started/training_web_autest_menu.jpg)
+
+
 * Get famiilar with the nagigation
 
 ### Define connecion in Smart MOCA Client
@@ -38,14 +42,20 @@ Smart AuTest supports following types of tests:
 * RF based tests
 * Web UI based tests
 
-You will need to define connection in Smart MOCA Client so that it has all of the connections defined
-[Define Connections](./Getting_AuTest?id=define-connections-in-moca-client)
+You will need to define connection in Smart MOCA Client so that it has all of the connections defined [Define Connections](./Getting_AuTest?id=define-connections-in-moca-client)
 
 ### Validate the connections
 If above steps were done properly you will be able to do following:
-* ![Launch AuTest from Smart MOCA Client](Images/training_getting_started/training_autest_launch.jpg)
+* Launch AuTest from Smart MOCA Client
+
+
+![Launch AuTest from Smart MOCA Client](Images/training_getting_started/training_autest_launch.jpg)
+
 * If you have access to multiple tenants, you will get a dropdown to select tenant.  If so, select the tenant
-* ![You will see following screen](Images/training_getting_started/training_main_screen.jpg)
+* You will see following screen
+ 
+![You will see following screen](Images/training_getting_started/training_main_screen.jpg)
+
     * We have three basic testing objects.  Tests, Run Sets, and Ruin Set Groups
     * We can press "Find" to fetch the data from the cloud metadata store
     * Settings will show the settings inherited from the Connection defined in MOCA Client.  We should always inherit from there and not overide here.
