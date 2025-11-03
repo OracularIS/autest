@@ -24,8 +24,8 @@ an environment variable should be set in the target envirionment.  ![Follow thes
 
 ### Get familiar with nagivating Web
 * Navigate to https://apps.smart-is.com/ and login
-* ![You will see your subscriptions](Images/training_getting_started/training_web_subscription_screen.jpg)
-* ![The AuTest metadata is grouped on the left hand side under "AuTest"](Images/training_getting_started/training_web_autest_menu.jpg)
+* You will see subscriptions.  ![You will see your subscriptions](Images/training_getting_started/training_web_subscription_screen.jpg)
+* On left hand side you will see AuTest Menu. ![AuTest Menu](Images/training_getting_started/training_web_autest_menu.jpg)
 * Get famiilar with the nagigation
 
 ### Define connecion in Smart MOCA Client
@@ -34,7 +34,8 @@ Smart AuTest supports following types of tests:
 * RF based tests
 * Web UI based tests
 
-![You will need to define connection in Smart MOCA Client so that it has all of the connections defined](./Getting_AuTest?id=define-connections-in-moca-client)
+You will need to define connection in Smart MOCA Client so that it has all of the connections defined
+![Define Connections](./Getting_AuTest?id=define-connections-in-moca-client)
 
 ### Validate the connections
 If above steps were done properly you will be able to do following:
