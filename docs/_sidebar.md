@@ -15,8 +15,17 @@
 - Training Tracks
     - [Getting Started](./training_getting_started.md)
     - [Running Tests](./training_run.md)
-    - [How to create MOCA Based Tests](./Creating_Tests.md)
-    - [How to create Web UI Tests](./creating_web_tests.md)
+    - [Command Basics](./training_commands_basic.md)
+    - [Creating MOCA Based Tests](./Creating_Tests.md)
+    - [Creating Web UI Based Tests](./creating_web_tests.md)
+    - [Creating RF tests](./training_creating_rf_tests.md)
+    - [Define Test Outputs](./training_creating_test_output.md)
+    - [Define Test Cases](./training_creating_test_case.md)
+    - [Define Run Set](./training_creating_run_set.md)
+    - [Define Run Set Group (Regression Testing)](./training_creating_run_set_group.md)
+    - [View Results](./training_view_results.md)
+
+- [Quick Reference](./quick_ref_cmd_list.md)
 - [Packaged Tests](./packaged_tests.md)
   - Outbound
     - [BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001](./tests_docs/BASE_OUB_0010000_ORD_COPY_TEMPLATE_MOCA_V001.md)
@@ -49,6 +58,7 @@
     - [BASE_INV_CREATE_MOCA_V001](./tests_docs/BASE_INV_CREATE_MOCA_V001.md)
     - [BASE_INV_MOVE_MOCA_V001](./tests_docs/BASE_INV_MOVE_MOCA_V001.md)
     - [BASE_INV_0020100_MOVE_RF_V001](./tests_docs/BASE_INV_0020100_MOVE_RF_V001.md)
+
 
 
 
