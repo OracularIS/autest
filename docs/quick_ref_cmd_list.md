@@ -17,6 +17,7 @@ Since a run set has several steps - it is often a requirement to maintain some c
 | stoloc                 | If passed in, we capture quantity |
 
 We have following test cases
+
 | Test Case        | Use             |
 |------------------|-----------------|
 | BASE_ALL_GEN     | Put as first step in a run set |
@@ -162,14 +163,14 @@ Usable value
 
 #### Examples
 * when providing Web UI filters, we need to know the name of the field and the corresponding value from stack.  With those two use
+    * Here the name of the field is "Transport Equipment" we enclosed it in quotes
+    * then we need to have an "="
+    * "&trlr_num" implies that we read trlr_num from the context
 
 ````
 ##publish data where @* and uc_gui_filter_colexpr = "'Transport Equipment='||&trlr_num"|Script("BASE_GET_GLOBAL_VALUE")##
 ````
 
-    * Here the name of the field is "Transport Equipment" we enclosed it in quotes
-    * then we need to have an "="
-    * "&trlr_num" implies that we read trlr_num from the context
  
 
 ### BASE_TRLR_FIND_EMPTY_DOCK_DOOR
