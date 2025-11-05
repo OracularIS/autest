@@ -45,20 +45,34 @@ For the MOCA-based test for receiving, we assume a scenario where a truck has ar
 1. **Initiating the Test**
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
+      <div style="text-align: left;">
+         <img src="./Images/image10.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
+      <br>
+      <div style="text-align: left;">
+         <img src="./Images/image11.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
 
-     ![](Images/image10.png)
-
-     ![](Images/image11.png)
-
-3. **Script Execution for Warehouse Identification**
+2. **Script Execution for Warehouse Identification**
    
    - The system will execute the following script to identify the warehouse ID:
+     
      ```
      ##publish data where @* and uc_use_context='rcvtrk' | Script("base_get_ossibot_wh_id")##
      ```
    - In this script, we will input our sample truck identifier in the variable `uc_src_trknum`, i.e., `RCVSMP001`.
 
-4. **Confirming the Sample Truck**
+3. **Confirming the Sample Truck**
    
    - After entering the truck identifier, press "OK" to proceed.
 
@@ -66,12 +80,18 @@ For the MOCA-based test for receiving, we assume a scenario where a truck has ar
 
 The execution console provides real-time feedback on the test process. Key features include:
 
-- **Step Highlighting**: The current step being executed is highlighted in yellow.
-- **Status Display**: Each row's status is displayed, indicating success or failure.
-- **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
+   - **Step Highlighting**: The current step being executed is highlighted in yellow.
+   - **Status Display**: Each row's status is displayed, indicating success or failure.
+   - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
-![](Images/image50.png)
-
+   <div style="text-align: left;">
+      <img src="./Images/image50.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+   </div>
 
 ### Detailed Execution Flow
 
@@ -104,9 +124,9 @@ This case study demonstrates the effectiveness of Smart AUtest in executing MOCA
 
 ### Recommendations
 
-- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
-- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
-- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+   - **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
+   - **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
+   - **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
  
@@ -128,9 +148,9 @@ For the purpose of testing inbound inventory, we create sample RCVTRK data. For 
 
 **Relevant Tables**
 
-- **rcvtrk**: Contains information about the trucks and their status.
-- **rcvinv**: Contains information about the inventory received.
-- **rcvlin**: Contains line items related to the received inventory.
+   - **rcvtrk**: Contains information about the trucks and their status.
+   - **rcvinv**: Contains information about the inventory received.
+   - **rcvlin**: Contains line items related to the received inventory.
 
 Optionally, inventory data for Advanced Shipping Notice (ASN) testing can be included to simulate scenarios where the inventory details are already known before the truck arrives.
 
@@ -149,12 +169,27 @@ We will assume a scenario where a truck has arrived and has been checked in. The
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
 
-     ![](Images/image13.png)
-
-     ![](Images/image14.png)
+      <div style="text-align: left;">
+         <img src="./Images/image13.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
+      <br>
+      <div style="text-align: left;">
+         <img src="./Images/image14.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>  
 
 2. **Script Execution for RCV_ID Generation**
    - The system will execute the following expression to generate the `rcv_id`:
+    
      ```
      [['ARTRK-' || '@uc_test_exec_seqnum']]
      ```
@@ -167,9 +202,9 @@ We will assume a scenario where a truck has arrived and has been checked in. The
 
 The execution console provides real-time feedback on the test process. Key features include:
 
-- **Step Highlighting**: The current step being executed is highlighted in yellow.
-- **Status Display**: Each row's status is displayed, indicating success or failure.
-- **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
+   - **Step Highlighting**: The current step being executed is highlighted in yellow.
+   - **Status Display**: Each row's status is displayed, indicating success or failure.
+   - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
 ### Detailed Execution Flow
 
@@ -202,9 +237,9 @@ This case study demonstrates the effectiveness of Smart AUtest in executing RF-b
 
 ### Recommendations
 
-- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
-- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
-- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+   - **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
+   - **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
+   - **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
 
@@ -221,9 +256,9 @@ The primary objective of this case study is to execute a web-based test for wave
 ### Sample Data Creation
 
 For the purpose of testing wave planning, we create sample orders with the following criteria:
-- **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
-- Orders are named with a **“ATST-TMPL-“** prefix.
-- We generate both orders and order line data to simulate a realistic scenario.
+   - **Template_flg = 1**: Indicates that these orders are templates for generating actual orders.
+   - Orders are named with a **“ATST-TMPL-“** prefix.
+   - We generate both orders and order line data to simulate a realistic scenario.
 
 For detailed information on available tests, refer to the [Packaged Tests](./packaged_tests.md) documentation
 
@@ -237,24 +272,45 @@ To execute the test, follow these steps:
 1. **Initiating the Test**
    - Open the Smart AUtest interface.
    - Press the “Start” button to initiate the test.
-
-     ![](Images/image15.png)
-
-     ![](Images/image16.png)
+      
+      <div style="text-align: left;">
+         <img src="./Images/image15.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
+      <br>
+      <div style="text-align: left;">
+         <img src="./Images/image16.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
 
 2. **URL Prompt**
    - After pressing the "Start" button, a prompt will appear requesting the URL for the web-based wave planning module.
    - Enter the URL and press "OK" to start the test.
 
-     ![](Images/image17.png)
+      <div style="text-align: left;">
+         <img src="./Images/image17.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
 
 ### Execution Console
 
 The execution console provides real-time feedback on the test process. Key features include:
 
-- **Step Highlighting**: The current step being executed is highlighted in yellow.
-- **Status Display**: Each row's status is displayed, indicating success or failure.
-- **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
+   - **Step Highlighting**: The current step being executed is highlighted in yellow.
+   - **Status Display**: Each row's status is displayed, indicating success or failure.
+   - **Elapsed Time**: The elapsed time for each row is shown, providing insight into the test duration.
 
 
 ### Detailed Execution Flow
@@ -289,9 +345,9 @@ This case study demonstrates the effectiveness of Smart AUtest in executing web-
 
 ### Recommendations
 
-- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the wave planning process.
-- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the wave planning process or database schema.
-- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+   - **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the wave planning process.
+   - **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the wave planning process or database schema.
+   - **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their order fulfillment processes and ensure seamless operations in their wave planning departments.
 
@@ -309,9 +365,9 @@ The objective of this run set is to execute a series of RF-based tests for recei
 
 For inbound testing, we create sample RCVTRK data, using identifiers such as **RCVSMP001**. This data includes records in the following tables:
 
-- **rcvtrk**: Contains information about the trucks and their status.
-- **rcvinv**: Contains information about the inventory received.
-- **rcvlin**: Contains line items related to the received inventory.
+   - **rcvtrk**: Contains information about the trucks and their status.
+   - **rcvinv**: Contains information about the inventory received.
+   - **rcvlin**: Contains line items related to the received inventory.
 
 Optionally, inventory data can be included for ASN testing to simulate scenarios where the inventory details are already known before the truck arrives.
 For detailed information on available tests, refer to the [Packaged Tests](./packaged_tests.md) documentation
@@ -350,9 +406,9 @@ To execute the run set, follow these steps:
 
 The execution console provides real-time feedback on the test process, displaying each step as it executes. Key features include:
 
-- **Step Highlighting**: The currently executing step is highlighted in yellow.
-- **Status Display**: Each row's status is shown, indicating success or failure.
-- **Elapsed Time**: The time taken for each step is displayed, providing insights into test duration and performance.
+   - **Step Highlighting**: The currently executing step is highlighted in yellow.
+   - **Status Display**: Each row's status is shown, indicating success or failure.
+   - **Elapsed Time**: The time taken for each step is displayed, providing insights into test duration and performance.
 
 
 ### Detailed Execution Flow
@@ -381,7 +437,14 @@ The following steps are executed as part of this run set:
    - This step closes and dispatches the truck.
    - The system updates the `rcvtrk` table to reflect the dispatch status, completing the receiving process.
 
-![](Images/image22.png)
+      <div style="text-align: left;">
+         <img src="./Images/image22.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div>
 
 ### Conclusion
 
@@ -389,8 +452,8 @@ This case study demonstrates the effectiveness of Smart AUtest in executing a ru
 
 ### Recommendations
 
-- **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
-- **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
-- **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
+   - **Regular Testing**: Implement regular testing schedules to ensure ongoing accuracy and reliability of the receiving process.
+   - **Data Validation**: Continuously validate sample data and test scripts to reflect any changes in the inventory process or database schema.
+   - **Enhanced Reporting**: Utilize detailed test reports to identify and address any issues promptly, ensuring smooth operations.
 
 By following these recommendations and utilizing the comprehensive testing capabilities of Smart AUtest, organizations can significantly improve their inventory management processes and ensure seamless operations in their receiving departments.
