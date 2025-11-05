@@ -24,8 +24,10 @@ Note that all of these parmeters, their prompts, valid possibilities, sequencing
 ### Run Set Test Cases
 A Run Set "Test Case" is simply an instance of run sets with all of its input saved.  Whenever we run a run-set we are allowed to save that as a "Test Case" ![Create Test Case](Images/training_run/training_run_autest_runset_create_test_case.jpg)
 
-When we have deifned test cases, they 
-will show up in the "Test Cases" tab ![Existing Test Cases](Images/training_run/training_run_autest_runset_exising_test_cases.jpg)
+
+When we have deifned test cases, they will show up in 
+the "Test Cases" tab ![Existing Test Cases](Images/training_run/training_run_autest_runset_exising_test_cases.jpg)
+
 
 ### Running a Run Set
 In order to run a run-set, highlight it and select one. 
