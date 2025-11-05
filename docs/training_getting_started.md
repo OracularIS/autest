@@ -20,7 +20,7 @@ At the end of this lesson:
 
 ### Prepare Target environment for automated testing
 We want to prevent a user from accidently running a test against an environment.  In order to prevent it, we enforce that
-an environment variable should be set in the target envirionment.  ![Follow these steps to do it](./Getting_AuTest?id=preparing-the-target-environment-for-smart-autest)
+an environment variable should be set in the target envirionment.  [Follow these steps to do it](./Getting_AuTest?id=preparing-the-target-environment-for-smart-autest)
 
 ### Get familiar with nagivating Web
 * Navigate to https://apps.smart-is.com/ and login
