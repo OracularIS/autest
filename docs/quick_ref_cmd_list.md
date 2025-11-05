@@ -65,6 +65,7 @@ this table for the device.  So we should call this test in the beginning of a ru
 | devcod                 | If not passed in default to @@DEVCOD |
 
 We have following test cases
+
 | Test Case        | Use             |
 |------------------|-----------------|
 | BASE_ALL_GEN     | Put in the beginning of a run set |
@@ -86,6 +87,7 @@ We place this toward the end of a run set.
 
 
 We have following test cases
+
 | Test Case        | Use             |
 |------------------|-----------------|
 | BASE_ALL_GEN     | Put in the beginning of a run set |
@@ -105,15 +107,23 @@ For example, it can be used as follows to get the text of code trlr_typ.  The va
 ````
  ##publish data where @* and colnam = 'trlr_typ' and codval = '@trlr_typ' |Script("BASE_GET_CODMST_DESC")##
 ````
-* Input
-    * colnam establishes the domain
-    * codval is the value for which it finds the description
-    * uc_return_colnam.  This is defaulted to lngdsc, but otherwise it can be passed in
-* Output
+
+#### Input
+
+| Input Parmeter         | Description                 | Comments |
+|------------------------|-----------------------------|----------|
+| colnam                 | establishes the domain      | |
+| codval                 | Value to look up            | |
+| uc_return_colnam       | Name of column to publish   | |
+
+
+#### Output
 Whatever is returned is the value to be typed in
 
 #### Special Codes
 Genrally it is going by the BY "codmst" but it has some special domains as well:
+
+
 | Special colnam  | Special Input Parmeters     | Special Logic                   |
 |-----------------|-----------------------------|---------------------------------|
 | carcod          | uc_return_colnam = carnam   | Use "list carriers"             |
@@ -127,6 +137,7 @@ to first find its verification code and that is what we need to type in.  So whe
 to type in a location, we should always use this
 
 #### Input
+
 | Input Parmeter         | Description                 | Comments |
 |------------------------|-----------------------------|----------|
 | stoloc                 | Location we want to look up | Whatever location we want to type in |
@@ -139,13 +150,23 @@ We publish the location verification code if defined
 ## General Purpose Values
 ### BASE_GET_GLOBAL_VALUE
 This command can be used to properly get some global values formatted per our needs
-* Input
-    * uc_gui_filter_colexpr is special code for use with GUI.  we pass the input field along with value place-holder.  For value from context use &
-* Outpit
-    * Usable value
+
+#### Input
+
+| Input Parmeter         | Description                 | Comments |
+|------------------------|-----------------------------|----------|
+| uc_gui_filter_colexpr  | special code for use with GUI.  we pass the input field along with value place-holder.  For value from context use &      | |
+
+#### Output
+Usable value
 
 #### Examples
-* when providing Web UI filters, we need to know the name of the field and the corresponding value from stack.  With those two use ````##publish data where @* and uc_gui_filter_colexpr = "'Transport Equipment='||&trlr_num"|Script("BASE_GET_GLOBAL_VALUE")##````
+* when providing Web UI filters, we need to know the name of the field and the corresponding value from stack.  With those two use
+
+````
+##publish data where @* and uc_gui_filter_colexpr = "'Transport Equipment='||&trlr_num"|Script("BASE_GET_GLOBAL_VALUE")##
+````
+
     * Here the name of the field is "Transport Equipment" we enclosed it in quotes
     * then we need to have an "="
     * "&trlr_num" implies that we read trlr_num from the context
@@ -154,7 +175,12 @@ This command can be used to properly get some global values formatted per our ne
 ### BASE_TRLR_FIND_EMPTY_DOCK_DOOR
 This command can be used to find an empty door
 
-* Input
-    * The stack
-* Output
-    * stoloc
+#### Input
+
+| Input Parmeter         | Description                 | Comments |
+|------------------------|-----------------------------|----------|
+| @*                     | Stack is interpretted      | |
+
+#### Output
+* stoloc
+
