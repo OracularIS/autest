@@ -56,7 +56,7 @@ Once we have our plan in place, now we need to execute the use case manually and
 * In form like this - that can sometimes cause an issue.  As you can see as soon as we typed load number, form looks the same afterwards.  All that happened was a flash of "Processing".  Sometimes that goes by too quickly for us to recognize that form changed
 * So as a general rule, we always type in the input and stuff F6 at the same time.
     * Generally we can always give value of a field with [F6] or [Enter] and that tells our framework to stuff these keys
-* Sometimes we need to scrape a value from the form.  Those can be referenced as <<form field name>>
+* Sometimes we need to scrape a value from the form.  Those can be referenced as ````<<form field name>>````
 
 ## Create the basic RF Tests for pick and deposit
 So now let us convert what we have into an application flow.  We are performing these steps on https://apps.smart-is.com
@@ -68,19 +68,45 @@ what we need but sometimes we also have some paramters.  So we should look up by
 ````
 [select * from les_mnu_opt where exec_nam like 'UNDIR_TRANSFER%']
 ````
-    * I see that two rows are returned ![Output of les_mnu_opt](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer.jpg)
+    
+    * I see that two rows are returned 
+    
+    ![Output of les_mnu_opt](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer.jpg)
+    
     * We want to invoke the full move which is FULL_INV_MOVE
+    
     * Our convention is to concatenate the exec_nam and exec_parm - so we will be calling it as "UNDIR_TRANSFER.FULL_INV_MOVE"
-1. So our first step is to call this ![Call Step for RF Form](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step.jpg)
-2. Now we need to map src_id to the value.  Whenever we have a flow where we enter a value and press F6, we should provide it as part of input.  So we will map src_id to a value called lodnum_enter and then pass that in with embedded F6
-    * Click on the argument icon ![Arg Icon](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_click_on_arg.jpg)
-    * Provide the value as lodnum_enter (we will discuss that later) ![lodnum_enter](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_lodnum_enter.jpg)
-3. Now create the second application flow for deposit.  We will call it TMP1_RF_MOVE_INVENTORY_DEPOSIT ![Deposit](Images/training_create_rf_test/training_create_rf_test_call_form_deposit.jpg)
-4. This application flow has a single step to wait for DEPOSIT_A ![Deposit A Step](Images/training_create_rf_test/training_create_rf_test_call_form_deposit_step.jpg)
-5. We need to provide value for location here.
-    * Click on the argument icon ![Arg Icon](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_click_on_arg.jpg)
+    
+1. So our first step is to call this
+
+
+![Call Step for RF Form](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step.jpg)
+
+3. Now we need to map src_id to the value.  Whenever we have a flow where we enter a value and press F6, we should provide it as part of input.  So we will map src_id to a value called lodnum_enter and then pass that in with embedded F6
+
+    * Click on the argument icon
+      
+   ![Arg Icon](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_click_on_arg.jpg)
+
+    * Provide the value as lodnum_enter (we will discuss that later)
+      
+   ![lodnum_enter](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_lodnum_enter.jpg)
+
+4. Now create the second application flow for deposit.  We will call it TMP1_RF_MOVE_INVENTORY_DEPOSIT ![Deposit](Images/training_create_rf_test/training_create_rf_test_call_form_deposit.jpg)
+
+5. This application flow has a single step to wait for DEPOSIT_A
+   
+ ![Deposit A Step](Images/training_create_rf_test/training_create_rf_test_call_form_deposit_step.jpg)
+
+7. We need to provide value for location here.
+
+    * Click on the argument icon
+   
+    ![Arg Icon](Images/training_create_rf_test/training_create_rf_test_call_form_undir_transfer_step_click_on_arg.jpg)
+
+    
     * And add "dstloc" as ````##publish data where @* and stoloc=@dstloc and uc_return_colnam='dstloc' |Script("BASE_GET_STOLOC_FOR_FRONT_END")##```` ![dstloc](Images/training_create_rf_test/training_create_rf_test_call_form_deposit_step_arg_dstloc.jpg)
-        * Whenever we are using location we should use  ![BASE_GET_STOLOC_FOR_FRONT_END](./quick_ref_cmd_list.md?id=base_get_stoloc_for_front_end)
+        * Whenever we are using location we should use  [BASE_GET_STOLOC_FOR_FRONT_END](./quick_ref_cmd_list.md?id=base_get_stoloc_for_front_end)
 
 ### Make MAINLINE Application Flow to do pick and deposit
 1. Create a new application flow called TMP1_RF_LOAD_TRANSFER_MAINLINE
@@ -90,9 +116,14 @@ what we need but sometimes we also have some paramters.  So we should look up by
 ### Make CALLABLE application Flow that calls the MAINLINE
 1. Create a new application flow called TMP1_RF_LOAD_TRANSFER_CALLABLE
 1. Now we will integrate a powerful conept where we will "loop" an application flow.  We want to call the MAINLINE for every laod
-    * In the TMP1_RF_LOAD_TRANSFER_CALLABLE application flow, click on the edit icon for MAINLINE ![Edit Icon](Images/training_create_rf_test/training_create_rf_test_callable_set_loop_edit_icon.jpg)
-    * As our input is srcloc, we want to get all distinct loads in source location.  And we want to also make a field called lodnum_enter which has F6.  So our expression of number of executions will be ````##
-##
+
+    * In the TMP1_RF_LOAD_TRANSFER_CALLABLE application flow, click on the edit icon for MAINLINE
+   
+   ![Edit Icon](Images/training_create_rf_test/training_create_rf_test_callable_set_loop_edit_icon.jpg)
+
+    * As our input is srcloc, we want to get all distinct loads in source location.  And we want to also make a field called lodnum_enter which has F6.  So our expression of number of executions will be
+    
+````##
 publish data where @* 
 | 
 [
@@ -104,7 +135,10 @@ order by 1
 ]
 ##
 ````
-    * The execution loop will look like this ![Execution Loop](Images/training_create_rf_test/training_create_rf_test_callable_set_loop_edit_icon_iter_loop.jpg)
+
+    * The execution loop will look like this 
+   
+   ![Execution Loop](Images/training_create_rf_test/training_create_rf_test_callable_set_loop_edit_icon_iter_loop.jpg)
 
 ### Create test to call this application flow
 Test is the basic object that can be invoked so we will now create a test to call our application flow and define the input parameters.  We already know our inputs
@@ -115,7 +149,15 @@ Test is the basic object that can be invoked so we will now create a test to cal
 
 ### We are ready to test it
 1. Open AuTest from Smart MOCA Client
-1. Find the new test we created ![Load Transfer Test](Images/training_create_rf_test/training_create_rf_test_moca_client_run.jpg)
+
+1. Find the new test we created
+
+![Load Transfer Test](Images/training_create_rf_test/training_create_rf_test_moca_client_run.jpg)
+
+
 1. Press Execute
-1. Put in source and destinaton ![Args](Images/training_create_rf_test/training_create_rf_test_moca_client_run_args.jpg)
+
+1. Put in source and destinaton
+
+![Args](Images/training_create_rf_test/training_create_rf_test_moca_client_run_args.jpg)
 
