@@ -34,14 +34,21 @@ Once we have defined our desired "test", we should define the input paramters fo
 
 ## Capture the Form and Field Data (Metdata)
 Once we have our plan in place, now we need to execute the use case manually and capture critical metadata
-* First we need to see what is the form we need to invoke.  That is displayed on the line#21 UNDIR_TRANSFER (see note about MTF task above) ![RF Form Name](Images/training_create_rf_test/training_create_rf_test_rf_form_name.jpg)
+* First we need to see what is the form we need to invoke.  That is displayed on the line#21 UNDIR_TRANSFER
+(see note about MTF task above)
+![RF Form Name](Images/training_create_rf_test/training_create_rf_test_rf_form_name.jpg)
 
 * Now see what is the RF field name where we are entering the load number.
+
 ![RF Field Name](Images/training_create_rf_test/training_create_rf_test_rf_field_name.jpg)
+
 * When I press [F6]
 * Then the new form that shows up is DEPOSIT_A
+
 ![Deposit RF Form](Images/training_create_rf_test/training_create_rf_test_rf_form_name_deposit.jpg)
+
 * The field where I put in destination is called "dstloc"
+
 ![Deposit Location](Images/training_create_rf_test/training_create_rf_test_rf_field_name_deposit_dstloc.jpg)
 
 ## Concepts
