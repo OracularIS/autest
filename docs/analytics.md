@@ -117,7 +117,6 @@ Examples include:
 - **INVENTORY**
 - **OUTBOUND**
 - **ORDER**
-- ...and more
 
 <div style="text-align: left;">
   <img src="./Images/dashboard7.png"
