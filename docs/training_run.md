@@ -22,10 +22,10 @@ in tabs ![Parameters after execute](Images/training_run/training_run_autest_runs
 Note that all of these parmeters, their prompts, valid possibilities, sequencing, tabs, etc are all defined in metadata.  The names of various tabs are all baed on certain conventions.  Otherwise tabs have no significance.
 
 ### Run Set Test Cases
-A Run Set "Test Case" is simply an instance of run sets with all of its input saved.  Whenever we run a run-set we are allowed to 
-save that as a "Test Case" ![Create Test Case](Images/training_run/training_run_autest_runset_create_test_case.jpg)
+A Run Set "Test Case" is simply an instance of run sets with all of its input saved.  Whenever we run a run-set we are allowed to save that as a "Test Case" ![Create Test Case](Images/training_run/training_run_autest_runset_create_test_case.jpg)
 
-When we have deifned test cases, they will show up in the "Test Cases" tab ![Existing Test Cases](Images/training_run/training_run_autest_runset_exising_test_cases.jpg)
+When we have deifned test cases, they 
+will show up in the "Test Cases" tab ![Existing Test Cases](Images/training_run/training_run_autest_runset_exising_test_cases.jpg)
 
 ### Running a Run Set
 In order to run a run-set, highlight it and select one. 
@@ -39,7 +39,7 @@ these run sets go through end to end functionality.  Relate that to the argument
     * BASE_OUB_000000_CREATE_TO_DISPATCH_WITH_PACKING
         * See "Use Case Selection" tab.  See how we can have the same run-set but control how we do things ![Use Case Tab](Images/training_run/training_run_autest_runset_order_use_case.jpg)
         * After seeing the "Use Case" input checkboxes, come back to the "Steps" tab and see how these input fields are used to contriol the flow ![Control Flow](Images/training_run/training_run_autest_runset_order_use_case_control_steps.jpg)
-            * When we have a "Run-Til" like ````##if('@uc_use_web_wave_plan_flg'!='1' and int('@uc_iteration_count')=1) publish data where uc_do_work=1##````
+            * When we have a "Run-Till" like ````##if('@uc_use_web_wave_plan_flg'!='1' and int('@uc_iteration_count')=1) publish data where uc_do_work=1##````
                 * uc_use_web_wave_plan_flg is our checkbox so 1 means it is checked
                 * If this expression returns a value then we execute the step else we do not
                 * We keep running the step until we get no rows
