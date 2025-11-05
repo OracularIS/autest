@@ -23,7 +23,7 @@ Typical reason for run set groups is to define regression test.  Once run set gr
 |-------------------------|------------------------------------------------|-----------------|----------|
 | -cp                     | "mocadev.jar;lib\*;lib\selenium-java-4.33.0\*" | No              | |
 |                         | com.oracular.mocadev.MOCADevLauncher           | No              | Always second parameter |
-| security_key=           | Key that you provide in MOCA Client for cloud  | Yes             | This is the key you created |
+| security_key=           | Key that you provide in MOCA Client when you launch it | Yes     | This is the key you created.  It is required to be able to save passwords |
 | moca_conn_id=           | Connection on the machine                      | Yes             | Connection created for the user running it |
 | uc_run_set_grp_id_list= | List of run set groups                         | Yes             | What you want to run |
 
@@ -31,10 +31,7 @@ Typical reason for run set groups is to define regression test.  Once run set gr
 
 ````
 cd /d %APPDATA%\SmartMOCAClient\sw\smc
-"C:\Program Files\Common Files\Oracle\Java\javapath\java.exe" -cp "mocadev.jar;lib\*;lib\selenium-java-4.33.0\*" com.oracular.mocadev.MOCADevLauncher "security_key=WHAT_YOU_GENERATE_FOR_YOURSELF" moca_conn_id=WHAT_YOU_HAVE_IN_MOCA_CLIENT uc_run_set_grp_id_list=SIS_TMP1_SAMPLE
+"C:\Program Files\Common Files\Oracle\Java\javapath\java.exe" -cp "mocadev.jar;lib\*;lib\selenium-java-4.33.0\*" com.oracular.mocadev.MOCADevLauncher "security_key=WHAT_YOU_CREATE_FOR_YOURSELF" moca_conn_id=WHAT_YOU_HAVE_IN_MOCA_CLIENT uc_run_set_grp_id_list=SIS_TMP1_SAMPLE
 ````
     * You can create a new key if you want for running as regression test
     * Put parameters in quotes as indicated
-
-````
-````
