@@ -3,7 +3,7 @@
 ## Overview
 Creating MOCA based tests requires intimate knowledge of the MOCA language and some concepts. As we create tests, we will utilize some concepts heavily: 
 
-Some of these tests may be performing a series of complex tasks.  When  they are executed in the context of auTest, we want to publish the details about each step.  This requires appropriate use of “&” so that the output of the whole script is then published to the auTest framework.  For example: 
+Some of these tests may be performing a series of complex tasks.  When  they are executed in the context of AuTest, we want to publish the details about each step.  This requires appropriate use of “&” so that the output of the whole script is then published to the AuTest framework.  For example: 
 ```
 Publish data where a=1 
 & 
@@ -12,7 +12,7 @@ publish data where a=2
 
 Will return two rows to the framework which can then be logged.  We utilize this technique in a MOCA test to publish information about each step in the script. 
 
-Developing MOCA based tests requires us to trace the use case first from the front-end to extract the MOCA Commands.  We need to understand how we can easily identify the commands that were executed from the front-end, as those are the ones that will then be used in the test.  The idea is to make the MOCA based test run the same commands as the front-end so that it can expose issues easily. 
+Developing MOCA based tests requires us to trace the use case first from the front-end to extract the MOCA commands.  We need to understand how we can easily identify the commands that were executed from the front-end, as those are the ones that will then be used in the test.  The idea is to make the MOCA based test run the same commands as the front-end so that it can expose issues easily. 
 
 This section describes the steps involved in MOCA based tests:
 
@@ -54,7 +54,7 @@ Decide input as expressions where appropriate – but at the same time, allow fo
 
 ### Decide on What Data Will This Test Run On
 
-In some cases, we will process one row – but for MOCA based tests, we will often create them to process a set of data. For example, we may process all inventory in a truck and deposit to a destination.
+In some cases, we will process one row but for MOCA based tests, we will often create them to process a set of data. For example, we may process all inventory in a truck and deposit to a destination.
 
 If we decide to work on more than one row, then it is a good practice to allow for optional input variables to limit how much data is processed. For example here I am defining that I want to process a single row.
 ```
