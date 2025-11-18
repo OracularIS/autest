@@ -1,4 +1,4 @@
-## Overview
+# Overview
 This training will cover some of the basic concepts around the concept of "Commands" in Smart AuTest.
 
 Commands are a basic building block for providing control over test execution.  Commands are basically MOCA snippets that perform certain actions, for example:
@@ -7,7 +7,7 @@ Commands are a basic building block for providing control over test execution.  
 ````
 ##if( ('@uc_new_car_move_id' is not null or '@uc_src_car_move_id_expr' is not null) and int('@uc_iteration_count') = 1 ) publish data where uc_do_work=1##
 ````
-* We can use them to provide values for variables defined in tests or run sets.  This is a powerful concept which allows us to provide menaningful values
+* We can use them to provide values for variables defined in tests or run sets.  This is a powerful concept which allows us to provide meaningful values
 * Commands are used to define "output" of a test.
     * "Output" of a MOCA based tests is easy to visualize - for a MOCA based test, whatever is published is deemed its output
     * For Web based or RF based tests, we can define a command with the test.  When the test has executed, this command is run and output of that command is deemed as output of the test.  This is a powerful capability to create elaborate validations
@@ -16,9 +16,13 @@ Commands are a basic building block for providing control over test execution.  
 So as you can see commands form a basic building block.  So familiarily with MOCA syntax is important.
 
 ## Command Store
-Commands are defined in Smart AuTest using our frontned ![Define Commands](Images/training_cmd_basic/training_run_autest_command_maintain.jpg).  You will
-see a rich set of commands.  The ones provided by Smart IS have "BASE" prefix.  If you see a few of them, you will see that these
-are MOCA code blocks.  For example see:
+Commands are defined in Smart AuTest using our frontend.
+
+![Define Commands](Images/training_cmd_basic/training_run_autest_command_maintain.jpg)
+
+
+You will see a rich set of commands.  The ones provided by Smart IS have "BASE" prefix.  If you see a few of them, you will see that these
+are MOCA code blocks.  For example:
 
 | Command Name                    | Overview                               | Note                                         |
 |---------------------------------|----------------------------------------|----------------------------------------------|
@@ -43,7 +47,7 @@ Script("BASE_GET_CODMST_DESC")
 
 ## Creating a new command
 * Press "Add" from command maintenance
-* Lets create a command to do publish some data.  Lets name it TMP1_PUBLISH_DATA (TMP1 is to identify that it is for training.  Lets put folliwing code
+* Lets create a command to do publish some data.  Lets name it TMP1_PUBLISH_DATA (TMP1 is to identify that it is for training).  Lets put the following code
 ````
 publish data
 where main_step = 'My Test'
@@ -76,3 +80,5 @@ where count = 20
 |
 Script("SIS_TMP1_DO_LOOP")
 ````
+---
+<br>

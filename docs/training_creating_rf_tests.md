@@ -1,12 +1,12 @@
-## Oveview
-We will create a sample RF test.  The underlying concepts are same as the Web Test so it is important that the web ui training has been 
-complted before this.
+# Oveview
+We will create a sample RF test.  The underlying concepts are same as the Web Test so it is important that the web UI training has been 
+completed before this.
 
 ## The form and field information
 Legacy MTF tests and new Mobile RF tests can be executed with the same exact test.  In order to provide the field and form information,
 we need to make sure that MTF task for legacy MTF is running with the "-G" option.
 
-* Open MOCA Console and find the MTF task
+- Open MOCA Console and find the MTF task
 * View its command line
     * Make sure it has -G22,1 at the end, for example:
 ````
@@ -63,8 +63,8 @@ So now let us convert what we have into an application flow.  We are performing 
 
 1. Select a name for this application flow.  It should be a descriptive name.  For example I will use TMP1_RF_MOVE_INVENTORY_PICKUP.  _TMP1 is simply to mark that is being created temporarily for training_.  This application flow is just to pick the load up.  ![AF for Pickup](Images/training_create_rf_test/training_create_rf_test_af_pickup.jpg)
 2. The first step is for invoking the form.  Here we have an important concept that we do not need to worry about which
-menu options we go throigh to get to the option - instead we need to simply proivide the option name.  The RF form (UNDIR_TRANSFER) provides us
-what we need but sometimes we also have some paramters.  So we should look up by form name in les_mnu_opt
+menu options we go through to get to the option - instead we need to simply provide the option name.  The RF form (UNDIR_TRANSFER) provides us
+what we need but sometimes we also have some parameters.  So we should look up by form name in les_mnu_opt
 ````
 [select * from les_mnu_opt where exec_nam like 'UNDIR_TRANSFER%']
 ````

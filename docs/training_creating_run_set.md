@@ -1,4 +1,4 @@
-## Overview
+# Overview
 While tests and test cases can be executed, Run Set is the basic unit for final execution of tests.  A run set allows 
 for combining **test cases**.  A run set also allows for arguments.  These arguments are **passed through** to the test and 
 commands if explicit values are not passed at the test case level.
@@ -15,14 +15,14 @@ Planning how the run sets are created as important.  Idea is to create them such
 each.  It is a good idea to see some of the available run sets to see how they achieve this goal.
 
 For our exercise:
-* It is a good idea to always start a run set with  ![BASE_GEN_MANAGE_RUN_SET_CONTEXT](./quick_ref_cmd_list.md?id=base_gen_manage_run_set_context)
+* It is a good idea to always start a run set with  ![BASE_GEN_MANAGE_RUN_SET_CONTEXT](quick_ref_cmd_list.md#base_gen_manage_run_set_context)
     * We have two test cases BASE_ALL_GEN for first step and BASE_GEN_CMPL for last step
 * As tests are run, sometimes we have data in device_context table that may be stale.  So for run sets we should always call ![BASE_CLEAR_AUTEST_DEVICE_CONTEXT](././quick_ref_cmd_list.md?id=base_clear_autest_device_context)
     * We have a test case BASE_ALL_GEN
 * Toward the end we will call ![BASE_GEN_POST_V001](./quick_ref_cmd_list.md?id=base_gen_post_v001)
     * We have a test case BASE_ALL_GEN
 
-In order to understand the concept of arguments, we will create Following arguments:
+In order to understand the concept of arguments, we will create following arguments:
 * uc_do_loc1_to_loc2_flg   (Tab Use Case Selection)
 * uc_do_loc2_to_loc1_flg (Tab Use Case Selection)
 * run_set_srcloc (Tab General )
@@ -38,7 +38,7 @@ We will modify them as follows:
 | LOC2_TO_LOC1 | srcloc       | @run_set_dstloc           | Yes |
 |              | dstloc       | @run_set_srcloc           | Yes |
 
-"Evaliuate Immediate" implies that in the course of executing the run set, as soon as it hits the point that it 
+"Evaluate Immediate" implies that in the course of executing the run set, as soon as it hits the point that it 
 executes the test case, it will evaluate the expression.
 
 Overall the idea is that we execute the test case twice to move back and forth and locations will be provided as part of run set.
@@ -90,22 +90,42 @@ We will name this run set TMP1_RUN_LOAD_TRANSFER
 
 ## Run Run Set
 Now that we have created the run set, lets run it:
-* Find the run set.  If you do not find it, clear cache (Settings Pull Down, then Clear All Caches)  ![Find](Images/training_create_run_set/training_run_set_moca_client_find.jpg)
+* Find the run set.  If you do not find it, clear cache (Settings Pull Down, then Clear All Caches)  
+
+![Find](Images/training_create_run_set/training_run_set_moca_client_find.jpg)
+
 * Press Execute
 * Note that we have two tabs and argumens are inside each tab.  Also note that we have checkboxes.
     * If these arguments do not have MLS Ids in the BY system then their names become prompts
     * We have description displayed as wel
-    * we can put more metadata as neede
-* Lets set both check boxes ![Set Checkboxes](Images/training_create_run_set/training_run_set_moca_client_set_checkboxes.jpg)
-* And provide the two locations ![Set Locations](Images/training_create_run_set/training_run_set_moca_client_set_locations.jpg)
-* We can also save this metadata as a "Run Set" "Test Case" ![Run Set Test Case](Images/training_create_run_set/training_run_set_moca_client_save_test_case.jpg)
+    * we can put more metadata as needed
+* Lets set both check boxes 
+
+![Set Checkboxes](Images/training_create_run_set/training_run_set_moca_client_set_checkboxes.jpg)
+
+* And provide the two locations
+
+ ![Set Locations](Images/training_create_run_set/training_run_set_moca_client_set_locations.jpg)
+
+* We can also save this metadata as a "Run Set" "Test Case" 
+
+![Run Set Test Case](Images/training_create_run_set/training_run_set_moca_client_save_test_case.jpg)
 
 ## Understand the output
 * The run set arguments are displayed when we started.  See the arguments.  uc_test_exec_seqnum gets a new value.  The wh_id and devcod were evaluated ![Run Set Run Args](Images/training_create_run_set/training_run_set_test_exec_args.jpg)
-* As it is running, the "Execution Unit" is populated.  See how it shows test case, and then application flows ![Exec Steps](Images/training_create_run_set/training_run_set_test_exec_steps.jpg)
+* As it is running, the "Execution Unit" is populated.  See how it shows test case, and then application flows 
+
+![Exec Steps](Images/training_create_run_set/training_run_set_test_exec_steps.jpg)
+
 * If you highlight the row for a test, you see
-    * Its output ![Test Output](Images/training_create_run_set/training_run_set_test_exec_step_output.jpg)
-    * Its validation ![Test Validation](Images/training_create_run_set/training_run_set_test_exec_step_val.jpg)
+    * Its output
+    
+     ![Test Output](Images/training_create_run_set/training_run_set_test_exec_step_output.jpg)
+
+    * Its validation 
+    
+    ![Test Validation](Images/training_create_run_set/training_run_set_test_exec_step_val.jpg)
+
 * The top tab has some interesting sections
     * The "Commands on Target Env" shows what MOCA was run on target ![Cmd On target](Images/training_create_run_set/training_run_set_test_exec_tab_cmd_on_target.jpg)
     * Tab which has the device code shows the interaction with the RF device ![RF Tab](Images/training_create_run_set/training_run_set_test_exec_tab_rf.jpg)

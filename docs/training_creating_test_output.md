@@ -1,4 +1,4 @@
-## Overview
+# Overview
 This section covers how we define output for user interface based (RF or Web) tests.  This is needed to properly validate the test results.
 
 ## Training Overview
@@ -53,11 +53,13 @@ and step = nvl(@step, 'INV-STOLOC' )
 ### View the output of a test
 Now that we have defined an output command for the test, when we run the test we will see that output
 * Execute the test
-* In the output pane, if you highlight the test, you will see "Results" tab ![Test Output](Images/training_cmd_output/training_test_output_set_cmd1_output.jpg)
+* In the output panel, if you highlight the test, you will see "Results" tab
+
+ ![Test Output](Images/training_cmd_output/training_test_output_set_cmd1_output.jpg)
 
 ### Validating the results
 Now that the test has an "output", we can create a code snippet to _validate_ that output.  The most flexible way to validate it is to process the
-resultset of the command and then for each row indicate if it passes or not.
+result set of the command and then for each row indicate if it passes or not.
 
 The rules of the validation command snippet are:
 * Output is a resultset uc_test_exec_res
@@ -80,7 +82,10 @@ and dstloc = 'PND002'
 |
 Script("SIS_TMP1_GET_LOAD_STOLOC")
 ````
-* From MOCA Client, Data pulldown, select "Get Result Set" ![Get Resultset](Images/training_cmd_output/training_test_output_get_resultset.jpg)
+* From MOCA Client, Data pulldown, select "Get Result Set"
+
+ ![Get Resultset](Images/training_cmd_output/training_test_output_get_resultset.jpg)
+ 
 * In a different tab, paste it - you will see a series of publish data statements.  Enclose the statements in a pair of "{}" and put ">>uc_test_exec_res".  For example
 
 ````

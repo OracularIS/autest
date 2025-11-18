@@ -1,10 +1,9 @@
-## Overview
+# Overview
 This training tracks helps in getting started with Smart AuTest.  Smart AuTest has two basic components
-* The Web based solution to maintain the metadara
-* Smart MOCA Client to launch the tests
+- The Web based solution to maintain the metadata
+- Smart MOCA Client to launch the tests
+
 Both systems work together where the metadata is fetched from the cloud and the tests are executed in the customer environment.
-
-
 
 ## Training Objective
 At the end of this lesson:
@@ -22,25 +21,25 @@ At the end of this lesson:
 We want to prevent a user from accidently running a test against an environment.  In order to prevent it, we enforce that
 an environment variable should be set in the target envirionment.  [Follow these steps to do it](./Getting_AuTest?id=preparing-the-target-environment-for-smart-autest)
 
-### Get familiar with nagivating Web
-* Navigate to https://apps.smart-is.com/ and login
-* You will see subscriptions.
+### Get familiar with Nagivating Web
+- Navigate to https://apps.smart-is.com/ and login
+- You will see subscriptions.
 
  ![You will see your subscriptions](Images/training_getting_started/training_web_subscription_screen.jpg)
 
  
-* On left hand side you will see AuTest Menu.
+- On left hand side you will see AuTest Menu.
 
 ![AuTest Menu](Images/training_getting_started/training_web_autest_menu.jpg)
 
 
-* Get famiilar with the nagigation
+- Get famiilar with the navigation
 
 ### Define connecion in Smart MOCA Client
 Smart AuTest supports following types of tests:
-* MOCA Based Tests
-* RF based tests
-* Web UI based tests
+- MOCA Based Tests
+- RF based tests
+- Web UI based tests
 
 You will need to define connection in Smart MOCA Client so that it has all of the connections defined [Define Connections](./Getting_AuTest?id=define-connections-in-moca-client)
 
