@@ -91,7 +91,7 @@ This training is to get familiar with viewing execution results.  We can view re
   * Select a row and press "Export" to see a PDF of the execution 
   
      <div style="text-align: center;">
-      <img src="./Images/trainingtrack/p19.png"
+      <img src="./Images/trainingtrack/P19.png"
           alt="undirectedmenu"
          style="height: 200px; margin: auto; display: block; cursor: zoom-in;
               border: 2px solid #000000; border-radius: 4px;"
