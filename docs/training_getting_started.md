@@ -25,12 +25,26 @@ an environment variable should be set in the target envirionment.  [Follow these
 - Navigate to https://apps.smart-is.com/ and login
 - You will see subscriptions.
 
- ![You will see your subscriptions](Images/training_getting_started/training_web_subscription_screen.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p1.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
  
 - On left hand side you will see AuTest Menu.
 
-![AuTest Menu](Images/training_getting_started/training_web_autest_menu.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p2.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 
 - Get famiilar with the navigation
@@ -48,7 +62,14 @@ If above steps were done properly you will be able to do following:
 * Launch AuTest from Smart MOCA Client
 
 
-![Launch AuTest from Smart MOCA Client](Images/training_getting_started/training_autest_launch.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p3.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 * If you have access to multiple tenants, you will get a dropdown to select tenant.  If so, select the tenant
   
@@ -57,7 +78,14 @@ If above steps were done properly you will be able to do following:
     * We can press "Find" to fetch the data from the cloud metadata store
     * Settings will show the settings inherited from the Connection defined in MOCA Client.  We should always inherit from there and not overide here
   
-![You will see following screen](Images/training_getting_started/training_main_screen.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p4.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 * Navigate to each tab and press Find.  You will see the data
 * Recognize the "world" tenant objects.  These are maintained by Smart IS

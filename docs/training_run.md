@@ -6,31 +6,80 @@ This lesson will help you understand how to run the tests.  We have three types 
 
 ## Run Sets
 ### View Run Sets on the web
-We can maintain the run sets from the web ![Run Set on Web](Images/training_run/training_run_web_runset.jpg)
+We can maintain the run sets from the web 
+
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p5.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 ### View Run Sets from Smart AuTest
 While we can view them on the web, in order to run a run-set, we need to find it in our Smart AuTest addon in MOCA Client.  All run-sets are 
-available under the Run Sets tab.  Pressing Find while on this tab will show the run sets ![AuTest Run Set](Images/training_run/training_run_autest_runset.jpg)
+available under the Run Sets tab.  Pressing Find while on this tab will show the run sets.
+
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p12.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 ### Run Set Arguments
 We can provide input to a run set in order to execute it.  If you highlight a run-set, you will see the parameters that can be passed to it
-on the right hand side.  This is showing the possible parameters ![Parameters](Images/training_run/training_run_autest_runset_parms.jpg)
+on the right hand side.  This is showing the possible parameters !
+
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p6.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 If you pressed Execute that will show the same parmeters along with a way to provide input.  You will see that input parameters are organized
-in tabs ![Parameters after execute](Images/training_run/training_run_autest_runset_parms_from_execute.jpg)
+
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p7.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 Note that all of these parmeters, their prompts, valid possibilities, sequencing, tabs, etc are all defined in metadata.  The names of various tabs are all based on certain conventions.  Otherwise tabs have no significance.
 
 ### Run Set Test Cases
 A Run Set "Test Case" is simply an instance of run sets with all of its input saved.  Whenever we run a run-set we are allowed to save that as a "Test Case". 
 
-![Create Test Case](Images/training_run/training_run_autest_runset_create_test_case.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p8.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 
 When we have defined test cases, they will show up in 
 the "Test Cases" tab 
 
-![Existing Test Cases](Images/training_run/training_run_autest_runset_exising_test_cases.jpg)
+  <div style="text-align: center;">
+  <img src="./Images/trainingtrack/p9.png"
+       alt="undirectedmenu"
+       style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+       onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+       ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+  </div>
 
 
 ### Running a Run Set
@@ -43,8 +92,27 @@ In order to run a run-set, highlight it and select one.
 * Get familiar with the following run sets.  See how arguments are laid out.  These three run sets form the core of the testing.  Understand how
 these run sets go through end to end functionality.  Relate that to the arguments
     * BASE_OUB_000000_CREATE_TO_DISPATCH_WITH_PACKING
-        * See "Use Case Selection" tab.  See how we can have the same run-set but control how we do things ![Use Case Tab](Images/training_run/training_run_autest_runset_order_use_case.jpg)
-        * After seeing the "Use Case" input checkboxes, come back to the "Steps" tab and see how these input fields are used to control the flow ![Control Flow](Images/training_run/training_run_autest_runset_order_use_case_control_steps.jpg)
+        * See "Use Case Selection" tab.  See how we can have the same run-set but control how we do things 
+         <div style="text-align: center;">
+            <img src="./Images/trainingtrack/p10.png"
+            alt="undirectedmenu"
+            style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+            onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+            ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+         </div> 
+       
+        * After seeing the "Use Case" input checkboxes, come back to the "Steps" tab and see how these input fields are used to control the flow 
+
+         <div style="text-align: center;">
+            <img src="./Images/trainingtrack/p11.png"
+            alt="undirectedmenu"
+            style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+            onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+            ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+         </div> 
+        
             * When we have a "Run-Till" like ````##if('@uc_use_web_wave_plan_flg'!='1' and int('@uc_iteration_count')=1) publish data where uc_do_work=1##````
                 * uc_use_web_wave_plan_flg is our checkbox so 1 means it is checked
                 * If this expression returns a value then we execute the step else we do not
