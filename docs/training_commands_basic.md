@@ -18,7 +18,14 @@ So as you can see commands form a basic building block.  So familiarily with MOC
 ## Command Store
 Commands are defined in Smart AuTest using our frontend.
 
-![Define Commands](Images/training_cmd_basic/training_run_autest_command_maintain.jpg)
+ <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p13.png"
+      alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+      border: 2px solid #000000; border-radius: 4px;"
+            onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+            ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+      </div> 
 
 
 You will see a rich set of commands.  The ones provided by Smart IS have "BASE" prefix.  If you see a few of them, you will see that these

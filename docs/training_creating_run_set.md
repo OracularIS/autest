@@ -6,9 +6,19 @@ commands if explicit values are not passed at the test case level.
 ## Some Best Practices
 We should follow some best practices
 * While it is possible to have validation inline, create commands so that we can improve reuse.  So the validation logic we created earlier - lets turn that into a command called TMP1_VAL_LOAD_STOLOC
-* The ideal place to put validation logic is not the test rather the test case.  This is because there are often subtle diffences in various test cases
+* The ideal place to put validation logic is not the test rather the test case.  This is because there are often subtle differences in various test cases
     * For the test TMP1_RF_LOAD_TRANSFER, remove the validation logic we had put earlier
-    * We have two test cases LOC1_TO_LOC2 amd LOC2_TO_LOC1, put validation command TMP1_VAL_LOAD_STOLOC on both test cases ![Set Val](Images/training_create_run_set/training_run_set_test_case_set_val.jpg)
+    * We have two test cases LOC1_TO_LOC2 amd LOC2_TO_LOC1, put validation command TMP1_VAL_LOAD_STOLOC on both test cases
+
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p23.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
 
 ## Planning
 Planning how the run sets are created as important.  Idea is to create them such that we have a wide test coverage in
@@ -46,9 +56,38 @@ Overall the idea is that we execute the test case twice to move back and forth a
 We will name this run set TMP1_RUN_LOAD_TRANSFER
 
 ## Create Run Set
-* On the web page, select "Run Set" and "Add" ![Add Run Set](Images/training_create_run_set/training_run_set_create.jpg)
-* Provide data for run set and press Save ![Run Set Main Data](Images/training_create_run_set/training_run_set_create_data.jpg)
-* Add Argumens of the run set ![Run Set Args](Images/training_create_run_set/training_run_set_create_args.jpg)
+* On the web page, select "Run Set" and "Add" 
+
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p24.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
+* Provide data for run set and press Save.
+
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p25.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
+* Add Argumens of the run set 
+
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p26.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
 
 | Argument                 | Description | Tab Id             | Eval Immediate |Control Type | Default Value   |
 |--------------------------|-------------|--------------------|----------------|-------------|-----------------|
@@ -60,8 +99,17 @@ We will name this run set TMP1_RUN_LOAD_TRANSFER
 | run_set_srcloc           | Source Loc  | 00100-GENERAL      |                |             | |
 | run_set_dstloc           | Dest Loc    | 00100-GENERAL      |                |             | |
 
-* Now add steps ![Add Steps](Images/training_create_run_set/training_run_set_create_steps.jpg)
-  
+* Now add steps 
+
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p27.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
     1. First step will be BASE_GEN_MANAGE_RUN_SET_CONTEXT and test case BASE_ALL_GEN
     2. Then BASE_CLEAR_AUTEST_DEVICE_CONTEXT and test case BASE_ALL_GEN
     3. Then TMP1_RF_LOAD_TRANSFER and test case LOC1_TO_LOC2
@@ -70,16 +118,34 @@ We will name this run set TMP1_RUN_LOAD_TRANSFER
     6. Then BASE_GEN_MANAGE_RUN_SET_CONTEXT and its test case BASE_GEN_CMPL
 
 * For the step that calls TMP1_RF_LOAD_TRANSFER, we want to put a condition that respects uc_do_loc1_to_loc2_flg and uc_do_loc2_to_loc1_flg
-    * For test case LOC1_TO_LOC2 ![Run Till Expr](Images/training_create_run_set/training_run_set_steps_loc1_to_loc2_run_expr.jpg)
+    * For test case LOC1_TO_LOC2 
 
-  ````
-  ##
-  if('@uc_do_loc1_to_loc2_flg'='1' and int('@uc_iteration_count')=1 ) 
+    <div style="text-align: center;">
+    <img src="Images/training_create_run_set/training_run_set_steps_loc1_to_loc2_run_expr.jpg"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
+     ````
+     ##
+    if('@uc_do_loc1_to_loc2_flg'='1' and int('@uc_iteration_count')=1 ) 
       publish data where uc_do_work=1
-  ##
-  ````
+     ##
+     ````
 
-    * For test case LOC2_TO_LOC1 ![Run Till Expr](Images/training_create_run_set/training_run_set_steps_loc2_to_loc1_run_expr.jpg)
+    * For test case LOC2_TO_LOC1
+
+    <div style="text-align: center;">
+    <img src="Images/training_create_run_set/training_run_set_steps_loc2_to_loc1_run_expr.jpg"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
   
   ````
   ##
@@ -92,7 +158,14 @@ We will name this run set TMP1_RUN_LOAD_TRANSFER
 Now that we have created the run set, lets run it:
 * Find the run set.  If you do not find it, clear cache (Settings Pull Down, then Clear All Caches)  
 
-![Find](Images/training_create_run_set/training_run_set_moca_client_find.jpg)
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p28.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
 
 * Press Execute
 * Note that we have two tabs and argumens are inside each tab.  Also note that we have checkboxes.
@@ -101,19 +174,51 @@ Now that we have created the run set, lets run it:
     * we can put more metadata as needed
 * Lets set both check boxes 
 
-![Set Checkboxes](Images/training_create_run_set/training_run_set_moca_client_set_checkboxes.jpg)
+    <div style="text-align: center;">
+    <img src="./Images/trainingtrack/p29.png"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
 
 * And provide the two locations
 
- ![Set Locations](Images/training_create_run_set/training_run_set_moca_client_set_locations.jpg)
+    <div style="text-align: center;">
+    <img src="Images/training_create_run_set/training_run_set_moca_client_set_locations.jpg"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
 
 * We can also save this metadata as a "Run Set" "Test Case" 
 
-![Run Set Test Case](Images/training_create_run_set/training_run_set_moca_client_save_test_case.jpg)
+    <div style="text-align: center;">
+    <img src="Images/training_create_run_set/training_run_set_moca_client_save_test_case.jpg"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
 
 ## Understand the output
-* The run set arguments are displayed when we started.  See the arguments.  uc_test_exec_seqnum gets a new value.  The wh_id and devcod were evaluated ![Run Set Run Args](Images/training_create_run_set/training_run_set_test_exec_args.jpg)
+* The run set arguments are displayed when we started.  See the arguments.  uc_test_exec_seqnum gets a new value.  The wh_id and devcod were evaluated 
+
+    <div style="text-align: center;">
+    <img src="Images/training_create_run_set/training_run_set_test_exec_args.jpg"
+        alt="undirectedmenu"
+        style="height: 200px; margin: auto; display: block; cursor: zoom-in;
+              border: 2px solid #000000; border-radius: 4px;"
+        onclick="this.style.height='400px'; this.style.cursor='zoom-out';"
+        ondblclick="this.style.height='200px'; this.style.cursor='zoom-in';">
+    </div>
+
 * As it is running, the "Execution Unit" is populated.  See how it shows test case, and then application flows 
+
 
 ![Exec Steps](Images/training_create_run_set/training_run_set_test_exec_steps.jpg)
 
