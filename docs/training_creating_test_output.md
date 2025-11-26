@@ -169,5 +169,6 @@ else
 ### View Validaion Output
 Now that we have defined validation, lets run the test again
 * Execute the test
-* In the output pane, if you highlight the test, you will see "Validation" tab ![Test Output](Images/training_cmd_output/training_test_output_val_res.jpg)
+* In the output pane, if you highlight the test, you will see "Validation" tab
+![Test Output](Images/training_cmd_output/training_test_output_val_res.jpg)
 
